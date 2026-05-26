@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 1489,
+    src: "/lovable-uploads/site-clearance-scaffold-building.jpg",
+    alt: "Site clearance team removing overgrown vegetation and debris around scaffolded commercial building",
+    category: "site-clearance"
+  },
+  {
     id: 41,
     src: "/lovable-uploads/site-clearance-avant-loader.jpg",
     alt: "Green Avant loader preparing site clearance on muddy terrain with tracked wheels",
