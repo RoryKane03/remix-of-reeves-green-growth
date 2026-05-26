@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.reevestreesurgeons.co.uk/sitemap.xml
+

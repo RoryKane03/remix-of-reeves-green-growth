@@ -1,0 +1,1 @@
+ALTER TABLE public.quotes ADD COLUMN discount_code text DEFAULT NULL;

@@ -1,0 +1,56 @@
+# Cache Control Headers for Optimal Performance
+
+# Static assets (JS, CSS) - immutable, long cache
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# Images - 30 day cache
+/lovable-uploads/*.jpg
+  Cache-Control: public, max-age=2592000
+  X-Content-Type-Options: nosniff
+  
+/lovable-uploads/*.png
+  Cache-Control: public, max-age=2592000
+  X-Content-Type-Options: nosniff
+
+/lovable-uploads/*.webp
+  Cache-Control: public, max-age=2592000
+  X-Content-Type-Options: nosniff
+
+# Videos - 30 day cache
+/lovable-uploads/*.mp4
+  Cache-Control: public, max-age=2592000
+
+/lovable-uploads/*.mov
+  Cache-Control: public, max-age=2592000
+
+# Fonts - immutable, long cache
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML - no cache, must revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Sitemap and robots
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+# Security headers for all requests
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

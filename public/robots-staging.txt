@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /
+
+# Use this file on your staging environment to block all crawling.
+# In production, keep using public/robots.txt.
+
+Sitemap: https://reevestreesurgeons.uk/sitemap.xml

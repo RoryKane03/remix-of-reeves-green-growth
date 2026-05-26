@@ -1,0 +1,99 @@
+import { createServer } from 'vite';
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const routes = [
+  '/',
+  '/our-work',
+  '/commercial-services',
+  '/domestic-services', 
+  '/tree-work',
+  '/hedge-cutting',
+  '/stump-grinding',
+  '/commercial/tree-work',
+  '/commercial/hedge-cutting',
+  '/commercial/stump-grinding',
+  '/services/commercial/site-clearance',
+  '/about',
+  '/privacy-policy',
+  // Location-specific pages for enhanced local SEO
+  '/locations/birmingham',
+  '/locations/coventry'
+];
+
+async function prerender() {
+  const server = await createServer({
+    server: { middlewareMode: true },
+    appType: 'custom',
+    root: path.resolve(__dirname, '..')
+  });
+
+  console.log('🕷️ Starting prerender process for Google indexing...');
+  
+  // Ensure dist directory exists
+  const distPath = path.resolve(__dirname, '../dist');
+  await fs.mkdir(distPath, { recursive: true });
+
+  let successCount = 0;
+  let errorCount = 0;
+
+  for (const route of routes) {
+    try {
+      console.log(`🔄 Processing route: ${route}`);
+      const { render } = await server.ssrLoadModule('/src/entry-server.tsx');
+      const html = await render(route);
+      
+      // Validate HTML content is not just <noscript>
+      if (!html || html.trim().length < 100) {
+        throw new Error(`Invalid HTML content (too short): ${html?.length || 0} characters`);
+      }
+      
+      if (html.includes('<noscript>') && !html.includes('<div id="root">')) {
+        throw new Error('HTML contains only <noscript> fallback content');
+      }
+      
+      // Extract title for validation
+      const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/);
+      const title = titleMatch ? titleMatch[1] : 'No title found';
+      
+      // Create proper file paths for nested routes (directory-style for better SEO)
+      let filePath;
+      if (route === '/') {
+        filePath = path.join(distPath, 'index.html');
+      } else {
+        // Create directory structure: /route/ -> /route/index.html
+        const routePath = route.replace(/^\//, '').replace(/\/$/, '');
+        const dirPath = path.join(distPath, routePath);
+        await fs.mkdir(dirPath, { recursive: true });
+        filePath = path.join(dirPath, 'index.html');
+      }
+      
+      await fs.mkdir(path.dirname(filePath), { recursive: true });
+      await fs.writeFile(filePath, html);
+      
+      console.log(`✓ ${route} → ${path.relative(distPath, filePath)}`);
+      console.log(`  📄 Title: "${title}"`);
+      console.log(`  📊 Size: ${html.length} characters`);
+      console.log(`  ✅ Contains React content: ${html.includes('<div id="root">') ? 'Yes' : 'No'}`);
+      successCount++;
+    } catch (error) {
+      console.error(`✗ Failed to prerender ${route}:`, error.message);
+      console.error(`  Stack: ${error.stack}`);
+      errorCount++;
+    }
+  }
+
+  await server.close();
+  
+  console.log(`\n🎉 Prerender complete!`);
+  console.log(`   ✅ Successfully generated: ${successCount} pages`);
+  if (errorCount > 0) {
+    console.log(`   ❌ Failed to generate: ${errorCount} pages`);
+  }
+  console.log(`\n📋 All static HTML files are now ready for Google crawler!`);
+}
+
+prerender();

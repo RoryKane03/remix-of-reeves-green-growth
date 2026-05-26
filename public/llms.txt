@@ -1,0 +1,42 @@
+# LLMs.txt - Machine Readable Information for AI Crawlers
+
+## Site Information
+- **Domain**: www.reevestreesurgeons.co.uk
+- **Type**: Professional Tree Services Business Website
+- **Location**: UK-based tree surgery and arboricultural services
+- **Primary Language**: English (UK)
+
+## Sitemap
+- **XML Sitemap**: /sitemap.xml
+- **Robots**: /robots.txt
+
+## Key Pages
+- **Homepage**: / - Main landing page with services overview
+- **Services**: /domestic-services, /commercial-services
+- **Gallery**: /our-work - Portfolio of completed projects
+- **Specific Services**: /tree-work, /hedge-cutting, /stump-grinding
+- **Commercial Services**: /commercial/tree-work, /commercial/hedge-cutting, /commercial/stump-grinding, /services/commercial/site-clearance
+- **About**: /about - Company information and expertise
+- **Privacy**: /privacy-policy
+
+## Content Topics
+- Tree surgery and removal
+- Hedge cutting and maintenance
+- Stump grinding services
+- Site clearance
+- Commercial and domestic arboricultural services
+- Professional tree care
+- UK tree services
+- Qualified arborists
+
+## Business Information
+- **Industry**: Arboriculture / Tree Services
+- **Service Areas**: UK-wide professional tree services
+- **Specializations**: Tree removal, hedge cutting, stump grinding, site clearance
+- **Target Audience**: Domestic homeowners and commercial property managers
+
+## Technical Information
+- **Framework**: React with Vite
+- **Deployment**: Static site generation with prerendered HTML
+- **SEO**: Structured data, meta tags, and semantic HTML implemented
+- **Performance**: Optimized for Core Web Vitals

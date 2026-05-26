@@ -1,0 +1,60 @@
+# Domain redirects - Redirect old .uk domain to new .co.uk domain
+https://reevestreesurgeons.uk/* https://www.reevestreesurgeons.co.uk/:splat 301!
+https://www.reevestreesurgeons.uk/* https://www.reevestreesurgeons.co.uk/:splat 301!
+http://reevestreesurgeons.uk/* https://www.reevestreesurgeons.co.uk/:splat 301!
+http://www.reevestreesurgeons.uk/* https://www.reevestreesurgeons.co.uk/:splat 301!
+
+# Static files - serve directly, don't route through SPA
+/sitemap.xml    /sitemap.xml    200
+/robots.txt     /robots.txt     200  
+/llms.txt       /llms.txt       200
+/favicon.ico    /favicon.ico    200
+
+# Prerendered pages - handle BOTH with and without trailing slash (no redirects)
+/                    /index.html                     200
+/contact             /contact.html                   200
+/contact/            /contact.html                   200
+/about               /about.html                     200
+/about/              /about.html                     200
+/our-work            /our-work.html                  200
+/our-work/           /our-work.html                  200
+/tree-work           /tree-work.html                 200
+/tree-work/          /tree-work.html                 200
+/hedge-cutting       /hedge-cutting.html             200
+/hedge-cutting/      /hedge-cutting.html             200
+/stump-grinding      /stump-grinding.html            200
+/stump-grinding/     /stump-grinding.html            200
+/domestic-services   /domestic-services.html         200
+/domestic-services/  /domestic-services.html         200
+/commercial-services  /commercial-services.html      200
+/commercial-services/ /commercial-services.html      200
+/commercial/tree-work  /commercial/tree-work.html    200
+/commercial/tree-work/ /commercial/tree-work.html    200
+/commercial/hedge-cutting  /commercial/hedge-cutting.html  200
+/commercial/hedge-cutting/ /commercial/hedge-cutting.html  200
+/commercial/stump-grinding  /commercial/stump-grinding.html  200
+/commercial/stump-grinding/ /commercial/stump-grinding.html  200
+/services/commercial/site-clearance  /services/commercial/site-clearance.html  200
+/services/commercial/site-clearance/ /services/commercial/site-clearance.html  200
+/locations/birmingham  /locations/birmingham.html    200
+/locations/birmingham/ /locations/birmingham.html    200
+/locations/worcester   /locations/worcester.html     200
+/locations/worcester/  /locations/worcester.html     200
+/locations/warwick     /locations/warwick.html       200
+/locations/warwick/    /locations/warwick.html       200
+/team/john-reeves      /team/john-reeves.html        200
+/team/john-reeves/     /team/john-reeves.html        200
+/privacy-policy        /privacy-policy.html          200
+/privacy-policy/       /privacy-policy.html          200
+/thank-you             /index.html                   200
+/thank-you/            /index.html                   200
+
+# Redirect old Coventry page to Worcester (both versions)
+/locations/coventry  /locations/worcester  301
+/locations/coventry/ /locations/worcester  301
+
+# Remove trailing slashes ONLY for paths that don't match above rules
+/*/                 /:splat                        301
+
+# Fallback for any other routes (SPA routing)
+/*    /index.html   200

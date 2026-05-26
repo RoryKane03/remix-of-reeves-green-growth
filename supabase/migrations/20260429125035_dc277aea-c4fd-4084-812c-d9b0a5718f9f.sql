@@ -1,0 +1,1 @@
+GRANT EXECUTE ON FUNCTION public.check_submission_rate_limit(text, text) TO anon, authenticated;
