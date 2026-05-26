@@ -529,6 +529,12 @@ const galleryImages: GalleryImage[] = [
     category: "stump-grinding"
   },
   {
+    id: 1484,
+    src: "/lovable-uploads/tree-work-tall-oak-dismantle.jpg",
+    alt: "Arborist sectionally dismantling a tall oak tree with chainsaw at height above woodland canopy",
+    category: "tree-work"
+  },
+  {
     id: 13,
     src: "/lovable-uploads/6ceae57f-a69a-4627-a5a3-9db71ea5b891.png",
     alt: "Professional tree surgeons conducting chainsaw work with safety equipment and team coordination",
