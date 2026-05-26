@@ -145,6 +145,30 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 1485,
+    src: "/lovable-uploads/hedge-cutting-roadside-hawthorn.jpg",
+    alt: "Professionally trimmed flowering hawthorn roadside hedge with neat squared finish",
+    category: "hedge-cutting"
+  },
+  {
+    id: 1486,
+    src: "/lovable-uploads/hedge-cutting-tall-conifer-shaped.jpg",
+    alt: "Tall conifer hedge expertly shaped into clean rounded forms beside residential property",
+    category: "hedge-cutting"
+  },
+  {
+    id: 1487,
+    src: "/lovable-uploads/hedge-cutting-garden-boundary-rounded.jpg",
+    alt: "Mature garden boundary hedge with smooth rounded crown providing privacy screening",
+    category: "hedge-cutting"
+  },
+  {
+    id: 1488,
+    src: "/lovable-uploads/hedge-cutting-tall-conifer-archway.jpg",
+    alt: "Large conifer hedges precisely cut into tall rounded pillars creating a green archway",
+    category: "hedge-cutting"
+  },
+  {
     id: 39,
     src: "/lovable-uploads/hedge-cutting-commercial-corner.jpg",
     alt: "Professional commercial hedge cutting on large corner property maintaining street-facing boundaries",
