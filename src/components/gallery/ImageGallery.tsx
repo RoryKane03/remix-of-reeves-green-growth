@@ -175,6 +175,12 @@ const galleryImages: GalleryImage[] = [
     category: "hedge-cutting"
   },
   {
+    id: 1490,
+    src: "/lovable-uploads/hedge-cutting-laurel-garden-boundary.jpg",
+    alt: "Tall laurel garden boundary hedge neatly trimmed providing privacy screening over patio",
+    category: "hedge-cutting"
+  },
+  {
     id: 39,
     src: "/lovable-uploads/hedge-cutting-commercial-corner.jpg",
     alt: "Professional commercial hedge cutting on large corner property maintaining street-facing boundaries",
