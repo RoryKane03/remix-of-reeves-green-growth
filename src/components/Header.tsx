@@ -14,7 +14,7 @@ const Header = () => {
   const [isAreasMobileOpen, setIsAreasMobileOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<'domestic' | 'commercial' | null>(null);
   const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<'domestic' | 'commercial' | null>(null);
-  const [closeMenuTimeout, setCloseMenuTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [closeMenuTimeout, setCloseMenuTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
   const navigate = useNavigate();
 
