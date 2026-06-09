@@ -68,9 +68,9 @@ const ThankYou = () => {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="tel:01527831033">
+              <a href="tel:01527874143">
                 <Phone className="h-4 w-4 mr-2" />
-                Call Us: 01527 831033
+                Call Us: 01527 874143
               </a>
             </Button>
           </div>
