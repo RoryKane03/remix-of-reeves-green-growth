@@ -441,7 +441,7 @@ const ContactForm = () => {
                         />
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div className="sm:col-span-1">
                           <Label htmlFor="city" className="text-sm font-medium mb-2 block" style={{ fontFamily: 'Inter, sans-serif', color: 'var(--text-900)' }}>
                             Town/City
@@ -465,19 +465,6 @@ const ContactForm = () => {
                             value={formData.postcode}
                             onChange={handleInputChange}
                             className="h-14 rounded-2xl border-neutral-200 focus:border-emerald transition-colors focus-premium uppercase"
-                            style={{ fontFamily: 'Inter, sans-serif' }}
-                          />
-                        </div>
-                        <div className="sm:col-span-1">
-                          <Label htmlFor="country" className="text-sm font-medium mb-2 block" style={{ fontFamily: 'Inter, sans-serif', color: 'var(--text-900)' }}>
-                            Country
-                          </Label>
-                          <Input
-                            id="country"
-                            name="country"
-                            value={formData.country}
-                            onChange={handleInputChange}
-                            className="h-14 rounded-2xl border-neutral-200 focus:border-emerald transition-colors focus-premium"
                             style={{ fontFamily: 'Inter, sans-serif' }}
                           />
                         </div>
