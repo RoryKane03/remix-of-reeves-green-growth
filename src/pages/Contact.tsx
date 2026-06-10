@@ -300,10 +300,9 @@ const Contact = () => {
                               <Input id="postcode" name="postcode" value={formData.postcode} onChange={handleInputChange} required className="h-12 rounded-lg border-gray-300 focus:border-green-500 focus:ring-green-500" />
                             </div>
                           </div>
-
-                          </div>
                         </div>
                       </div>
+
 
                       {/* Service Required */}
                       <div>
