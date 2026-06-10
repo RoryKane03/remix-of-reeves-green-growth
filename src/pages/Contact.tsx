@@ -299,12 +299,8 @@ const Contact = () => {
                               </Label>
                               <Input id="postcode" name="postcode" value={formData.postcode} onChange={handleInputChange} required className="h-12 rounded-lg border-gray-300 focus:border-green-500 focus:ring-green-500" />
                             </div>
-                            <div>
-                              <Label htmlFor="country" className="text-sm font-medium text-gray-900 mb-2 block">
-                                Country
-                              </Label>
-                              <Input id="country" name="country" value="United Kingdom" readOnly className="h-12 rounded-lg border-gray-300 bg-gray-50 text-gray-700 cursor-not-allowed" />
-                            </div>
+                          </div>
+
                           </div>
                         </div>
                       </div>
