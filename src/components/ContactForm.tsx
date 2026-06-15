@@ -94,7 +94,7 @@ const ContactForm = () => {
           city: formData.city || undefined,
           postcode: formData.postcode || undefined,
           country: formData.country || undefined,
-          discount_code: formData.discount_code || undefined,
+          
         },
         uploadedFiles
       );
@@ -116,7 +116,6 @@ const ContactForm = () => {
         country: 'United Kingdom',
         service: '',
         message: '',
-        discount_code: '',
       });
       setUploadedFiles([]);
     } catch (err: unknown) {
@@ -542,28 +541,6 @@ const ContactForm = () => {
                       </div>}
                   </div>
 
-                  {/* Discount Code */}
-                  <div>
-                    <Label htmlFor="discount_code" className="text-sm font-medium mb-2 block" style={{
-                      fontFamily: 'Inter, sans-serif',
-                      color: 'var(--text-900)'
-                    }}>
-                      Discount code (optional)
-                    </Label>
-                    <Input
-                      id="discount_code"
-                      name="discount_code"
-                      value={formData.discount_code}
-                      onChange={handleInputChange}
-                      placeholder="Got a code from our social media? Enter it here"
-                      maxLength={50}
-                      className={`h-14 rounded-2xl border-neutral-200 focus:border-emerald transition-colors focus-premium ${discountError ? 'border-red-500' : ''}`}
-                      style={{ fontFamily: 'Inter, sans-serif' }}
-                    />
-                    {discountError && (
-                      <p className="text-sm text-red-600 mt-1">{discountError}</p>
-                    )}
-                  </div>
 
                   <div className="pt-4">
                     <button type="submit" className="btn-primary-green w-full justify-center focus-premium flex items-center space-12 h-14 text-lg disabled:opacity-50 disabled:pointer-events-none" disabled={isSubmitting} style={{
