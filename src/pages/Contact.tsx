@@ -21,7 +21,7 @@ import SEO from '@/components/SEO';
 import { getLocalBusinessData } from '@/utils/structuredData';
 import { submitQuote } from '@/features/quotes/submitQuote';
 import { toast } from 'sonner';
-import QuoteTips from '@/components/QuoteTips';
+
 import { formatQuoteFileSize, processQuoteFiles } from '@/utils/quoteFileProcessing';
 
 const Contact = () => {
