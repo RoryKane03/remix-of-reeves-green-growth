@@ -21,7 +21,7 @@ import SEO from '@/components/SEO';
 import { getLocalBusinessData } from '@/utils/structuredData';
 import { submitQuote } from '@/features/quotes/submitQuote';
 import { toast } from 'sonner';
-import QuoteTips from '@/components/QuoteTips';
+
 import { formatQuoteFileSize, processQuoteFiles } from '@/utils/quoteFileProcessing';
 
 const Contact = () => {
@@ -229,8 +229,6 @@ const Contact = () => {
         </section>
 
 
-        {/* Quote Tips Section */}
-        <QuoteTips />
 
         {/* Main Content - Two Column Layout */}
         <section className="py-12 lg:py-16 bg-white">
