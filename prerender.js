@@ -88,10 +88,12 @@ async function prerender() {
     await vite.close()
     console.log('\n🎉 Prerendering complete!')
     console.log('📄 All pages now have static HTML with full content for SEO')
+    process.exit(0)
     
   } catch (error) {
     console.warn('⚠️ Prerendering skipped (non-fatal):', error.message)
-    // Don't exit with error code - prerendering is optional enhancement
+    // Don't fail the build - prerendering is optional enhancement
+    process.exit(0)
   }
 }
 
