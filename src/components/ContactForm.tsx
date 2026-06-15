@@ -77,13 +77,6 @@ const ContactForm = () => {
     e.preventDefault();
     if (isSubmitting) return;
 
-    // Validate discount code
-    const code = formData.discount_code.trim();
-    if (code && code.toUpperCase() !== 'MARCH20') {
-      setDiscountError('Invalid discount code');
-      return;
-    }
-
     setIsSubmitting(true);
     console.log("[ContactForm] submitting quote request with", uploadedFiles.length, "files");
     
