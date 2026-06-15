@@ -39,11 +39,9 @@ const ContactForm = () => {
     country: 'United Kingdom',
     service: '',
     message: '',
-    discount_code: '',
   });
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
   const [isCompressing, setIsCompressing] = useState(false);
-  const [discountError, setDiscountError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -51,9 +49,6 @@ const ContactForm = () => {
       ...prev,
       [name]: value
     }));
-    if (name === 'discount_code') {
-      setDiscountError('');
-    }
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
