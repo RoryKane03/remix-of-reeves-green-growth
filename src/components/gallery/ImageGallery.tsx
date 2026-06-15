@@ -151,6 +151,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 1900,
+    src: "/lovable-uploads/tree-work-new-planting-roadside.jpg",
+    alt: "Newly planted young pine and conifer trees with wooden stakes along a landscaped roadside verge",
+    category: "tree-work"
+  },
+  {
     id: 1485,
     src: "/lovable-uploads/hedge-cutting-roadside-hawthorn.jpg",
     alt: "Professionally trimmed flowering hawthorn roadside hedge with neat squared finish",
