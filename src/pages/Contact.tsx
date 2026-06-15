@@ -229,8 +229,6 @@ const Contact = () => {
         </section>
 
 
-        {/* Quote Tips Section */}
-        <QuoteTips />
 
         {/* Main Content - Two Column Layout */}
         <section className="py-12 lg:py-16 bg-white">
