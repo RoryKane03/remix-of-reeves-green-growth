@@ -18,6 +18,36 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2001,
+    src: hedgeCutting1574.url,
+    alt: "Neatly maintained garden hedge alongside a young tree with countryside views",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2002,
+    src: hedgeCutting1575.url,
+    alt: "Freshly trimmed formal hedge running along a country garden boundary",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2003,
+    src: hedgeCutting1576.url,
+    alt: "Precision-cut hedge separating a private garden from open countryside fields",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2004,
+    src: hedgeCutting1577.url,
+    alt: "Tall, professionally shaped hedgerow bordering a large lawn under blue skies",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2005,
+    src: hedgeCutting1578.url,
+    alt: "Long, well-maintained garden hedge with established trees along a rural boundary",
+    category: "hedge-cutting"
+  },
+  {
     id: 1489,
     src: "/lovable-uploads/site-clearance-scaffold-building.jpg",
     alt: "Site clearance team removing overgrown vegetation and debris around scaffolded commercial building",
