@@ -14,7 +14,7 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   {
     id: 2001,
-    src: hedgeCutting1574.url,
+    src: "/lovable-uploads/hedge-cutting-1574.jpg",
     alt: "Neatly maintained garden hedge alongside a young tree with countryside views",
     category: "hedge-cutting"
   },
