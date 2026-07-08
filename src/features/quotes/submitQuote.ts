@@ -8,7 +8,7 @@ const QuoteFormSchema = z.object({
     .trim()
     .min(2, "Name must be at least 2 characters")
     .max(100, "Name must be less than 100 characters")
-    .regex(/^[a-zA-Z\s\-']+$/, "Name can only contain letters, spaces, hyphens, and apostrophes"),
+    .regex(/^[\p{L}\s\-'.,]+$/u, "Name can only contain letters, spaces, hyphens, apostrophes, periods, and commas"),
   
   email: z.string()
     .trim()
