@@ -13,6 +13,24 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2010,
+    src: "/lovable-uploads/tree-work-1583.jpg",
+    alt: "Reeves arborist climbing high in a large ash tree crown reducing branches in a rural garden with chipper and crew below",
+    category: "tree-work"
+  },
+  {
+    id: 2011,
+    src: "/lovable-uploads/tree-work-1584.jpg",
+    alt: "Tree surgeon in orange PPE using a MEWP cherry picker to sectionally dismantle a large tree with sawdust falling",
+    category: "tree-work"
+  },
+  {
+    id: 2012,
+    src: "/lovable-uploads/tree-work-1585.jpg",
+    alt: "Reeves arborist working from a truck-mounted cherry picker to prune large roadside trees safely",
+    category: "tree-work"
+  },
+  {
     id: 2001,
     src: "/lovable-uploads/hedge-cutting-1574.jpg",
     alt: "Neatly maintained garden hedge alongside a young tree with countryside views",
