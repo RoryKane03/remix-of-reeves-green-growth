@@ -7,7 +7,7 @@
 
 const STATIC_CACHE = 'static-v3';
 const FONT_CACHE = 'fonts-v1';
-const IMAGE_CACHE = 'images-v1';
+const IMAGE_CACHE = 'images-v2';
 const API_CACHE = 'api-v1';
 const CACHE_MAX_AGE = 30 * 24 * 60 * 60 * 1000; // 30 days
 
