@@ -703,12 +703,6 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
-    id: 136,
-    src: "/lovable-uploads/tree-work-tall-oak-dismantle.jpg",
-    alt: "Reeves arborist climbing and sectionally dismantling tall dead oak tree with chainsaw above West Midlands woodland",
-    category: "tree-work"
-  },
-  {
     id: 137,
     src: "/lovable-uploads/tree-work-oak-topping-aerial.jpg",
     alt: "Certified arborist topping a tall oak with chainsaw during aerial dismantle above West Midlands woodland",
