@@ -612,12 +612,6 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
-    id: 17,
-    src: "/lovable-uploads/2e6c5c70-5f8a-44c2-9819-2955f8136056.png",
-    alt: "Professional arborist performing precision tree work at height on mature Cedar tree",
-    category: "tree-work"
-  },
-  {
     id: 147,
     src: "/lovable-uploads/tree-work-aerial-dismantle-village.jpg",
     alt: "Climber's POV aerial view dismantling a tree section by section above a village with sports field in the distance",
