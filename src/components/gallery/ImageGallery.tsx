@@ -577,12 +577,6 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
-    id: 16,
-    src: "/lovable-uploads/7e5b8a79-8efc-43ed-a8c9-7e342e0977ab.png",
-    alt: "Skilled arborist performing precise tree climbing and sectional tree removal near residential property",
-    category: "tree-work"
-  },
-  {
     id: 17,
     src: "/lovable-uploads/2e6c5c70-5f8a-44c2-9819-2955f8136056.png",
     alt: "Professional arborist performing precision tree work at height on mature Cedar tree",
