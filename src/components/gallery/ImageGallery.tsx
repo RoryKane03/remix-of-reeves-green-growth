@@ -20,7 +20,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 2002,
-    src: hedgeCutting1575.url,
+    src: "/lovable-uploads/hedge-cutting-1575.jpg",
     alt: "Freshly trimmed formal hedge running along a country garden boundary",
     category: "hedge-cutting"
   },
