@@ -32,7 +32,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 2004,
-    src: hedgeCutting1577.url,
+    src: "/lovable-uploads/hedge-cutting-1577.jpg",
     alt: "Tall, professionally shaped hedgerow bordering a large lawn under blue skies",
     category: "hedge-cutting"
   },
