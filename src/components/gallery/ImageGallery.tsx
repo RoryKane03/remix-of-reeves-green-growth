@@ -1,11 +1,6 @@
 import { useState } from 'react';
 import Lightbox from './Lightbox';
 import CategoryDescription from './CategoryDescription';
-import hedgeCutting1574 from '@/assets/hedge-cutting-1574.jpg.asset.json';
-import hedgeCutting1575 from '@/assets/hedge-cutting-1575.jpg.asset.json';
-import hedgeCutting1576 from '@/assets/hedge-cutting-1576.jpg.asset.json';
-import hedgeCutting1577 from '@/assets/hedge-cutting-1577.jpg.asset.json';
-import hedgeCutting1578 from '@/assets/hedge-cutting-1578.jpg.asset.json';
 
 type FilterType = 'tree-work' | 'hedge-cutting' | 'stump-grinding' | 'site-clearance';
 
