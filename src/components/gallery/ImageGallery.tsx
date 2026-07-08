@@ -26,7 +26,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 2003,
-    src: hedgeCutting1576.url,
+    src: "/lovable-uploads/hedge-cutting-1576.jpg",
     alt: "Precision-cut hedge separating a private garden from open countryside fields",
     category: "hedge-cutting"
   },
