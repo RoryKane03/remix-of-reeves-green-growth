@@ -1,11 +1,6 @@
 import { useState } from 'react';
 import Lightbox from './Lightbox';
 import CategoryDescription from './CategoryDescription';
-import hedgeCutting1574 from '@/assets/hedge-cutting-1574.jpg.asset.json';
-import hedgeCutting1575 from '@/assets/hedge-cutting-1575.jpg.asset.json';
-import hedgeCutting1576 from '@/assets/hedge-cutting-1576.jpg.asset.json';
-import hedgeCutting1577 from '@/assets/hedge-cutting-1577.jpg.asset.json';
-import hedgeCutting1578 from '@/assets/hedge-cutting-1578.jpg.asset.json';
 
 type FilterType = 'tree-work' | 'hedge-cutting' | 'stump-grinding' | 'site-clearance';
 
@@ -19,31 +14,31 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   {
     id: 2001,
-    src: hedgeCutting1574.url,
+    src: "/lovable-uploads/hedge-cutting-1574.jpg",
     alt: "Neatly maintained garden hedge alongside a young tree with countryside views",
     category: "hedge-cutting"
   },
   {
     id: 2002,
-    src: hedgeCutting1575.url,
+    src: "/lovable-uploads/hedge-cutting-1575.jpg",
     alt: "Freshly trimmed formal hedge running along a country garden boundary",
     category: "hedge-cutting"
   },
   {
     id: 2003,
-    src: hedgeCutting1576.url,
+    src: "/lovable-uploads/hedge-cutting-1576.jpg",
     alt: "Precision-cut hedge separating a private garden from open countryside fields",
     category: "hedge-cutting"
   },
   {
     id: 2004,
-    src: hedgeCutting1577.url,
+    src: "/lovable-uploads/hedge-cutting-1577.jpg",
     alt: "Tall, professionally shaped hedgerow bordering a large lawn under blue skies",
     category: "hedge-cutting"
   },
   {
     id: 2005,
-    src: hedgeCutting1578.url,
+    src: "/lovable-uploads/hedge-cutting-1578.jpg",
     alt: "Long, well-maintained garden hedge with established trees along a rural boundary",
     category: "hedge-cutting"
   },
