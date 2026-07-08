@@ -38,7 +38,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 2005,
-    src: hedgeCutting1578.url,
+    src: "/lovable-uploads/hedge-cutting-1578.jpg",
     alt: "Long, well-maintained garden hedge with established trees along a rural boundary",
     category: "hedge-cutting"
   },
