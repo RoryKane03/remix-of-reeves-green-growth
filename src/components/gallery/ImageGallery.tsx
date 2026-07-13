@@ -764,12 +764,6 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
-    id: 137,
-    src: "/lovable-uploads/tree-work-oak-topping-aerial.jpg",
-    alt: "Certified arborist topping a tall oak with chainsaw during aerial dismantle above West Midlands woodland",
-    category: "tree-work"
-  },
-  {
     id: 70,
     src: "/lovable-uploads/tree-work-ground-chainsaw.jpg",
     alt: "Arborist in hi-vis gear processing felled branches with chainsaw at commercial car park during winter tree work",
