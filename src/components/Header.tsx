@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown, ChevronRight, ArrowUpRight, Phone, Mail } from "l
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/reeves-logo-hq.png";
 import { trackPhoneCall } from "@/utils/phoneTracking";
+import { trackEmailClick } from "@/utils/emailTracking";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -170,6 +171,7 @@ const Header = () => {
               {/* Email */}
               <a 
                 href="mailto:info@reevestreesurgeons.co.uk" 
+                onClick={() => trackEmailClick('info@reevestreesurgeons.co.uk')}
                 className="flex items-center gap-2 text-white/90 hover:text-gold transition-colors duration-200"
               >
                 <Mail className="h-3.5 w-3.5" />

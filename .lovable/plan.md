@@ -1,36 +1,52 @@
 ## Goal
-A private admin-only page that shows how many times people clicked "Call" buttons on the website, updating every time you open/refresh it. Also includes quick links to Google Analytics and Meta Events Manager for deeper analysis.
 
-## What you'll get
+Track every click on `mailto:` links the same way phone clicks are already tracked, and add a small stats tile to the Admin dashboard showing phone + email click totals over the last 7 and 30 days.
 
-- New page at `/admin/analytics`
-- Only visible to you (must be signed in with the admin role you already have)
-- Non-admins get redirected away; logged-out users get sent to sign-in
-- No public link — it's hidden from the site navigation
+## What we'll build
 
-### Metrics shown
-- Total call clicks — **Today**, **Last 7 days**, **Last 30 days**, **All-time**
-- "Last updated" timestamp + Refresh button
-- Small links out to Google Analytics 4 and Meta Events Manager
+### 1. Email click tracking
 
-## How the data gets there
+Mirror the existing phone tracking pattern.
 
-1. New table `phone_clicks` in the backend (page URL, timestamp, optional user-agent).
-2. Every existing call/phone button already runs `trackPhoneCall()` — I'll extend that helper so it also writes a row to `phone_clicks` in parallel with the GA / Google Ads / Meta pixel events. No button code changes.
-3. The dashboard reads counts from that table on every visit — always fresh.
+- New file `src/utils/emailTracking.ts` exporting:
+  - `trackEmailClick(email)` — fires GA4 `email_click` event, Meta Pixel `Contact` event, and inserts a row into a new `email_clicks` table (fire-and-forget).
+  - `handleEmailClick(email)` — calls `trackEmailClick`, then opens `mailto:` after a 150 ms buffer (same pattern as `handlePhoneClick`).
+- Wire `handleEmailClick` into every `mailto:` link:
+  - `src/components/Footer.tsx` — `info@reevestreesurgeons.co.uk`
+  - `src/pages/Contact.tsx` — any mailto links
+  - Any other page with a mailto (I'll grep to make sure none are missed).
+- Google Ads conversion is skipped for now (no label yet), matching the current phone setup.
 
-## Access rules
-- `phone_clicks` insert: allowed for anyone (including logged-out visitors) so clicks are captured.
-- `phone_clicks` read: admin role only.
+### 2. Backend — `email_clicks` table
 
-## Technical details
-- Migration: create `public.phone_clicks (id, page_path, user_agent, created_at)`, GRANTs, RLS, policies (`INSERT` to anon+authenticated, `SELECT` via `has_role(auth.uid(),'admin')`).
-- Update `src/utils/phoneTracking.ts` to `supabase.from('phone_clicks').insert(...)` (fire-and-forget, never blocks the dial).
-- New route `/admin/analytics` in `src/App.tsx` → `src/pages/admin/Analytics.tsx`.
-- Guard: check session + `user_roles` for `admin`; redirect otherwise.
-- Queries: 4 `count` queries with `created_at >=` filters for today / 7d / 30d / all-time, run on mount + on Refresh click.
-- Styled with existing forest/gold brand tokens; no changes to public site UI.
+New table mirroring `phone_clicks`:
 
-## Out of scope (can add later if wanted)
-- Clicks-per-page breakdown, time-series chart, recent clicks feed
-- Form submissions or other event tracking
+- Columns: `id`, `email_address`, `page_path`, `user_agent`, `created_at`.
+- RLS: anyone (anon + authenticated) can INSERT; only admins can SELECT.
+- GRANTs: INSERT to anon + authenticated; SELECT to authenticated; ALL to service_role.
+
+### 3. Admin dashboard tile
+
+Add a "Click Tracking" card to `src/pages/Admin.tsx` (or `src/pages/admin/Analytics.tsx` if that fits better — I'll pick whichever the current admin layout uses).
+
+Shows four numbers in a compact card:
+
+```text
+                Last 7 days   Last 30 days
+Phone clicks        42            187
+Email clicks         9             38
+```
+
+Data comes from simple `count` queries against `phone_clicks` and `email_clicks` filtered by `created_at`. Admin-only, uses existing `has_role` guard already in place on those pages.
+
+## Out of scope (per your answers)
+
+- Google Ads conversion label — the placeholder in `phoneTracking.ts` stays as-is.
+- WhatsApp click tracking.
+- Full time-series charts or per-page breakdowns (can be added later if you want).
+
+## Technical notes
+
+- The `email_clicks` insert is fire-and-forget inside a `try/catch` so a slow/failed DB write never blocks the mail client from opening.
+- Storing the email address (not just a click count) lets us later distinguish, say, sales vs support inboxes if you add more.
+- GA4 events will show up in Reports → Engagement → Events as `phone_call_click` and `email_click`. Meta will show them under the standard `Contact` event.

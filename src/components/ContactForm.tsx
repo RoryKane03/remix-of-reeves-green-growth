@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { trackEmailClick } from '@/utils/emailTracking';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -207,9 +208,10 @@ const ContactForm = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <a href="mailto:info@reevestreesurgeons.co.uk" className="text-forest-600 hover:text-emerald break-all transition-colors focus-premium" style={{
+                <a href="mailto:info@reevestreesurgeons.co.uk" onClick={() => trackEmailClick('info@reevestreesurgeons.co.uk')} className="text-forest-600 hover:text-emerald break-all transition-colors focus-premium" style={{
                   fontFamily: 'Inter, sans-serif'
                 }}>
+
                   info@reevestreesurgeons.co.uk
                 </a>
               </CardContent>
