@@ -21,6 +21,7 @@ import { useAdminQuotes } from '@/hooks/useAdminQuotes';
 import QuoteFilesCell from '@/components/admin/QuoteFilesCell';
 import QuoteDetailsModal from '@/components/admin/QuoteDetailsModal';
 import AdminFilters from '@/components/admin/AdminFilters';
+import ClickTrackingCard from '@/components/admin/ClickTrackingCard';
 
 interface QuoteFile {
   id: string;
@@ -145,6 +146,11 @@ const Admin = () => {
           </CardContent>
         </Card>
       </div>
+
+      {/* Click tracking totals */}
+      <ClickTrackingCard />
+
+
 
       {/* Security Notice */}
       <Alert className="border-blue-200 bg-blue-50">
