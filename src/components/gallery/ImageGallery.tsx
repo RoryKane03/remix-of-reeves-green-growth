@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Lightbox from './Lightbox';
 import CategoryDescription from './CategoryDescription';
+import treeWorkAerialClimberOak from '@/assets/tree-work-aerial-climber-oak.jpeg.asset.json';
+import treeWorkDismantleChainsawSpray from '@/assets/tree-work-dismantle-chainsaw-spray.jpeg.asset.json';
 
 type FilterType = 'tree-work' | 'hedge-cutting' | 'stump-grinding' | 'site-clearance';
 
