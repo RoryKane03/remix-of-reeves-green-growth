@@ -16,7 +16,7 @@ declare global {
 
 const GOOGLE_ADS_ID = 'AW-17942512211';
 const GOOGLE_ADS_CALL_CONVERSION_LABEL = 'YOUR_CONVERSION_LABEL_HERE';
-const META_PIXEL_ID = 'YOUR_PIXEL_ID_HERE';
+const META_PIXEL_ID = '1305046474735858';
 
 const PHONE_NUMBER = '01527874143';
 
@@ -51,11 +51,7 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
   }
 
   // Meta Pixel "Contact" event
-  if (
-    typeof window.fbq === 'function' &&
-    META_PIXEL_ID &&
-    META_PIXEL_ID !== 'YOUR_PIXEL_ID_HERE'
-  ) {
+  if (typeof window.fbq === 'function' && META_PIXEL_ID) {
     window.fbq('track', 'Contact');
   }
 }
