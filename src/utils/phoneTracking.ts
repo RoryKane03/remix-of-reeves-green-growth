@@ -57,7 +57,19 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
   if (typeof window.fbq === 'function' && META_PIXEL_ID) {
     window.fbq('track', 'Contact');
   }
+
+  // Log to our own backend so the admin dashboard can report on it.
+  // Fire-and-forget — never block the dial action.
+  try {
+    void supabase.from('phone_clicks').insert({
+      page_path: typeof window !== 'undefined' ? window.location.pathname : null,
+      user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : null,
+    });
+  } catch (err) {
+    if (isDev) console.warn('[Phone Tracking] DB log failed', err);
+  }
 }
+
 
 export function handlePhoneClick(phoneNumber: string = PHONE_NUMBER) {
   trackPhoneCall(phoneNumber);
