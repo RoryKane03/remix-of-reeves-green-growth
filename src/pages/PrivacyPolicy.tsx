@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <div className="bg-neutral-050 rounded-lg p-6 space-y-2">
                   <p className="text-lg"><strong>Data Controller:</strong> Reeves Tree Surgeons Ltd</p>
-                  <p className="text-lg"><strong>Email:</strong> <a href="mailto:info@reevestreesurgeons.co.uk" className="text-accent-emerald hover:text-forest-600 underline">info@reevestreesurgeons.co.uk</a></p>
+                  <p className="text-lg"><strong>Email:</strong> <a href="mailto:info@reevestreesurgeons.co.uk" onClick={() => trackEmailClick('info@reevestreesurgeons.co.uk')} className="text-accent-emerald hover:text-forest-600 underline">info@reevestreesurgeons.co.uk</a></p>
                   <p className="text-lg"><strong>Telephone:</strong> <a href="tel:01527-874143" className="text-accent-emerald hover:text-forest-600 underline">01527 874143</a></p>
                   <p className="text-lg"><strong>Postal Address:</strong> [Insert your full registered business address here]</p>
                 </div>
@@ -205,7 +205,7 @@ const PrivacyPolicy = () => {
                   <li>Lodge a complaint with the ICO (Information Commissioner's Office): <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-accent-emerald hover:text-forest-600 underline">ico.org.uk</a> / <a href="tel:0303-123-1113" className="text-accent-emerald hover:text-forest-600 underline">0303 123 1113</a>.</li>
                 </ul>
                 <p className="text-lg leading-relaxed mt-4">
-                  To exercise these rights, email <a href="mailto:info@reevestreesurgeons.co.uk" className="text-accent-emerald hover:text-forest-600 underline">info@reevestreesurgeons.co.uk</a>.
+                  To exercise these rights, email <a href="mailto:info@reevestreesurgeons.co.uk" onClick={() => trackEmailClick('info@reevestreesurgeons.co.uk')} className="text-accent-emerald hover:text-forest-600 underline">info@reevestreesurgeons.co.uk</a>.
                 </p>
               </section>
 
@@ -233,7 +233,7 @@ const PrivacyPolicy = () => {
               <section id="contact-us" className="mb-8">
                 <h2 className="text-2xl font-bold text-forest-900 mb-6">Contact us</h2>
                 <div className="bg-neutral-050 rounded-lg p-6 space-y-2">
-                  <p className="text-lg">📧 <a href="mailto:info@reevestreesurgeons.co.uk" className="text-accent-emerald hover:text-forest-600 underline">info@reevestreesurgeons.co.uk</a></p>
+                  <p className="text-lg">📧 <a href="mailto:info@reevestreesurgeons.co.uk" onClick={() => trackEmailClick('info@reevestreesurgeons.co.uk')} className="text-accent-emerald hover:text-forest-600 underline">info@reevestreesurgeons.co.uk</a></p>
                   <p className="text-lg">📞 <a href="tel:01527-874143" className="text-accent-emerald hover:text-forest-600 underline">01527 874143</a></p>
                 </div>
               </section>
