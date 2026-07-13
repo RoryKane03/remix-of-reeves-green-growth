@@ -16,6 +16,7 @@ import { LazySection } from '@/components/LazySection';
 import { getServiceData } from '@/utils/structuredData';
 import beforeImg from '@/assets/before-after/hedge-cutting-before.jpg';
 import afterImg from '@/assets/before-after/hedge-cutting-after.jpg';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 const HedgeCutting = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -25,7 +26,7 @@ const HedgeCutting = () => {
     navigate('/contact');
   };
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
   const services = [{
     id: 'regular',

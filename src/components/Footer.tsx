@@ -1,6 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Phone, Mail, MapPin, TreePine, CheckCircle, AlertTriangle } from 'lucide-react';
 import { useCookieConsent } from '@/contexts/CookieConsentContext';
+import { trackPhoneCall } from '@/utils/phoneTracking';
 import facebookIcon from '@/assets/social/facebook-icon.webp';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -111,7 +112,7 @@ const Footer = () => {
                 <div className="flex items-start gap-2">
                   <Phone className="text-white mt-0.5 flex-shrink-0" size={14} />
                   <div className="text-sm">
-                    <a href="tel:01527874143" className="hover:text-gold transition-colors text-white hover:underline">
+                    <a href="tel:01527874143" onClick={() => trackPhoneCall('01527874143')} className="hover:text-gold transition-colors text-white hover:underline">
                       01527 874143
                     </a>
                   </div>
@@ -139,7 +140,7 @@ const Footer = () => {
                     <AlertTriangle size={14} className="text-forest-900" />
                     <span className="text-xs font-semibold text-forest-900">24/7 Emergency</span>
                   </div>
-                  <a href="tel:01527874143" className="text-forest-900 font-bold text-base hover:text-forest-800 transition-colors">
+                  <a href="tel:01527874143" onClick={() => trackPhoneCall('01527874143')} className="text-forest-900 font-bold text-base hover:text-forest-800 transition-colors">
                     01527 874143
                   </a>
                 </div>

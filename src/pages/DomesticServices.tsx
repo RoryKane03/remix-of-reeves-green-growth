@@ -16,6 +16,7 @@ import BeforeAfterComparison from '@/components/BeforeAfterComparison';
 import { getServiceData } from '@/utils/structuredData';
 import beforeImg from '@/assets/before-after/hedge-cutting-before.jpg';
 import afterImg from '@/assets/before-after/hedge-cutting-after.jpg';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 const services = [{
   id: 'tree-work',
   icon: TreePine,
@@ -73,7 +74,7 @@ const DomesticServices = () => {
     navigate('/contact');
   };
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
   return <div className="min-h-screen bg-white">
       <SEO title="Domestic Tree Services in West Midlands | Reeves Tree Surgeons" description="Trusted local tree surgeons for safe, reliable home and garden care since 2002. Professional tree work, hedge cutting & stump grinding services." keywords="domestic tree services, West Midlands tree surgeons, residential tree work, home garden tree care, ARB approved contractor" url="/domestic-services" structuredData={getServiceData("Domestic Tree Services", "Professional domestic tree services for homeowners in West Midlands", "/domestic-services")} breadcrumbs={[{

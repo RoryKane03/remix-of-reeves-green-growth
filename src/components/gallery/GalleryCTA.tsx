@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Phone, ArrowRight } from 'lucide-react';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 
 const GalleryCTA = () => {
   const scrollToContact = () => {
@@ -7,7 +8,7 @@ const GalleryCTA = () => {
   };
 
   const callNow = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
 
   return (

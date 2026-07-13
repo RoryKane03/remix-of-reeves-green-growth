@@ -11,13 +11,14 @@ import AccreditationCarousel from "@/components/AccreditationCarousel";
 import SEO from "@/components/SEO";
 import { getLocalBusinessData } from "@/utils/structuredData";
 import arbLogo from "@/assets/accreditations/arb-logo.png";
+import { handlePhoneClick } from "@/utils/phoneTracking";
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const handleCallUs = () => {
-    window.location.href = "tel:01527874143";
+    handlePhoneClick('01527874143');
   };
   const credentials = [
     {

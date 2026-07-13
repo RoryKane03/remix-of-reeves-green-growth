@@ -1,5 +1,6 @@
 import { MessageCircle, Phone } from 'lucide-react';
 import { useState } from 'react';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 
 const FloatingChat = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -9,7 +10,7 @@ const FloatingChat = () => {
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
 
   return (

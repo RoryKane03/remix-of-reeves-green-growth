@@ -21,6 +21,7 @@ import { toast } from 'sonner';
 import { submitQuote } from '@/features/quotes/submitQuote';
 import { supabase } from '@/integrations/supabase/client';
 import { formatQuoteFileSize, processQuoteFiles } from '@/utils/quoteFileProcessing';
+import { trackPhoneCall } from '@/utils/phoneTracking';
 
 // Photo upload fix - synced 2025-11-03 14:52
 const ContactForm = () => {
@@ -172,7 +173,7 @@ const ContactForm = () => {
                   }}>
                     General enquiries
                   </div>
-                  <a href="tel:01527874143" className="text-forest-600 hover:text-emerald transition-colors font-medium focus-premium" style={{
+                  <a href="tel:01527874143" onClick={() => trackPhoneCall('01527874143')} className="text-forest-600 hover:text-emerald transition-colors font-medium focus-premium" style={{
                     fontFamily: 'Inter, sans-serif'
                   }}>
                     01527 874143
@@ -185,7 +186,7 @@ const ContactForm = () => {
                   }}>
                     24/7 emergency
                   </div>
-                  <a href="tel:01527874143" className="text-gold hover:brightness-110 font-semibold transition-all duration-200 focus-premium" style={{
+                  <a href="tel:01527874143" onClick={() => trackPhoneCall('01527874143')} className="text-gold hover:brightness-110 font-semibold transition-all duration-200 focus-premium" style={{
                     fontFamily: 'Inter, sans-serif'
                   }}>
                     01527 874143
