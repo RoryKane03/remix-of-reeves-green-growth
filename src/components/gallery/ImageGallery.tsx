@@ -13,6 +13,18 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2013,
+    src: "/lovable-uploads/tree-work-1586.jpg",
+    alt: "Reeves arborist in orange PPE working from a MEWP cherry picker pruning a large chestnut tree above a garden fence",
+    category: "tree-work"
+  },
+  {
+    id: 2014,
+    src: "/lovable-uploads/tree-work-1587.jpg",
+    alt: "Tree surgeon on an elevated platform with crane rigging removing sections from a tall tree beside a Fresh Grill building",
+    category: "tree-work"
+  },
+  {
     id: 2010,
     src: "/lovable-uploads/tree-work-1583.jpg",
     alt: "Reeves arborist climbing high in a large ash tree crown reducing branches in a rural garden with chipper and crew below",
