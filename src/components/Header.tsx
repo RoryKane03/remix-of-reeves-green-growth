@@ -101,6 +101,7 @@ const Header = () => {
         }
       ]
     },
+    { href: "/our-work", label: "Our Work", type: "route" },
     { 
       label: "Areas We Cover", 
       type: "dropdown",
@@ -111,7 +112,6 @@ const Header = () => {
         { href: "/locations/warwick", label: "Warwick Tree Services" }
       ]
     },
-    { href: "/our-work", label: "Our Work", type: "route" },
   ];
 
   return (
