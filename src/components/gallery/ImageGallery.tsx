@@ -14,13 +14,13 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   {
     id: 2019,
-    src: treeWork1590.url,
+    src: "/lovable-uploads/tree-work-1590.jpg",
     alt: "Aerial drone view of Reeves arborists dismantling a large tree between industrial warehouse buildings using a mobile crane and ground crew",
     category: "tree-work"
   },
   {
     id: 2018,
-    src: treeWork1589.url,
+    src: "/lovable-uploads/tree-work-1589.jpg",
     alt: "Aerial view of Reeves arborists dismantling a large tree beside a commercial warehouse using a mobile crane, with climber in the canopy and ground crew operating a stump grinder",
     category: "tree-work"
   },
