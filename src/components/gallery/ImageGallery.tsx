@@ -15,6 +15,18 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2021,
+    src: treeWorkAerialClimberOak.url,
+    alt: "Aerial view of Reeves tree surgeon climbing and dismantling a tall tree above dense scrubland beside residential housing in the West Midlands",
+    category: "tree-work"
+  },
+  {
+    id: 2020,
+    src: treeWorkDismantleChainsawSpray.url,
+    alt: "Reeves arborist in orange PPE using a chainsaw at the top of a large tree during aerial dismantle, sawdust spraying against a blue sky",
+    category: "tree-work"
+  },
+  {
     id: 2019,
     src: "/lovable-uploads/tree-work-1590.jpg",
     alt: "Aerial drone view of Reeves arborists dismantling a large tree between industrial warehouse buildings using a mobile crane and ground crew",
