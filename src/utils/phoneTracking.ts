@@ -7,12 +7,15 @@
  *  - META_PIXEL_ID: from Meta Events Manager (https://business.facebook.com/events_manager)
  */
 
+import { supabase } from '@/integrations/supabase/client';
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
     fbq?: (...args: unknown[]) => void;
   }
 }
+
 
 const GOOGLE_ADS_ID = 'AW-17942512211';
 const GOOGLE_ADS_CALL_CONVERSION_LABEL = 'YOUR_CONVERSION_LABEL_HERE';
