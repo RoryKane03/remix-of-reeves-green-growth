@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2017,
+    src: "/lovable-uploads/tree-work-1588.jpg",
+    alt: "Tree surgeon in orange PPE lifted by mobile crane dismantling a tall tree beside commercial warehouse buildings",
+    category: "tree-work"
+  },
+  {
     id: 2016,
     src: "/lovable-uploads/site-clearance-turfing-sprinkler.jpg",
     alt: "Newly laid turf being watered with a sprinkler during residential site clearance reinstatement",
