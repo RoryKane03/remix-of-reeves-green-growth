@@ -51,11 +51,7 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
   }
 
   // Meta Pixel "Contact" event
-  if (
-    typeof window.fbq === 'function' &&
-    META_PIXEL_ID &&
-    META_PIXEL_ID !== 'YOUR_PIXEL_ID_HERE'
-  ) {
+  if (typeof window.fbq === 'function' && META_PIXEL_ID) {
     window.fbq('track', 'Contact');
   }
 }
