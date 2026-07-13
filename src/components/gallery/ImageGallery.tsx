@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2015,
+    src: "/lovable-uploads/site-clearance-aba-crane.jpg",
+    alt: "Large green ABA Cranes mobile crane positioned in a commercial car park for tree work and site clearance support",
+    category: "site-clearance"
+  },
+  {
     id: 2013,
     src: "/lovable-uploads/tree-work-1586.jpg",
     alt: "Reeves arborist in orange PPE working from a MEWP cherry picker pruning a large chestnut tree above a garden fence",
