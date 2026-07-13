@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2016,
+    src: "/lovable-uploads/site-clearance-turfing-sprinkler.jpg",
+    alt: "Newly laid turf being watered with a sprinkler during residential site clearance reinstatement",
+    category: "site-clearance"
+  },
+  {
     id: 2015,
     src: "/lovable-uploads/site-clearance-aba-crane.jpg",
     alt: "Large green ABA Cranes mobile crane positioned in a commercial car park for tree work and site clearance support",
