@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, CheckCircle2, Upload, Send, Loader2 } from 'lucide-react';
+import { trackEmailClick } from '@/utils/emailTracking';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -473,7 +474,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-gray-600 mb-1">Email</p>
-                          <a href="mailto:info@reevestreesurgeons.co.uk" className="text-base font-semibold text-green-600 hover:text-green-700 transition-colors break-all">
+                          <a href="mailto:info@reevestreesurgeons.co.uk" onClick={() => trackEmailClick('info@reevestreesurgeons.co.uk')} className="text-base font-semibold text-green-600 hover:text-green-700 transition-colors break-all">
                             info@reevestreesurgeons.co.uk
                           </a>
                         </div>

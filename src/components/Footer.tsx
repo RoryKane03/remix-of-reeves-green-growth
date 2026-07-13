@@ -2,6 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Phone, Mail, MapPin, TreePine, CheckCircle, AlertTriangle } from 'lucide-react';
 import { useCookieConsent } from '@/contexts/CookieConsentContext';
 import { trackPhoneCall } from '@/utils/phoneTracking';
+import { trackEmailClick } from '@/utils/emailTracking';
 import facebookIcon from '@/assets/social/facebook-icon.webp';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -121,7 +122,7 @@ const Footer = () => {
                 <div className="flex items-start gap-2">
                   <Mail className="text-white mt-0.5 flex-shrink-0" size={14} />
                   <div className="text-sm">
-                    <a href="mailto:info@reevestreesurgeons.co.uk" className="hover:text-gold transition-colors text-white hover:underline break-all">
+                    <a href="mailto:info@reevestreesurgeons.co.uk" onClick={() => trackEmailClick('info@reevestreesurgeons.co.uk')} className="hover:text-gold transition-colors text-white hover:underline break-all">
                       info@reevestreesurgeons.co.uk
                     </a>
                   </div>
