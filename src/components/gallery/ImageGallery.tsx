@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Lightbox from './Lightbox';
 import CategoryDescription from './CategoryDescription';
 import treeWork1589 from '@/assets/tree-work-1589.jpg.asset.json';
+import treeWork1590 from '@/assets/tree-work-1590.jpg.asset.json';
 
 type FilterType = 'tree-work' | 'hedge-cutting' | 'stump-grinding' | 'site-clearance';
 
