@@ -37,6 +37,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Auth = lazy(() => import("./pages/Auth"));
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminBootstrap = lazy(() => import("./pages/AdminBootstrap"));
+const AdminAnalytics = lazy(() => import("./pages/admin/Analytics"));
+
 
 
 const queryClient = new QueryClient();
@@ -81,6 +83,7 @@ const AppContent = () => {
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/bootstrap" element={<AdminBootstrap />} />
+            <Route path="/admin/analytics" element={<AdminAnalytics />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

@@ -1,39 +1,36 @@
 ## Goal
-Track every click on any "Call Us Now" / phone button so you can see which clicks turn into calls in your ad and analytics dashboards.
+A private admin-only page that shows how many times people clicked "Call" buttons on the website, updating every time you open/refresh it. Also includes quick links to Google Analytics and Meta Events Manager for deeper analysis.
 
-## What we will build
-1. A single reusable helper `trackPhoneCall()` in `src/utils/phoneTracking.ts` that fires:
-   - **Google Analytics 4** event `phone_call_click` (works immediately with the existing GA tag `G-XDQDP2VTBG`).
-   - **Google Ads** conversion event for `AW-17942512211` (needs your conversion label).
-   - **Meta Pixel** `Contact` event (needs your Pixel ID).
-2. Replace every raw `tel:01527874143` click handler with the tracked wrapper.
-3. Add the Meta Pixel base script to `index.html` so the `fbq()` function is available.
+## What you'll get
 
-## Files to change
-- `src/utils/phoneTracking.ts` — new tracking helper.
-- `src/components/CTASection.tsx` — wrap "Call Us Now" button.
-- `src/components/gallery/GalleryCTA.tsx` — wrap "Call Us Now" button.
-- `src/components/FloatingChat.tsx` — wrap "Call Now" button.
-- `src/components/Header.tsx` — wrap the top-bar phone number link.
-- `index.html` — add Meta Pixel base code.
+- New page at `/admin/analytics`
+- Only visible to you (must be signed in with the admin role you already have)
+- Non-admins get redirected away; logged-out users get sent to sign-in
+- No public link — it's hidden from the site navigation
 
-## What I need from you
-Because you chose "All of the above", two extra IDs are required:
+### Metrics shown
+- Total call clicks — **Today**, **Last 7 days**, **Last 30 days**, **All-time**
+- "Last updated" timestamp + Refresh button
+- Small links out to Google Analytics 4 and Meta Events Manager
 
-1. **Google Ads conversion label** for phone calls. You get this in Google Ads under:
-   `Tools & Settings → Conversions → New conversion action → Website → Create and continue → Manually add code`
-   It looks like a short string, e.g. `abc123xyz456`.
-2. **Meta Pixel ID**. You get this from Meta Events Manager:
-   `https://business.facebook.com/events_manager`
-   It looks like `123456789012345`.
+## How the data gets there
 
-You can paste them here and I will store them securely via Lovable Secrets so they are not hard-coded in the repo. If you prefer, I can leave placeholder values in the code and you can update them later.
+1. New table `phone_clicks` in the backend (page URL, timestamp, optional user-agent).
+2. Every existing call/phone button already runs `trackPhoneCall()` — I'll extend that helper so it also writes a row to `phone_clicks` in parallel with the GA / Google Ads / Meta pixel events. No button code changes.
+3. The dashboard reads counts from that table on every visit — always fresh.
 
-## How it will work
-- When a visitor clicks any phone button, the helper first fires the tracking events, then navigates to `tel:01527874143`.
-- A small `setTimeout` buffer gives the pixels time to dispatch before the browser leaves the page.
-- In local development the helper will log to the console instead of sending real events.
+## Access rules
+- `phone_clicks` insert: allowed for anyone (including logged-out visitors) so clicks are captured.
+- `phone_clicks` read: admin role only.
 
-## Out of scope
-- We will not change the phone number, button styling, or page layout.
-- We will not add backend storage for these events; they are sent directly to Google/Meta.
+## Technical details
+- Migration: create `public.phone_clicks (id, page_path, user_agent, created_at)`, GRANTs, RLS, policies (`INSERT` to anon+authenticated, `SELECT` via `has_role(auth.uid(),'admin')`).
+- Update `src/utils/phoneTracking.ts` to `supabase.from('phone_clicks').insert(...)` (fire-and-forget, never blocks the dial).
+- New route `/admin/analytics` in `src/App.tsx` → `src/pages/admin/Analytics.tsx`.
+- Guard: check session + `user_roles` for `admin`; redirect otherwise.
+- Queries: 4 `count` queries with `created_at >=` filters for today / 7d / 30d / all-time, run on mount + on Refresh click.
+- Styled with existing forest/gold brand tokens; no changes to public site UI.
+
+## Out of scope (can add later if wanted)
+- Clicks-per-page breakdown, time-series chart, recent clicks feed
+- Form submissions or other event tracking

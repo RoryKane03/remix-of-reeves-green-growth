@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      phone_clicks: {
+        Row: {
+          created_at: string
+          id: string
+          page_path: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          page_path?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          page_path?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       quote_files: {
         Row: {
           created_at: string
