@@ -37,6 +37,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Auth = lazy(() => import("./pages/Auth"));
 const Admin = lazy(() => import("./pages/Admin"));
 const AdminBootstrap = lazy(() => import("./pages/AdminBootstrap"));
+const AdminAnalytics = lazy(() => import("./pages/admin/Analytics"));
+
 
 
 const queryClient = new QueryClient();
