@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Lightbox from './Lightbox';
 import CategoryDescription from './CategoryDescription';
+import treeWork1589 from '@/assets/tree-work-1589.jpg.asset.json';
 
 type FilterType = 'tree-work' | 'hedge-cutting' | 'stump-grinding' | 'site-clearance';
 
@@ -13,11 +14,18 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2018,
+    src: treeWork1589.url,
+    alt: "Aerial view of Reeves arborists dismantling a large tree beside a commercial warehouse using a mobile crane, with climber in the canopy and ground crew operating a stump grinder",
+    category: "tree-work"
+  },
+  {
     id: 2017,
     src: "/lovable-uploads/tree-work-1588.jpg",
     alt: "Tree surgeon in orange PPE lifted by mobile crane dismantling a tall tree beside commercial warehouse buildings",
     category: "tree-work"
   },
+
   {
     id: 2016,
     src: "/lovable-uploads/site-clearance-turfing-sprinkler.jpg",
