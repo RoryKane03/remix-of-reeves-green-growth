@@ -14,6 +14,7 @@ import BeforeAfterComparison from '@/components/BeforeAfterComparison';
 import ServiceHero from '@/components/ServiceHero';
 import { LazySection } from '@/components/LazySection';
 import { getServiceData } from '@/utils/structuredData';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 import treeBeforeImg from '@/assets/before-after/tree-work-before.jpg';
 import treeAfterImg from '@/assets/before-after/tree-work-after.jpg';
 const TreeWork = () => {
@@ -25,7 +26,7 @@ const TreeWork = () => {
     navigate('/contact');
   };
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
   const services = [{
     id: 'pruning',

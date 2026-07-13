@@ -12,6 +12,7 @@ import CTASection from '@/components/CTASection';
 import SEO from '@/components/SEO';
 import { getServiceData } from '@/utils/structuredData';
 import OptimizedImage from '@/components/ImageOptimization';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 
 const CommercialSiteClearance = () => {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ const CommercialSiteClearance = () => {
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
 
   const services = [

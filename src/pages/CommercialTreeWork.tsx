@@ -22,6 +22,7 @@ import {
   Phone
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 
 const CommercialTreeWork = () => {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ const CommercialTreeWork = () => {
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
 
   const services = [

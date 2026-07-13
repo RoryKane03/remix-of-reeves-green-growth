@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import BeforeAfterComparison from '@/components/BeforeAfterComparison';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 
 const CommercialStumpGrinding = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const CommercialStumpGrinding = () => {
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
 
   const services = [

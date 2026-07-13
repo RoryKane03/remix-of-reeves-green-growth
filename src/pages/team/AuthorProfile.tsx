@@ -7,6 +7,7 @@ import { Award, Shield, Phone, Mail, CheckCircle2, Star, TreePine, Users, Calend
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getAuthorSchema } from '@/utils/structuredData';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 
 const AuthorProfile = () => {
   const authorSchema = getAuthorSchema("John Reeves");
@@ -75,7 +76,7 @@ const AuthorProfile = () => {
                       </Button>
                     </Link>
                     <Button 
-                      onClick={() => window.location.href = 'tel:01527874143'}
+                      onClick={() => handlePhoneClick('01527874143')}
                       className="btn-outline-white"
                     >
                       01527 874143
@@ -355,7 +356,7 @@ const AuthorProfile = () => {
                     </Button>
                   </Link>
                   <Button 
-                    onClick={() => window.location.href = 'tel:01527874143'}
+                    onClick={() => handlePhoneClick('01527874143')}
                     className="bg-white text-forest-900 hover:bg-white/90 text-lg px-8 py-4 h-auto"
                   >
                     <Phone size={20} />

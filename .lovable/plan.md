@@ -1,25 +1,39 @@
-## Why the images show as blank with text on the live site
+## Goal
+Track every click on any "Call Us Now" / phone button so you can see which clicks turn into calls in your ad and analytics dashboards.
 
-Your published site is hosted on **Netlify** (see `netlify.toml`), not on Lovable's hosting.
+## What we will build
+1. A single reusable helper `trackPhoneCall()` in `src/utils/phoneTracking.ts` that fires:
+   - **Google Analytics 4** event `phone_call_click` (works immediately with the existing GA tag `G-XDQDP2VTBG`).
+   - **Google Ads** conversion event for `AW-17942512211` (needs your conversion label).
+   - **Meta Pixel** `Contact` event (needs your Pixel ID).
+2. Replace every raw `tel:01527874143` click handler with the tracked wrapper.
+3. Add the Meta Pixel base script to `index.html` so the `fbq()` function is available.
 
-When I added the 5 new hedge photos, I used the Lovable CDN system, which serves files from special URLs like `/__l5e/assets-v1/…/hedge-cutting-1574.jpg`. Those URLs only work on Lovable hosting — on Netlify they don't exist, so Netlify's SPA fallback returns your `index.html` page instead of the image. The browser tries to render that HTML as an image, which is why you see a blank tile with page text on it.
+## Files to change
+- `src/utils/phoneTracking.ts` — new tracking helper.
+- `src/components/CTASection.tsx` — wrap "Call Us Now" button.
+- `src/components/gallery/GalleryCTA.tsx` — wrap "Call Us Now" button.
+- `src/components/FloatingChat.tsx` — wrap "Call Now" button.
+- `src/components/Header.tsx` — wrap the top-bar phone number link.
+- `index.html` — add Meta Pixel base code.
 
-Every other image in your gallery uses `/lovable-uploads/…` (files inside the `public/` folder), which Netlify serves correctly. The fix is to do the same for these 5 images.
+## What I need from you
+Because you chose "All of the above", two extra IDs are required:
 
-## Plan
+1. **Google Ads conversion label** for phone calls. You get this in Google Ads under:
+   `Tools & Settings → Conversions → New conversion action → Website → Create and continue → Manually add code`
+   It looks like a short string, e.g. `abc123xyz456`.
+2. **Meta Pixel ID**. You get this from Meta Events Manager:
+   `https://business.facebook.com/events_manager`
+   It looks like `123456789012345`.
 
-1. Copy the 5 uploaded photos into `public/lovable-uploads/`:
-   - `hedge-cutting-1574.jpg`
-   - `hedge-cutting-1575.jpg`
-   - `hedge-cutting-1576.jpg`
-   - `hedge-cutting-1577.jpg`
-   - `hedge-cutting-1578.jpg`
-2. In `src/components/gallery/ImageGallery.tsx`:
-   - Remove the 5 `import hedgeCutting15xx from '@/assets/hedge-cutting-15xx.jpg.asset.json'` lines.
-   - Change each of the 5 gallery entries from `src: hedgeCutting15xx.url` to `src: "/lovable-uploads/hedge-cutting-15xx.jpg"`.
-3. Delete the now-unused Lovable CDN pointers from `src/assets/`:
-   - `hedge-cutting-1574.jpg.asset.json` … `hedge-cutting-1578.jpg.asset.json`
-   (Uses `lovable-assets delete` so the CDN copies are cleaned up too.)
-4. Verify the build compiles.
+You can paste them here and I will store them securely via Lovable Secrets so they are not hard-coded in the repo. If you prefer, I can leave placeholder values in the code and you can update them later.
 
-After you publish/redeploy on Netlify, the 5 hedge cutting photos will display correctly.
+## How it will work
+- When a visitor clicks any phone button, the helper first fires the tracking events, then navigates to `tel:01527874143`.
+- A small `setTimeout` buffer gives the pixels time to dispatch before the browser leaves the page.
+- In local development the helper will log to the console instead of sending real events.
+
+## Out of scope
+- We will not change the phone number, button styling, or page layout.
+- We will not add backend storage for these events; they are sent directly to Google/Meta.

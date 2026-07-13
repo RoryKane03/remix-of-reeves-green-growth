@@ -23,6 +23,7 @@ import { submitQuote } from '@/features/quotes/submitQuote';
 import { toast } from 'sonner';
 
 import { formatQuoteFileSize, processQuoteFiles } from '@/utils/quoteFileProcessing';
+import { trackPhoneCall } from '@/utils/phoneTracking';
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -459,7 +460,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-gray-600 mb-1">Phone</p>
-                          <a href="tel:01527874143" className="text-base font-semibold text-green-600 hover:text-green-700 transition-colors">
+                          <a href="tel:01527874143" onClick={() => trackPhoneCall('01527874143')} className="text-base font-semibold text-green-600 hover:text-green-700 transition-colors">
                             01527 874143
                           </a>
                         </div>

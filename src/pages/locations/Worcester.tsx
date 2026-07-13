@@ -10,6 +10,7 @@ import CTASection from '@/components/CTASection';
 import RelatedServices from '@/components/RelatedServices';
 import LocationHero from '@/components/LocationHero';
 import { getLocalBusinessData } from '@/utils/structuredData';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 
 const Worcester = () => {
   const navigate = useNavigate();
@@ -235,7 +236,7 @@ const Worcester = () => {
                         </div>
                       </div>
                       <div className="mt-4 text-center">
-                        <Button onClick={() => window.location.href = 'tel:01527874143'} className="btn-primary-green w-full">
+                        <Button onClick={() => handlePhoneClick('01527874143')} className="btn-primary-green w-full">
                           Emergency Call Now
                         </Button>
                       </div>

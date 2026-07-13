@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import { trackQuoteConversion } from '@/utils/gtagConversion';
+import { trackPhoneCall } from '@/utils/phoneTracking';
 
 const ThankYou = () => {
   useEffect(() => {
@@ -68,7 +69,7 @@ const ThankYou = () => {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="tel:01527874143">
+              <a href="tel:01527874143" onClick={() => trackPhoneCall('01527874143')}>
                 <Phone className="h-4 w-4 mr-2" />
                 Call Us: 01527 874143
               </a>

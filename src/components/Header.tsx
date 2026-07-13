@@ -5,6 +5,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { Menu, X, ChevronDown, ChevronRight, ArrowUpRight, Phone, Mail } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/reeves-logo-hq.png";
+import { trackPhoneCall } from "@/utils/phoneTracking";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -156,6 +157,7 @@ const Header = () => {
               {/* Phone */}
               <a 
                 href="tel:01527874143" 
+                onClick={() => trackPhoneCall('01527874143')}
                 className="flex items-center gap-2 text-white/90 hover:text-gold transition-colors duration-200"
               >
                 <Phone className="h-3.5 w-3.5" />

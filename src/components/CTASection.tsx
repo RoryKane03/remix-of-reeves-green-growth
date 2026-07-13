@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Phone, ArrowRight } from 'lucide-react';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 
 interface CTASectionProps {
   heading?: string;
@@ -21,7 +22,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
 
   return (

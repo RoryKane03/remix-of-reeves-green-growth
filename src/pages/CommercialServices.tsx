@@ -12,6 +12,7 @@ import SEO from '@/components/SEO';
 import InternalLinkSuggestions from '@/components/InternalLinkSuggestions';
 import CTASection from '@/components/CTASection';
 import { getServiceData } from '@/utils/structuredData';
+import { handlePhoneClick } from '@/utils/phoneTracking';
 const services = [{
   id: 'site-clearance',
   icon: HardHat,
@@ -76,7 +77,7 @@ const CommercialServices = () => {
     navigate('/contact');
   };
   const handleCall = () => {
-    window.location.href = 'tel:01527874143';
+    handlePhoneClick('01527874143');
   };
   return <div className="min-h-screen bg-white">
       <SEO title="Commercial Tree Surgery Services | Reeves Tree Surgeons" description="Professional commercial tree services in West Midlands. ARB approved contractor for businesses, schools & commercial properties. Site clearance, tree work & hedge cutting." keywords="commercial tree services, business tree surgery, commercial tree work, commercial hedge cutting, commercial stump grinding, site clearance, West Midlands, ARB approved contractor" url="/commercial-services" structuredData={getServiceData("Commercial Tree Services", "Professional commercial tree services for businesses and institutions in West Midlands", "/commercial-services")} breadcrumbs={[{
