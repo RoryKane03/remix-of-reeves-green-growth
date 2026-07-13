@@ -101,7 +101,7 @@ const LocationHero = ({
                 Get Free {locationName} Quote
               </Button>
               <Button
-                onClick={() => (window.location.href = 'tel:01527874143')}
+                onClick={() => handlePhoneClick('01527874143')}
                 size="lg"
                 className="bg-forest-800 hover:bg-forest-900 text-white border-2 border-white/30 font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-200"
               >
