@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Lightbox from './Lightbox';
 import CategoryDescription from './CategoryDescription';
 import treeWork1589 from '@/assets/tree-work-1589.jpg.asset.json';
+import treeWork1590 from '@/assets/tree-work-1590.jpg.asset.json';
 
 type FilterType = 'tree-work' | 'hedge-cutting' | 'stump-grinding' | 'site-clearance';
 
@@ -13,6 +14,12 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
+  {
+    id: 2019,
+    src: treeWork1590.url,
+    alt: "Aerial drone view of Reeves arborists dismantling a large tree between industrial warehouse buildings using a mobile crane and ground crew",
+    category: "tree-work"
+  },
   {
     id: 2018,
     src: treeWork1589.url,
