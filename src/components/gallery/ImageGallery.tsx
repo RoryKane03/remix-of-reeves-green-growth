@@ -15,6 +15,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2022,
+    src: "/lovable-uploads/site-clearance-fresh-grill-landscaping.jpg",
+    alt: "Completed commercial site clearance and landscaping with fresh planting and bark mulch bed beside a Fresh Grill building",
+    category: "site-clearance"
+  },
+  {
     id: 2021,
     src: treeWorkAerialClimberOak.url,
     alt: "Aerial view of Reeves tree surgeon climbing and dismantling a tall tree above dense scrubland beside residential housing in the West Midlands",
