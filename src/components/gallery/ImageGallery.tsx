@@ -15,6 +15,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2024,
+    src: "/lovable-uploads/tree-work-night-crane-lift.jpg",
+    alt: "Nighttime crane lift removing a large tree section, with a green ABA Cranes mobile crane, arborist in a MEWP basket, and ground crew in high-visibility PPE",
+    category: "tree-work"
+  },
+  {
     id: 2023,
     src: "/lovable-uploads/tree-work-night-crane-operation.jpg",
     alt: "Nighttime tree dismantle operation with a green ABA Cranes mobile crane lifting an arborist in a MEWP basket, crew in orange PPE managing the roadside site",
