@@ -15,6 +15,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2023,
+    src: "/lovable-uploads/tree-work-night-crane-operation.jpg",
+    alt: "Nighttime tree dismantle operation with a green ABA Cranes mobile crane lifting an arborist in a MEWP basket, crew in orange PPE managing the roadside site",
+    category: "tree-work"
+  },
+  {
     id: 2022,
     src: "/lovable-uploads/site-clearance-fresh-grill-landscaping.jpg",
     alt: "Completed commercial site clearance and landscaping with fresh planting and bark mulch bed beside a Fresh Grill building",
