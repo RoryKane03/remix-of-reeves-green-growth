@@ -204,7 +204,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-white/70">
               <div className="space-y-0.5">
                 <div>© {currentYear} Reeves Tree Surgeons. All rights reserved.</div>
-                <div>Reeves Tree Surgeons Limited | Registered office 4e Heathfield Road, Kings Heath, Birmingham B14 7DB. | Registered in England No. 05491186</div>
+                <div>Reeves Tree Surgeons Limited | Registered office 125 Aston Cantlow Rd, Wilmcote, Stratford-upon-Avon CV37 9XW | Registered in England No. 05491186</div>
               </div>
               <div className="text-gold font-semibold text-sm">Established 2002</div>
             </div>
