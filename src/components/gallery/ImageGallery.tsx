@@ -15,6 +15,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2025,
+    src: "/lovable-uploads/tree-work-aerial-pine-yard.jpg",
+    alt: "Aerial drone view of Reeves arborists dismantling a large pine tree in a commercial yard, with a tracked chipper, trailer and banksman in orange PPE below",
+    category: "tree-work"
+  },
+  {
     id: 2024,
     src: "/lovable-uploads/tree-work-night-crane-lift.jpg",
     alt: "Nighttime crane lift removing a large tree section, with a green ABA Cranes mobile crane, arborist in a MEWP basket, and ground crew in high-visibility PPE",
