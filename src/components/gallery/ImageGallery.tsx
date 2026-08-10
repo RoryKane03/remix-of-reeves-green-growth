@@ -116,6 +116,18 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2032,
+    src: "/lovable-uploads/hedge-cutting-office-formal.jpg",
+    alt: "Neatly shaped flowering hedge maintained by Reeves Tree Surgeons outside a commercial office building entrance",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2033,
+    src: "/lovable-uploads/hedge-cutting-office-boundary.jpg",
+    alt: "Long boundary hedge trimmed to a uniform height alongside a commercial office block by Reeves Tree Surgeons",
+    category: "hedge-cutting"
+  },
+  {
     id: 2029,
     src: "/lovable-uploads/hedge-cutting-mewp-conifer.jpg",
     alt: "Reeves tree surgeons using a truck-mounted MEWP cherry picker to reduce a tall conifer beside a residential driveway",
