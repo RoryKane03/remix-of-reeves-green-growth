@@ -15,6 +15,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2026,
+    src: "/lovable-uploads/tree-work-climber-pine-industrial.jpg",
+    alt: "Reeves arborist in orange helmet and PPE climbing a tall pine to sectionally dismantle it beside an industrial unit",
+    category: "tree-work"
+  },
+  {
     id: 2025,
     src: "/lovable-uploads/tree-work-aerial-pine-yard.jpg",
     alt: "Aerial drone view of Reeves arborists dismantling a large pine tree in a commercial yard, with a tracked chipper, trailer and banksman in orange PPE below",
