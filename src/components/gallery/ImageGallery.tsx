@@ -37,6 +37,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2034,
+    src: "/lovable-uploads/site-clearance-courtyard-gravel.jpg",
+    alt: "Cleared and landscaped courtyard after a Reeves site clearance, with fresh gravel, flagstone path and potted topiary outside a period cottage",
+    category: "site-clearance"
+  },
+  {
     id: 2028,
     src: "/lovable-uploads/site-clearance-night-crane-rigging.jpg",
     alt: "Night-time crane-assisted tree removal during a Reeves site clearance, with rigging lines set into a large tree and an arborist working from a MEWP basket",
