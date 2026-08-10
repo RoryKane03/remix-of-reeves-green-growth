@@ -116,6 +116,24 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2029,
+    src: "/lovable-uploads/hedge-cutting-mewp-conifer.jpg",
+    alt: "Reeves tree surgeons using a truck-mounted MEWP cherry picker to reduce a tall conifer beside a residential driveway",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2030,
+    src: "/lovable-uploads/hedge-cutting-boxed-beech-boundary.jpg",
+    alt: "Freshly boxed and squared garden boundary hedge after professional hedge cutting by Reeves Tree Surgeons",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2031,
+    src: "/lovable-uploads/hedge-cutting-garden-boundary-topiary.jpg",
+    alt: "Neatly trimmed garden boundary hedge with a large rounded topiary conifer after maintenance by Reeves Tree Surgeons",
+    category: "hedge-cutting"
+  },
+  {
     id: 2001,
     src: "/lovable-uploads/hedge-cutting-1574.jpg",
     alt: "Neatly maintained garden hedge alongside a young tree with countryside views",
