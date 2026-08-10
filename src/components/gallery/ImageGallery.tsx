@@ -37,6 +37,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2028,
+    src: "/lovable-uploads/site-clearance-night-crane-rigging.jpg",
+    alt: "Night-time crane-assisted tree removal during a Reeves site clearance, with rigging lines set into a large tree and an arborist working from a MEWP basket",
+    category: "site-clearance"
+  },
+  {
     id: 2027,
     src: "/lovable-uploads/site-clearance-night-road-crane.jpg",
     alt: "Aerial night view of a Reeves roadside site clearance with a green mobile crane, MEWP platform, tipper skip and crew in orange PPE clearing vegetation",
