@@ -37,6 +37,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2027,
+    src: "/lovable-uploads/site-clearance-night-road-crane.jpg",
+    alt: "Aerial night view of a Reeves roadside site clearance with a green mobile crane, MEWP platform, tipper skip and crew in orange PPE clearing vegetation",
+    category: "site-clearance"
+  },
+  {
     id: 2022,
     src: "/lovable-uploads/site-clearance-fresh-grill-landscaping.jpg",
     alt: "Completed commercial site clearance and landscaping with fresh planting and bark mulch bed beside a Fresh Grill building",
