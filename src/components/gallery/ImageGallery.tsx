@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2035,
+    src: "/lovable-uploads/tree-work-night-crane-lift-roadside.jpg",
+    alt: "Nighttime crane-assisted tree dismantle operation with crew in orange PPE guiding a large tree section lowered by rigging lines",
+    category: "tree-work"
+  },
+  {
     id: 2026,
     src: "/lovable-uploads/tree-work-climber-pine-industrial.jpg",
     alt: "Reeves arborist in orange helmet and PPE climbing a tall pine to sectionally dismantle it beside an industrial unit",
