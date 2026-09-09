@@ -67,6 +67,18 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2041,
+    src: "/lovable-uploads/site-clearance-pizza-carvery-topiary.jpg",
+    alt: "Commercial site clearance and landscaping with spiral topiary and white gravel bed outside a Pizza Burger Carvery restaurant",
+    category: "site-clearance"
+  },
+  {
+    id: 2040,
+    src: "/lovable-uploads/site-clearance-fulling-mill-topiary.jpg",
+    alt: "Reeves site clearance and landscaping with spiral topiary trees and white gravel bed outside The Fulling Mill pub",
+    category: "site-clearance"
+  },
+  {
     id: 2034,
     src: "/lovable-uploads/site-clearance-courtyard-gravel.jpg",
     alt: "Cleared and landscaped courtyard after a Reeves site clearance, with fresh gravel, flagstone path and potted topiary outside a period cottage",
