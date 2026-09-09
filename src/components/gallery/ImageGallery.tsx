@@ -13,6 +13,24 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2038,
+    src: "/lovable-uploads/tree-work-mewp-high-canopy.jpg",
+    alt: "Reeves arborist working from a MEWP cherry picker high in the canopy of a large tree beside a Tudor-style building",
+    category: "tree-work"
+  },
+  {
+    id: 2037,
+    src: "/lovable-uploads/tree-work-arborist-mewp-canopy.jpg",
+    alt: "Tree surgeon in orange PPE using a MEWP cherry picker to dismantle a large tree next to a timber-framed building",
+    category: "tree-work"
+  },
+  {
+    id: 2036,
+    src: "/lovable-uploads/tree-work-mewp-tudor-building.jpg",
+    alt: "Reeves tree surgery team with a MEWP cherry picker and wood chipper preparing to dismantle a large tree beside a Tudor-style property",
+    category: "tree-work"
+  },
+  {
     id: 2035,
     src: "/lovable-uploads/tree-work-night-crane-lift-roadside.jpg",
     alt: "Nighttime crane-assisted tree dismantle operation with crew in orange PPE guiding a large tree section lowered by rigging lines",
