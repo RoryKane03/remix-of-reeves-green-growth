@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2039,
+    src: "/lovable-uploads/tree-work-residential-garden-canopy.jpg",
+    alt: "Reeves tree surgeons shaping the canopy of a mature garden tree in a residential setting",
+    category: "tree-work"
+  },
+  {
     id: 2038,
     src: "/lovable-uploads/tree-work-mewp-high-canopy.jpg",
     alt: "Reeves arborist working from a MEWP cherry picker high in the canopy of a large tree beside a Tudor-style building",
