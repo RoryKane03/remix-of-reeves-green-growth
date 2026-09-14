@@ -29,7 +29,6 @@ const Hero = () => {
       <div className="home-hero__inner">
         <div className="home-hero__content">
           <p className="home-hero__kicker home-hero__entrance home-hero__entrance--1">
-            <span aria-hidden="true" />
             Family-run from Bromsgrove
           </p>
 
