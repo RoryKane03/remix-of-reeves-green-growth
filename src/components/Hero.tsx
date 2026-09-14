@@ -42,7 +42,7 @@ const Hero = () => {
               loading="eager"
               decoding="async"
             />
-            <p>Independently checked — only 5% of UK tree surgeons are</p>
+            <p>Top 5 % of Tree Surgeons</p>
           </div>
 
           <h1 className="home-hero__title home-hero__entrance home-hero__entrance--2">
