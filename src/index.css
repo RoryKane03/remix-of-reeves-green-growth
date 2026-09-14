@@ -277,6 +277,12 @@
 .home-hero__entrance--3 { animation-delay: 220ms; }
 .home-hero__entrance--4 { animation-delay: 330ms; }
 
+@media (min-width: 980px) {
+  .home-hero__title {
+    font-size: clamp(2.1rem, 5.2vw, 4rem);
+  }
+}
+
 @media (max-width: 979px) {
   .home-hero {
     min-height: 0;
