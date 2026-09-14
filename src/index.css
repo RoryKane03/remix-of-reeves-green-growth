@@ -193,7 +193,7 @@
   gap: 0.85rem;
 }
 
-.home-hero__button {
+.home-hero__button.home-hero__button {
   width: auto;
   height: auto;
   min-height: 54px;
@@ -201,53 +201,52 @@
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 600;
-  box-shadow: none;
-  transform: none;
+  box-shadow: none !important;
+  transform: none !important;
   transition: background-color 0.18s ease, border-color 0.18s ease;
 }
 
-.home-hero__button:hover,
-.home-hero__button:focus-visible,
-.home-hero__button:active {
-  transform: none;
-  box-shadow: none;
+.home-hero__button.home-hero__button:hover,
+.home-hero__button.home-hero__button:focus-visible,
+.home-hero__button.home-hero__button:active {
+  transform: none !important;
+  box-shadow: none !important;
 }
 
-.home-hero__button:focus-visible {
+.home-hero__button.home-hero__button:focus-visible {
   outline: 2px solid hsl(var(--hero-gold));
   outline-offset: 3px;
-  background-color: transparent;
 }
 
-.home-hero__button--primary {
+.home-hero__button--primary.home-hero__button--primary {
   border: none;
   background: hsl(var(--hero-gold));
   color: hsl(var(--hero-deep));
 }
 
-.home-hero__button--primary:hover {
+.home-hero__button--primary.home-hero__button--primary:hover {
   background: hsl(var(--hero-gold-hover));
   color: hsl(var(--hero-deep));
 }
 
-.home-hero__button--primary:active {
+.home-hero__button--primary.home-hero__button--primary:active {
   background: hsl(var(--hero-gold-active));
   color: hsl(var(--hero-deep));
 }
 
-.home-hero__button--secondary {
+.home-hero__button--secondary.home-hero__button--secondary {
   border: 1px solid hsl(var(--hero-border));
   background: transparent;
   color: hsl(var(--hero-off-white));
 }
 
-.home-hero__button--secondary:hover {
+.home-hero__button--secondary.home-hero__button--secondary:hover {
   border-color: hsl(var(--hero-off-white));
   background: hsl(var(--hero-surface-hover));
   color: hsl(var(--hero-off-white));
 }
 
-.home-hero__button--secondary:active {
+.home-hero__button--secondary.home-hero__button--secondary:active {
   background: hsl(var(--hero-surface-active));
   color: hsl(var(--hero-off-white));
 }
