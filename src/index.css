@@ -171,6 +171,10 @@
   text-wrap: balance;
 }
 
+.home-hero__desktop-break {
+  display: block;
+}
+
 .home-hero__subtext {
   max-width: 520px;
   margin: 0 0 2.25rem;
@@ -330,6 +334,10 @@
     max-width: none;
     font-size: clamp(2.1rem, 9vw, 3rem);
     line-height: 1.1;
+  }
+
+  .home-hero__desktop-break {
+    display: none;
   }
 
   .home-hero__subtext {
