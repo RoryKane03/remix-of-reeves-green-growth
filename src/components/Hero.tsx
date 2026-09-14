@@ -42,11 +42,11 @@ const Hero = () => {
               loading="eager"
               decoding="async"
             />
-            <p>Top 5 % of Tree Surgeons</p>
+            <p>Top 5% of tree surgeons</p>
           </div>
 
           <h1 className="home-hero__title home-hero__entrance home-hero__entrance--2">
-            The West Midlands'<br className="home-hero__desktop-break" /> ARB Approved tree<br className="home-hero__desktop-break" /> surgeons since 2002
+            The West Midlands' ARB Approved tree surgeons since 2002
           </h1>
 
           <p className="home-hero__subtext home-hero__entrance home-hero__entrance--3">
