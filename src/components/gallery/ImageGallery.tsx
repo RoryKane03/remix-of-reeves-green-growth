@@ -164,6 +164,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2045,
+    src: "/lovable-uploads/hedge-cutting-tall-rounded-yew.jpg",
+    alt: "Row of tall rounded yew hedges freshly trimmed by Reeves Tree Surgeons beside a holly tree in a garden border",
+    category: "hedge-cutting"
+  },
+  {
     id: 2044,
     src: "/lovable-uploads/hedge-cutting-mewp-boundary-hedge.jpg",
     alt: "Reeves arborist working from a red tracked MEWP to trim a tall boundary hedge between two residential properties",
