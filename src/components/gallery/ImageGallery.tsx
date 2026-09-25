@@ -164,6 +164,18 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2042,
+    src: "/lovable-uploads/hedge-cutting-ivy-roof-trim.jpg",
+    alt: "Reeves tree surgeon trimming ivy growth from a residential flat roof with a ladder in place",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2043,
+    src: "/lovable-uploads/hedge-cutting-long-reach-ivy-hedge.jpg",
+    alt: "Reeves arborist using a long-reach pole hedge trimmer on a tripod ladder to cut a large ivy hedge",
+    category: "hedge-cutting"
+  },
+  {
     id: 2032,
     src: "/lovable-uploads/hedge-cutting-office-formal.jpg",
     alt: "Neatly shaped flowering hedge maintained by Reeves Tree Surgeons outside a commercial office building entrance",
