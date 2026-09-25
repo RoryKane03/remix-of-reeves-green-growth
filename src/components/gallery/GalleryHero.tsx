@@ -12,7 +12,7 @@ const GalleryHero = () => {
             filter: 'saturate(1.1) contrast(1.05)'
           }}
           loading="eager"
-          fetchPriority="high"
+          fetchpriority="high"
           decoding="async"
         />
         {/* Elegant gradient overlay matching homepage style */}
