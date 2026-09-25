@@ -73,6 +73,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2047,
+    src: "/lovable-uploads/site-clearance-driveway-groundsworks.jpg",
+    alt: "Reeves crew carrying out groundworks and site clearance with a mini excavator, tracked chipper and pickup on a large country estate",
+    category: "site-clearance"
+  },
+  {
     id: 2041,
     src: "/lovable-uploads/site-clearance-pizza-carvery-topiary.jpg",
     alt: "Commercial site clearance and landscaping with spiral topiary and white gravel bed outside a Pizza Burger Carvery restaurant",
