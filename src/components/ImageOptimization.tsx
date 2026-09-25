@@ -77,7 +77,7 @@ const OptimizedImage = ({
       style={optimizedStyle}
       onLoad={handleLoad}
       onError={handleError}
-      {...(fetchPriority !== 'auto' && { fetchPriority })}
+      {...(fetchPriority !== 'auto' && ({ fetchpriority: fetchPriority } as Record<string, string>))}
     />
   );
 };
