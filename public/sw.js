@@ -5,7 +5,7 @@
    - Optimized for Core Web Vitals and offline support
 */
 
-const STATIC_CACHE = 'static-v3';
+const STATIC_CACHE = 'static-v4';
 const FONT_CACHE = 'fonts-v1';
 const IMAGE_CACHE = 'images-v2';
 const API_CACHE = 'api-v1';
