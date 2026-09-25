@@ -164,6 +164,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2044,
+    src: "/lovable-uploads/hedge-cutting-mewp-boundary-hedge.jpg",
+    alt: "Reeves arborist working from a red tracked MEWP to trim a tall boundary hedge between two residential properties",
+    category: "hedge-cutting"
+  },
+  {
     id: 2042,
     src: "/lovable-uploads/hedge-cutting-ivy-roof-trim.jpg",
     alt: "Reeves tree surgeon trimming ivy growth from a residential flat roof with a ladder in place",
