@@ -68,8 +68,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Cache built assets (JS/CSS) with cache-first strategy
-  if (url.origin === self.location.origin && (pathname.startsWith('/assets/') || pathname.startsWith('/src/'))) {
+  // Cache built assets (JS/CSS) with cache-first strategy.
+  // Content-hashed /assets/ files are immutable, so cache-first is safe there.
+  // NEVER cache /src/* (unhashed dev module URLs) — serving a stale module after
+  // an edit breaks the app with mismatched contexts (Router/Helmet errors).
+  if (url.origin === self.location.origin && pathname.startsWith('/assets/')) {
     event.respondWith((async () => {
       const cache = await caches.open(STATIC_CACHE);
       const cached = await cache.match(request);
