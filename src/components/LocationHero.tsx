@@ -47,7 +47,7 @@ const LocationHero = ({
             filter: 'saturate(1.1) contrast(1.05)',
           }}
           loading="eager"
-          fetchpriority="high"
+          {...({ fetchpriority: 'high' } as Record<string, string>)}
           decoding="async"
           width="1920"
           height="1080"

@@ -29,7 +29,7 @@ const ServiceHero = ({ category, icon: Icon, title, description, backgroundImage
             filter: 'saturate(1.1) contrast(1.05)'
           }}
           loading="eager"
-          fetchpriority="high"
+          {...({ fetchpriority: 'high' } as Record<string, string>)}
           decoding="async"
         />
         {/* Enhanced gradient overlay for better contrast */}
