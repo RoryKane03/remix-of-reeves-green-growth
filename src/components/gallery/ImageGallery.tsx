@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2046,
+    src: "/lovable-uploads/tree-work-beech-reduction-roadside.jpg",
+    alt: "Reeves tree surgeon in orange PPE carrying out a sectional reduction on a large roadside copper beech, with climbing lines rigged through the crown",
+    category: "tree-work"
+  },
+  {
     id: 2039,
     src: "/lovable-uploads/tree-work-residential-garden-canopy.jpg",
     alt: "Reeves tree surgeons shaping the canopy of a mature garden tree in a residential setting",
