@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2051,
+    src: "/lovable-uploads/tree-work-crane-pub-car-park.jpg",
+    alt: "Aerial view of Reeves arborists dismantling a large tree in a pub car park, with a mobile crane extending over the site and the tree section suspended by rigging lines",
+    category: "tree-work"
+  },
+  {
     id: 2046,
     src: "/lovable-uploads/tree-work-beech-reduction-roadside.jpg",
     alt: "Reeves tree surgeon in orange PPE carrying out a sectional reduction on a large roadside copper beech, with climbing lines rigged through the crown",
