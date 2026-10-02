@@ -73,6 +73,24 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2050,
+    src: "/lovable-uploads/site-clearance-avant-brush-clearance.jpg",
+    alt: "Reeves operator loading cleared brush and vegetation into a skip with a green Avant 755 mini loader during a commercial site clearance in Derby",
+    category: "site-clearance"
+  },
+  {
+    id: 2049,
+    src: "/lovable-uploads/site-clearance-harvester-pride-park-dusk.jpg",
+    alt: "Cleared and mulched landscape outside the Harvester pub at Pride Park Derby at dusk, with a Ward skip and site barriers",
+    category: "site-clearance"
+  },
+  {
+    id: 2048,
+    src: "/lovable-uploads/site-clearance-harvester-turfing.jpg",
+    alt: "Freshly laid turf along the car park verge at the Harvester pub, Pride Park Derby, following Reeves site clearance and reinstatement",
+    category: "site-clearance"
+  },
+  {
     id: 2047,
     src: "/lovable-uploads/site-clearance-driveway-groundsworks.jpg",
     alt: "Reeves crew carrying out groundworks and site clearance with a mini excavator, tracked chipper and pickup on a large country estate",
