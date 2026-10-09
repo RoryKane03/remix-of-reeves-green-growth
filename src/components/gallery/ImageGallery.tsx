@@ -200,6 +200,18 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2053,
+    src: "/lovable-uploads/hedge-cutting-modern-garden-lollipop-topiary.jpg",
+    alt: "Tall evergreen screen hedge trimmed with a flat level top along a slatted fence line, with lollipop topiary standards and a conical topiary in a modern paved residential garden",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2054,
+    src: "/lovable-uploads/hedge-cutting-laurel-driveway-border.jpg",
+    alt: "Cherry laurel hedge neatly trimmed in stepped sections along a block-paved driveway, with sculpted conical and dome topiary and small lollipop standards in the background",
+    category: "hedge-cutting"
+  },
+  {
     id: 2052,
     src: "/lovable-uploads/hedge-cutting-leylandii-boundary-trim.jpg",
     alt: "Tall Leylandii boundary hedge reduced and shaped with a flat level top and straight face in a residential garden, with lawn and wooden decking in the foreground",
