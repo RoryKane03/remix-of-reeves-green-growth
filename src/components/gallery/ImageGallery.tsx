@@ -200,6 +200,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2052,
+    src: "/lovable-uploads/hedge-cutting-leylandii-boundary-trim.jpg",
+    alt: "Tall Leylandii boundary hedge reduced and shaped with a flat level top and straight face in a residential garden, with lawn and wooden decking in the foreground",
+    category: "hedge-cutting"
+  },
+  {
     id: 2045,
     src: "/lovable-uploads/hedge-cutting-tall-rounded-yew.jpg",
     alt: "Row of tall rounded yew hedges freshly trimmed by Reeves Tree Surgeons beside a holly tree in a garden border",
