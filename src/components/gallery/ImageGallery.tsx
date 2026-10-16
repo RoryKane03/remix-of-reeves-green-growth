@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2058,
+    src: "/lovable-uploads/tree-work-crane-lifting-section.jpg",
+    alt: "Davies mobile crane with an extended telescopic boom lowering a rigging line to a Reeves arborist in orange high-visibility PPE working high in a partially dismantled ivy-covered tree in a wooded residential garden",
+    category: "tree-work"
+  },
+  {
     id: 2055,
     src: "/lovable-uploads/tree-work-crane-lift-castell-mynach.jpg",
     alt: "Mobile crane lifting a dismantled tree section over a pub car park during a Reeves crane-assisted tree removal",
