@@ -13,6 +13,24 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2055,
+    src: "/lovable-uploads/tree-work-crane-lift-castell-mynach.jpg",
+    alt: "Mobile crane lifting a dismantled tree section over a pub car park during a Reeves crane-assisted tree removal",
+    category: "tree-work"
+  },
+  {
+    id: 2056,
+    src: "/lovable-uploads/tree-work-climber-crane-rigging.jpg",
+    alt: "Reeves arborist in orange PPE climbing a tree beside a building roof, rigging a section to a crane hook",
+    category: "tree-work"
+  },
+  {
+    id: 2057,
+    src: "/lovable-uploads/tree-work-chainsaw-processing-car-park.jpg",
+    alt: "Reeves tree surgeons in hi-vis PPE processing a felled tree with chainsaws in a car park",
+    category: "tree-work"
+  },
+  {
     id: 2051,
     src: "/lovable-uploads/tree-work-crane-pub-car-park.jpg",
     alt: "Aerial view of Reeves arborists dismantling a large tree in a pub car park, with a mobile crane extending over the site and the tree section suspended by rigging lines",
