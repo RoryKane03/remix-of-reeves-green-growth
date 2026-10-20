@@ -61,8 +61,11 @@ const Lightbox = ({ images, currentImageId, onClose, onNavigate }: LightboxProps
       <button
         type="button"
         aria-label="Close image viewer"
-        className="absolute top-3 right-3 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:top-5 md:right-5 md:h-12 md:w-12"
-        style={{ top: 'max(12px, env(safe-area-inset-top))', right: 'max(12px, env(safe-area-inset-right))' }}
+        className="absolute z-30 flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        style={{
+          top: 'max(14px, env(safe-area-inset-top))',
+          right: 'max(14px, env(safe-area-inset-right))'
+        }}
         onClick={(e) => {
           e.stopPropagation();
           onClose();
