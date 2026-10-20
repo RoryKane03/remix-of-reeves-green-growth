@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2059,
+    src: "/lovable-uploads/tree-work-stump-chip-raking-verge.jpg",
+    alt: "Reeves Tree Surgeons arborist in orange high-visibility PPE raking wood chips and grindings from a completed tree stump removal on a grass verge with a hand saw and debris hose nearby",
+    category: "tree-work"
+  },
+  {
     id: 2058,
     src: "/lovable-uploads/tree-work-crane-lifting-section.jpg",
     alt: "Davies mobile crane with an extended telescopic boom lowering a rigging line to a Reeves arborist in orange high-visibility PPE working high in a partially dismantled ivy-covered tree in a wooded residential garden",
