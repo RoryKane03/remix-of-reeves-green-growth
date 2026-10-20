@@ -51,7 +51,7 @@ const Lightbox = ({ images, currentImageId, onClose, onNavigate }: LightboxProps
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[100] flex flex-col bg-black/95"
+      className="fixed inset-0 z-[100] flex flex-col bg-black"
       role="dialog"
       aria-modal="true"
       aria-label="Image viewer"
