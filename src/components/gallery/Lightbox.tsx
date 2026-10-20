@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 interface LightboxImage {
   id: number;
@@ -46,74 +46,88 @@ const Lightbox = ({ images, currentImageId, onClose, onNavigate }: LightboxProps
 
   if (!currentImage) return null;
 
-  return (
-    <div 
-      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+  const navButtonClass =
+    'absolute top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:h-14 md:w-14';
+
+  return createPortal(
+    <div
+      className="fixed inset-0 z-[100] flex flex-col bg-black"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
       onClick={onClose}
     >
-      {/* Close button */}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute top-4 right-4 z-10 text-white hover:bg-white/20 rounded-full"
-        onClick={onClose}
+      {/* Close button — fixed to the corner, above everything */}
+      <button
+        type="button"
+        aria-label="Close image viewer"
+        className="absolute z-30 flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        style={{
+          top: 'max(14px, env(safe-area-inset-top))',
+          right: 'max(14px, env(safe-area-inset-right))'
+        }}
+        onClick={(e) => {
+          e.stopPropagation();
+          onClose();
+        }}
       >
-        <X className="h-6 w-6" />
-      </Button>
+        <X className="h-6 w-6" strokeWidth={2.5} />
+      </button>
 
       {/* Navigation buttons */}
       {images.length > 1 && (
         <>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 rounded-full"
+          <button
+            type="button"
+            aria-label="Previous image"
+            className={`${navButtonClass} left-2 md:left-4`}
             onClick={(e) => {
               e.stopPropagation();
               onNavigate('prev');
             }}
           >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
+            <ChevronLeft className="h-7 w-7" />
+          </button>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20 rounded-full"
+          <button
+            type="button"
+            aria-label="Next image"
+            className={`${navButtonClass} right-2 md:right-4`}
             onClick={(e) => {
               e.stopPropagation();
               onNavigate('next');
             }}
           >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
+            <ChevronRight className="h-7 w-7" />
+          </button>
         </>
       )}
 
-      {/* Image container */}
-      <div 
-        className="relative w-[90vw] max-w-7xl h-[80vh] md:h-[85vh] flex items-center justify-center px-12 md:px-16"
+      {/* Image area — leaves room for buttons and the counter */}
+      <div
+        className="flex min-h-0 flex-1 items-center justify-center px-16 py-14 md:px-20 md:py-16"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={currentImage.src}
           alt={currentImage.alt}
-          className="w-full h-full object-contain rounded-lg shadow-2xl"
+          className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
         />
-        
-        {/* Image counter */}
-        {images.length > 1 && (
-          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-            {currentIndex + 1} / {images.length}
-          </div>
-        )}
       </div>
 
+      {/* Counter */}
+      {images.length > 1 && (
+        <div className="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-3 py-1 text-sm text-white">
+          {currentIndex + 1} / {images.length}
+        </div>
+      )}
+
       {/* Touch/swipe instructions */}
-      <div className="absolute bottom-4 left-4 text-white/70 text-sm hidden md:block">
+      <div className="pointer-events-none absolute bottom-4 left-4 hidden text-sm text-white/70 md:block">
         Use arrow keys or click arrows to navigate • ESC to close
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
