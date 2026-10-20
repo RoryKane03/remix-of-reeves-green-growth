@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2061,
+    src: "/lovable-uploads/tree-work-crane-lift-over-timber-barn.jpg",
+    alt: "Mobile crane with an extended telescopic boom lifting a large leafy tree section clear of a timber-clad barn roof during a crane-assisted tree removal by Reeves Tree Surgeons",
+    category: "tree-work"
+  },
+  {
     id: 2059,
     src: "/lovable-uploads/tree-work-stump-chip-raking-verge.jpg",
     alt: "Reeves Tree Surgeons arborist in orange high-visibility PPE raking wood chips and grindings from a completed tree stump removal on a grass verge with a hand saw and debris hose nearby",
