@@ -13,6 +13,12 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2065,
+    src: "/lovable-uploads/tree-work-limbs-loading-tudor-car-park.jpg",
+    alt: "Large freshly cut tree limbs and a trunk section staged for loading behind hazard tape in a cordoned-off car park beside a Tudor-style building, with an orange and white Reeves tree surgery truck waiting",
+    category: "tree-work"
+  },
+  {
     id: 2061,
     src: "/lovable-uploads/tree-work-crane-lift-over-timber-barn.jpg",
     alt: "Mobile crane with an extended telescopic boom lifting a large leafy tree section clear of a timber-clad barn roof during a crane-assisted tree removal by Reeves Tree Surgeons",
