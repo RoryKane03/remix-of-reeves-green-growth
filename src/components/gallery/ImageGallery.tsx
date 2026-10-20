@@ -115,6 +115,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2062,
+    src: "/lovable-uploads/site-clearance-chipper-tipper-loading.jpg",
+    alt: "Först ST6 wood chipper blowing freshly chipped branches and foliage into the open bed of a white Mercedes Sprinter tipper during a Reeves Tree Surgeons site clearance on a residential road",
+    category: "site-clearance"
+  },
+  {
     id: 2050,
     src: "/lovable-uploads/site-clearance-avant-brush-clearance.jpg",
     alt: "Reeves operator loading cleared brush and vegetation into a skip with a green Avant 755 mini loader during a commercial site clearance in Derby",
