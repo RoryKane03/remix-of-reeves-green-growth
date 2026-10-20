@@ -115,6 +115,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2064,
+    src: "/lovable-uploads/site-clearance-tracked-mulcher-cleared-field.jpg",
+    alt: "Tracked yellow remote-controlled forestry mulcher parked in a cleared field of shredded vegetation and brush during site clearance and scrub mulching by Reeves Tree Surgeons, with dense trees and railway gantries in the background",
+    category: "site-clearance"
+  },
+  {
     id: 2062,
     src: "/lovable-uploads/site-clearance-chipper-tipper-loading.jpg",
     alt: "Först ST6 wood chipper blowing freshly chipped branches and foliage into the open bed of a white Mercedes Sprinter tipper during a Reeves Tree Surgeons site clearance on a residential road",
