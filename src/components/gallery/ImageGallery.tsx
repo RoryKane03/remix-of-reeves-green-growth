@@ -242,6 +242,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2063,
+    src: "/lovable-uploads/hedge-cutting-boundary-hedge-estate-railings.jpg",
+    alt: "Long formally trimmed broadleaf boundary hedge with a flat level top and neat vertical sides, backed by dark metal estate railings, beside a mown grass verge with rolling arable fields and mature oaks beyond",
+    category: "hedge-cutting"
+  },
+  {
     id: 2060,
     src: "/lovable-uploads/hedge-cutting-car-park-boundary-trim.jpg",
     alt: "Long boundary hedge trimmed to a flat level top beside a tarmac car park with newly painted bay markings, residential houses and mature trees behind under a blue sky",
