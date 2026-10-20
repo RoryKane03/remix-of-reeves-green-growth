@@ -121,6 +121,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2066,
+    src: "/lovable-uploads/site-clearance-felled-timber-logs-pasture.jpg",
+    alt: "Large felled tree trunk with thick limb cuts beside a neatly stacked pile of cut timber logs on a grass pasture after tree felling and site clearance by Reeves Tree Surgeons, with a post-and-wire fence line and overcast sky",
+    category: "site-clearance"
+  },
+  {
     id: 2064,
     src: "/lovable-uploads/site-clearance-tracked-mulcher-cleared-field.jpg",
     alt: "Tracked yellow remote-controlled forestry mulcher parked in a cleared field of shredded vegetation and brush during site clearance and scrub mulching by Reeves Tree Surgeons, with dense trees and railway gantries in the background",
