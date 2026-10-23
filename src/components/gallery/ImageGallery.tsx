@@ -13,6 +13,24 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2067,
+    src: "/lovable-uploads/tree-work-crane-dismantle-poplar.jpg",
+    alt: "Orange mobile crane with an extended boom rigged to a tall ivy-covered tree trunk being dismantled in sections beside a residential car park, with cut stumps on the grass verge below",
+    category: "tree-work"
+  },
+  {
+    id: 2068,
+    src: "/lovable-uploads/tree-work-climber-pov-crane-removal.jpg",
+    alt: "Climber's point of view from a Niftylift cherry picker holding a Stihl chainsaw during a crane-assisted tree removal, with the orange mobile crane boom extended over a partially dismantled tree and fresh-cut stumps below",
+    category: "tree-work"
+  },
+  {
+    id: 2069,
+    src: "/lovable-uploads/tree-work-climber-chainsaw-ivy-trunk.jpg",
+    alt: "Reeves arborist's point of view cutting into an ivy-covered tree trunk with an orange Stihl MS 881 chainsaw high above a residential street, with the crane and work site visible below",
+    category: "tree-work"
+  },
+  {
     id: 2065,
     src: "/lovable-uploads/tree-work-limbs-loading-tudor-car-park.jpg",
     alt: "Large freshly cut tree limbs and a trunk section staged for loading behind hazard tape in a cordoned-off car park beside a Tudor-style building, with an orange and white Reeves tree surgery truck waiting",
