@@ -107,11 +107,13 @@ export type Database = {
           discount_code: string | null
           email: string
           id: string
+          marketing_attribution: Json | null
           message: string | null
           name: string
           phone: string
           postcode: string | null
           service: string | null
+          tracking_consent: Json | null
           user_id: string | null
         }
         Insert: {
@@ -123,11 +125,13 @@ export type Database = {
           discount_code?: string | null
           email: string
           id?: string
+          marketing_attribution?: Json | null
           message?: string | null
           name: string
           phone: string
           postcode?: string | null
           service?: string | null
+          tracking_consent?: Json | null
           user_id?: string | null
         }
         Update: {
@@ -139,11 +143,13 @@ export type Database = {
           discount_code?: string | null
           email?: string
           id?: string
+          marketing_attribution?: Json | null
           message?: string | null
           name?: string
           phone?: string
           postcode?: string | null
           service?: string | null
+          tracking_consent?: Json | null
           user_id?: string | null
         }
         Relationships: []
