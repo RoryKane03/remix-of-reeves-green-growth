@@ -42,6 +42,10 @@ export const CookieConsentProvider: React.FC<CookieConsentProviderProps> = ({ ch
     const onStorage = (event: StorageEvent) => {
       if (event.key === CONSENT_KEY || event.key === EVIDENCE_KEY) {
         updateGoogleConsent(false);
+        if (readChoice() !== 'accepted' && document.querySelector('script[data-google-ads]')) {
+          window.location.reload();
+          return;
+        }
         void sync();
       }
     };
@@ -56,6 +60,10 @@ export const CookieConsentProvider: React.FC<CookieConsentProviderProps> = ({ ch
     setShowBanner(false);
     updateGoogleConsent(choice === 'accepted');
     window.fbq?.('consent', choice === 'accepted' ? 'grant' : 'revoke');
+    if (choice === 'rejected' && document.querySelector('script[data-google-ads]')) {
+      window.location.reload();
+      return;
+    }
     if (choice === 'accepted') void initializeTracking();
   };
   const acceptCookies = () => { void choose('accepted'); };

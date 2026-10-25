@@ -1,6 +1,7 @@
 /**
  * SEO Analytics and Tracking Utilities
  */
+import { readChoice } from './trackingConsent';
 
 interface SEOEvent {
   event: string;
@@ -42,6 +43,7 @@ class SEOAnalyticsService implements SEOAnalytics {
   }
 
   private sendEvent(eventData: SEOEvent) {
+    if (readChoice() !== 'accepted') return;
     // In development, just log to console
     if (this.isDevelopment) {
       console.log('🔍 SEO Analytics:', eventData);

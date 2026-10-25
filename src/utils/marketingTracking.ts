@@ -71,6 +71,6 @@ export async function quoteTrackingMetadata() {
   try { attribution = allowed ? JSON.parse(sessionStorage.getItem(ATTRIBUTION_KEY) || 'null') : null; } catch { /* optional */ }
   return { marketing_attribution: attribution, tracking_consent: {
     tracking_allowed: allowed, choice: readChoice(), region: await resolveRegion(),
-    evidence: readEvidence(), recorded_at: new Date().toISOString(),
+    evidence: JSON.parse(JSON.stringify(readEvidence())), recorded_at: new Date().toISOString(),
   } };
 }

@@ -8,6 +8,7 @@
  */
 
 import { supabase } from '@/integrations/supabase/client';
+import { readChoice } from './trackingConsent';
 
 declare global {
   interface Window {
@@ -31,7 +32,7 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
   }
 
   // Google Analytics 4 custom event
-  if (typeof window.gtag === 'function') {
+  if (readChoice() === 'accepted' && typeof window.gtag === 'function') {
     window.gtag('event', 'phone_call_click', {
       event_category: 'engagement',
       event_label: window.location.pathname,
@@ -42,7 +43,7 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
 
   // Google Ads conversion event
   if (
-    typeof window.gtag === 'function' &&
+    readChoice() === 'accepted' && typeof window.gtag === 'function' &&
     GOOGLE_ADS_CALL_CONVERSION_LABEL &&
     GOOGLE_ADS_CALL_CONVERSION_LABEL !== 'YOUR_CONVERSION_LABEL_HERE'
   ) {
@@ -54,7 +55,7 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
   }
 
   // Meta Pixel "Contact" event
-  if (typeof window.fbq === 'function' && META_PIXEL_ID) {
+  if (readChoice() === 'accepted' && typeof window.fbq === 'function' && META_PIXEL_ID) {
     window.fbq('track', 'Contact');
   }
 
