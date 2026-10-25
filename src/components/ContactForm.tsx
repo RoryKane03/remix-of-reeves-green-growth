@@ -1,3 +1,4 @@
+import { finishQuoteSubmission } from '@/utils/quoteReceipt';
 import { useState } from 'react';
 import { trackEmailClick } from '@/utils/emailTracking';
 import { useNavigate } from 'react-router-dom';
@@ -104,7 +105,7 @@ const ContactForm = () => {
       console.log("[ContactForm] quote submission completed successfully");
 
       // Redirect to thank you page (handles conversion tracking)
-      navigate('/thank-you');
+      finishQuoteSubmission(result.quoteId);
 
       // Reset form
       setFormData({

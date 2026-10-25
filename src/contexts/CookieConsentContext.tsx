@@ -1,4 +1,6 @@
 
+import { CONSENT_KEY, EVIDENCE_KEY, readChoice, recordChoice, resolveRegion, consentRequired } from '@/utils/trackingConsent';
+import { initializeTracking, updateGoogleConsent } from '@/utils/marketingTracking';
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 interface CookieConsentContextType {
@@ -28,32 +30,38 @@ export const CookieConsentProvider: React.FC<CookieConsentProviderProps> = ({ ch
   const [cookieConsent, setCookieConsent] = useState<'accepted' | 'rejected' | null>(null);
 
   useEffect(() => {
-    const savedConsent = localStorage.getItem('rts_cookie_consent');
-    if (savedConsent === 'accepted' || savedConsent === 'rejected') {
-      setCookieConsent(savedConsent as 'accepted' | 'rejected');
-      setShowBanner(false);
-    } else {
-      setShowBanner(true);
-    }
+    let active = true;
+    const sync = async () => {
+      const region = await resolveRegion();
+      if (!active) return;
+      const choice = readChoice();
+      setCookieConsent(choice);
+      setShowBanner(choice === null && consentRequired(region));
+      await initializeTracking();
+    };
+    const onStorage = (event: StorageEvent) => {
+      if (event.key === CONSENT_KEY || event.key === EVIDENCE_KEY) {
+        updateGoogleConsent(false);
+        void sync();
+      }
+    };
+    void sync();
+    window.addEventListener('storage', onStorage);
+    return () => { active = false; window.removeEventListener('storage', onStorage); };
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem('rts_cookie_consent', 'accepted');
-    setCookieConsent('accepted');
+  const choose = async (choice: 'accepted' | 'rejected') => {
+    recordChoice(choice, await resolveRegion());
+    setCookieConsent(choice);
     setShowBanner(false);
+    updateGoogleConsent(choice === 'accepted');
+    window.fbq?.('consent', choice === 'accepted' ? 'grant' : 'revoke');
+    if (choice === 'accepted') void initializeTracking();
   };
-
-  const rejectCookies = () => {
-    localStorage.setItem('rts_cookie_consent', 'rejected');
-    setCookieConsent('rejected');
-    setShowBanner(false);
-  };
-
-  const resetConsent = () => {
-    localStorage.removeItem('rts_cookie_consent');
-    setCookieConsent(null);
-    setShowBanner(true);
-  };
+  const acceptCookies = () => { void choose('accepted'); };
+  const rejectCookies = () => { void choose('rejected'); };
+  // Opening settings does not withdraw or erase the current permission.
+  const resetConsent = () => { setShowBanner(true); };
 
   return (
     <CookieConsentContext.Provider

@@ -1,3 +1,4 @@
+import { finishQuoteSubmission } from '@/utils/quoteReceipt';
 import { useEffect, useState, useRef } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, CheckCircle2, Upload, Send, Loader2 } from 'lucide-react';
@@ -165,7 +166,7 @@ const Contact = () => {
       console.log('[Contact] Submit result:', result);
 
       // Redirect to thank you page (handles conversion tracking)
-      navigate('/thank-you');
+      finishQuoteSubmission(result.quoteId);
 
       // Reset form
       setFormData({
