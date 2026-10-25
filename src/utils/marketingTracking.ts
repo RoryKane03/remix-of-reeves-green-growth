@@ -7,7 +7,9 @@ declare global {
 }
 export function updateGoogleConsent(allowed: boolean) {
   window.dataLayer ||= [];
-  window.gtag ||= function (...args: unknown[]) { window.dataLayer.push(args); };
+  // gtag.js only processes Arguments objects, never plain arrays.
+  // eslint-disable-next-line prefer-rest-params
+  window.gtag ||= function () { window.dataLayer.push(arguments); } as (...args: unknown[]) => void;
   window.gtag('consent', 'update', { ad_storage: allowed ? 'granted' : 'denied', ad_user_data: 'denied', ad_personalization: allowed ? 'granted' : 'denied', analytics_storage: allowed ? 'granted' : 'denied' });
   if (!allowed) {
     window.gtag('set', 'user_data', null);
