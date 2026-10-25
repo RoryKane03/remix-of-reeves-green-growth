@@ -12,6 +12,7 @@ import { seoAnalytics } from "./utils/seoAnalytics";
 import CriticalCSS from "./components/CriticalCSS";
 import ScrollToTop from "./components/ScrollToTop";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
+import CookieConsentBanner from './components/CookieConsentBanner';
 
 // Lazy load all page components for better code splitting
 const Index = lazy(() => import("./pages/Index"));
@@ -58,6 +59,7 @@ const AppContent = () => {
     <>
       <CriticalCSS />
       <ScrollToTop />
+      <CookieConsentBanner />
       <div style={{ paddingTop: isHomePage ? '0' : '110px' }}>
         <Suspense fallback={<RouteLoadingFallback />}>
           <Routes>
