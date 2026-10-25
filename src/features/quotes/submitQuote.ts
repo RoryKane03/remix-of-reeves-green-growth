@@ -1,3 +1,4 @@
+import { quoteTrackingMetadata } from '@/utils/marketingTracking';
 import { supabase } from "@/integrations/supabase/client";
 import { logSecurityEvent, validateFileUpload, validateFileContent, sanitizeInput, detectAutomatedSubmission, RateLimiter } from "@/utils/security";
 import { z } from "zod";
@@ -298,9 +299,12 @@ export async function submitQuote(data: QuoteFormData, files: File[], formMetada
   const quoteId = crypto.randomUUID();
 
   try {
+    // Optional measurement must never prevent a saved enquiry.
+    const trackingMetadata = await quoteTrackingMetadata().catch(() => ({ marketing_attribution: null, tracking_consent: null }));
     // 1) Insert the quote (using normalized values)
     const { error: quoteError } = await supabase.from("quotes").insert({
       id: quoteId,
+      ...trackingMetadata,
       name: normalized.name,
       email: normalized.email,
       phone: normalized.phone,
@@ -465,6 +469,7 @@ export async function submitQuote(data: QuoteFormData, files: File[], formMetada
 
     return { 
       quoteId, 
+      trackingAllowed: trackingMetadata.tracking_consent?.tracking_allowed === true,
       uploads: filesData.map(f => ({ 
         success: true, 
         file: { name: f.name, size: f.size, type: f.type } as File, 

@@ -5,6 +5,7 @@
  */
 
 import { supabase } from '@/integrations/supabase/client';
+import { readChoice } from './trackingConsent';
 
 const EMAIL_ADDRESS = 'info@reevestreesurgeons.co.uk';
 
@@ -16,7 +17,7 @@ export function trackEmailClick(email: string = EMAIL_ADDRESS) {
   }
 
   // GA4 custom event
-  if (typeof window.gtag === 'function') {
+  if (readChoice() === 'accepted' && typeof window.gtag === 'function') {
     window.gtag('event', 'email_click', {
       event_category: 'engagement',
       event_label: typeof window !== 'undefined' ? window.location.pathname : '',
@@ -26,7 +27,7 @@ export function trackEmailClick(email: string = EMAIL_ADDRESS) {
   }
 
   // Meta Pixel "Contact" event
-  if (typeof window.fbq === 'function') {
+  if (readChoice() === 'accepted' && typeof window.fbq === 'function') {
     window.fbq('track', 'Contact');
   }
 

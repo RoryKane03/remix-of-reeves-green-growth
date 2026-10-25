@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
           {/* Last Updated Pill */}
           <div className="mt-8">
             <span className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium">
-              Last updated: 20 August 2025
+              Last updated: 25 October 2026
             </span>
           </div>
         </div>
@@ -175,7 +175,13 @@ const PrivacyPolicy = () => {
               <section id="cookies" className="mb-12">
                 <h2 className="text-2xl font-bold text-forest-900 mb-6">5. Cookies</h2>
                 <p className="text-lg leading-relaxed mb-4">
-                  We use essential cookies to make our site function properly. With your consent, we may also use analytics cookies to understand site performance.
+                  Essential storage supports the website and your saved cookie choices. Optional measurement shares page visits, device information and successful quote completions with Google Ads, Google Analytics and Meta for advertising measurement, ad optimization and website analytics. We do not send your name, email, phone number, address or photos for advertising matching.
+                </p>
+                <p className="text-lg leading-relaxed mb-4">
+                  Where permitted by your advertising choice and region, we save the advertising click identifier (GCLID), campaign source, landing page and referring website with your enquiry. A click identifier does not by itself prove which campaign produced a quote. In the UK, EEA, Switzerland, Canada (where province cannot be resolved), and unknown locations, optional tags remain blocked until acceptance. Elsewhere optional measurement may run unless you reject it or signal an applicable opt-out.
+                </p>
+                <p className="text-lg leading-relaxed mb-4">
+                  We retain your visitor identifier, decision, time, region and the notice version shown as consent evidence. The enquiry includes its event-time choice and evidence reference. Withdrawal preserves earlier acceptance evidence but stops subsequent optional measurement; blocked events are not replayed. Use Cookie Settings in the footer to reject or change your choice at any time. Our published 12-month consent-record retention applies to these records; enquiry attribution follows enquiry retention. See <a href="https://business.safety.google/privacy/" target="_blank" rel="noopener noreferrer" className="underline">Google’s use of advertising data</a>.
                 </p>
                 <p className="text-lg leading-relaxed mb-4">
                   You can:
@@ -186,7 +192,7 @@ const PrivacyPolicy = () => {
                   <li>Manage cookies through your browser.</li>
                 </ul>
                 <p className="text-lg leading-relaxed mt-4">
-                  See our separate Cookie Notice for details.
+                  The choices above cover optional analytics and advertising cookies.
                 </p>
               </section>
 

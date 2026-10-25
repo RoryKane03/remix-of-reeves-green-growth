@@ -5,12 +5,14 @@ import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
-import { trackQuoteConversion } from '@/utils/gtagConversion';
 import { trackPhoneCall } from '@/utils/phoneTracking';
 
 const ThankYou = () => {
   useEffect(() => {
-    trackQuoteConversion();
+    // Google counts the guarded page load; do not send a duplicate event.
+    if (!window.__quoteConfirmed && window.location.search !== '?confirmation=untracked') {
+      window.location.replace('/contact');
+    }
   }, []);
 
   return (

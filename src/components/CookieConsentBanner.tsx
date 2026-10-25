@@ -1,4 +1,5 @@
 
+import { CONSENT_NOTICE } from '@/utils/trackingConsent';
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -55,17 +56,17 @@ const CookieConsentBanner = () => {
       className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-[1200px]"
       onKeyDown={handleKeyDown}
     >
-      <div className="bg-[#FAFCF9] rounded-2xl shadow-lg border border-neutral-200 p-6">
+      <div className="bg-background rounded-lg shadow-lg border border-neutral-200 p-6">
         <div className="flex flex-col gap-4">
           {/* Cookie message */}
           <div className="text-center sm:text-left">
-            <p className="text-[#1E3A2A] text-base sm:text-lg leading-relaxed">
-              We use cookies to improve your browsing experience. You can accept or reject cookies at any time. 
+            <p className="text-foreground text-base sm:text-lg leading-relaxed">
+              {CONSENT_NOTICE} 
               For more details, see our{' '}
               <Link 
                 ref={privacyLinkRef}
                 to="/privacy-policy" 
-                className="text-[#1E6B45] hover:text-[#185A3A] underline font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E6B45] focus:ring-offset-2 rounded"
+                className="text-primary hover:text-primary/80 underline font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
                 aria-label="Read our Privacy Policy"
               >
                 Privacy Policy
@@ -79,7 +80,7 @@ const CookieConsentBanner = () => {
             <Button
               ref={acceptButtonRef}
               onClick={acceptCookies}
-              className="w-full sm:flex-1 h-12 bg-[#1E6B45] hover:bg-[#185A3A] text-white font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E6B45] focus:ring-offset-2"
+              className="w-full sm:flex-1 h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               aria-label="Accept all cookies"
             >
               Accept Cookies
@@ -88,7 +89,7 @@ const CookieConsentBanner = () => {
               ref={rejectButtonRef}
               onClick={rejectCookies}
               variant="outline"
-              className="w-full sm:flex-1 h-12 border border-[#C8D8CC] text-[#1E3A2A] hover:bg-[#EFF5F0] hover:text-[#1E3A2A] font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#1E6B45] focus:ring-offset-2"
+              className="w-full sm:flex-1 h-12 border border-border text-foreground hover:bg-[#EFF5F0] hover:text-foreground font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               aria-label="Reject non-essential cookies"
             >
               Reject Cookies
