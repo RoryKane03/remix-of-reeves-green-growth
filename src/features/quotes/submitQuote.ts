@@ -469,6 +469,7 @@ export async function submitQuote(data: QuoteFormData, files: File[], formMetada
 
     return { 
       quoteId, 
+      trackingAllowed: trackingMetadata.tracking_consent?.tracking_allowed === true,
       uploads: filesData.map(f => ({ 
         success: true, 
         file: { name: f.name, size: f.size, type: f.type } as File, 

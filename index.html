@@ -13,6 +13,7 @@
           sessionStorage.removeItem('rts_quote_receipt');
           const age = receipt ? Date.now() - receipt.createdAt : -1;
           window.__quoteConfirmed = !!(receipt && /^[0-9a-f-]{36}$/i.test(receipt.quoteId) && age >= 0 && age < 300000);
+          window.__quoteTrackingAllowed = window.__quoteConfirmed && receipt.trackingAllowed === true;
           if (!window.__quoteConfirmed && location.search !== '?confirmation=untracked') location.replace('/contact');
         } catch { location.replace('/contact'); }
       }

@@ -3,7 +3,7 @@ export const ADS_ID = 'AW-17942512211';
 export const ANALYTICS_ID = 'G-XDQDP2VTBG';
 const ATTRIBUTION_KEY = 'rts_landing_attribution';
 declare global {
-  interface Window { dataLayer: unknown[]; __quoteConfirmed?: boolean; fbq?: (...args: unknown[]) => void; }
+  interface Window { dataLayer: unknown[]; __quoteConfirmed?: boolean; __quoteTrackingAllowed?: boolean; fbq?: (...args: unknown[]) => void; }
 }
 export function updateGoogleConsent(allowed: boolean) {
   window.dataLayer ||= [];
@@ -15,7 +15,7 @@ export function updateGoogleConsent(allowed: boolean) {
   }
 }
 export async function initializeTracking() {
-  if (location.pathname.replace(/\/$/, '') === '/thank-you' && !window.__quoteConfirmed) return;
+  if (location.pathname.replace(/\/$/, '') === '/thank-you' && (!window.__quoteConfirmed || !window.__quoteTrackingAllowed)) return;
   const allowed = await canTrackAds();
   updateGoogleConsent(allowed);
   if (!allowed) return;

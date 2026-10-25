@@ -105,7 +105,7 @@ const ContactForm = () => {
       console.log("[ContactForm] quote submission completed successfully");
 
       // Redirect to thank you page (handles conversion tracking)
-      finishQuoteSubmission(result.quoteId);
+      finishQuoteSubmission(result.quoteId, result.trackingAllowed);
 
       // Reset form
       setFormData({

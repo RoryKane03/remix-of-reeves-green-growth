@@ -166,7 +166,7 @@ const Contact = () => {
       console.log('[Contact] Submit result:', result);
 
       // Redirect to thank you page (handles conversion tracking)
-      finishQuoteSubmission(result.quoteId);
+      finishQuoteSubmission(result.quoteId, result.trackingAllowed);
 
       // Reset form
       setFormData({
