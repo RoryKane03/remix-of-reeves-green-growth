@@ -4,7 +4,7 @@
     <!-- Deny optional measurement until the existing consent flow resolves. -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function(){window.dataLayer.push(Array.from(arguments));};
+      window.gtag = function(){window.dataLayer.push(arguments);};
       window.gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied'});
       // Consume a successful quote receipt before any provider can inspect this URL.
       if (location.pathname.replace(/\/$/, '') === '/thank-you') {
