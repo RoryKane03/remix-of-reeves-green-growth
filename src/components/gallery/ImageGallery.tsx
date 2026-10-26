@@ -549,13 +549,13 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 2,
-    src: "/lovable-uploads/e4587469-be1f-4959-a258-62dd2b8a8834.png",
+    src: "/lovable-uploads/e4587469-be1f-4959-a258-62dd2b8a8834-1280.webp",
     alt: "Professional stump grinding with specialized equipment",
     category: "stump-grinding"
   },
   {
     id: 3,
-    src: "/lovable-uploads/56fdf6b5-eb05-4c88-a572-ff26ba94815d.png",
+    src: "/lovable-uploads/56fdf6b5-eb05-4c88-a572-ff26ba94815d-1280.webp",
     alt: "Professional team conducting large tree removal project",
     category: "tree-work"
   },

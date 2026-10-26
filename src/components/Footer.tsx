@@ -65,7 +65,7 @@ const Footer = () => {
               
               {/* Domestic Services */}
               <div className="space-y-2">
-                <h5 className="text-xs font-semibold text-white/80 mb-1.5">Domestic</h5>
+                <h5 className="text-xs font-semibold text-white/80 mb-1.5"><a href="/domestic-services" className="hover:text-gold hover:underline">Domestic</a></h5>
                 <ul className="space-y-1.5 text-white/90 text-sm">
                   <li><a href="/tree-work" className="hover:text-gold transition-colors hover:underline">Tree Work</a></li>
                   <li><a href="/hedge-cutting" className="hover:text-gold transition-colors hover:underline">Hedge Cutting</a></li>
@@ -75,12 +75,12 @@ const Footer = () => {
 
               {/* Commercial Services */}
               <div className="space-y-2">
-                <h5 className="text-xs font-semibold text-white/80 mb-1.5">Commercial</h5>
+                <h5 className="text-xs font-semibold text-white/80 mb-1.5"><a href="/commercial-services" className="hover:text-gold hover:underline">Commercial</a></h5>
                 <ul className="space-y-1.5 text-white/90 text-sm">
-                  <li><a href="/commercial-site-clearance" className="hover:text-gold transition-colors hover:underline">Site Clearance</a></li>
-                  <li><a href="/commercial-tree-work" className="hover:text-gold transition-colors hover:underline">Commercial Tree Work</a></li>
-                  <li><a href="/commercial-hedge-cutting" className="hover:text-gold transition-colors hover:underline">Commercial Hedge Cutting</a></li>
-                  <li><a href="/commercial-stump-grinding" className="hover:text-gold transition-colors hover:underline">Commercial Stump Grinding</a></li>
+                  <li><a href="/services/commercial/site-clearance" className="hover:text-gold transition-colors hover:underline">Site Clearance</a></li>
+                  <li><a href="/commercial/tree-work" className="hover:text-gold transition-colors hover:underline">Commercial Tree Work</a></li>
+                  <li><a href="/commercial/hedge-cutting" className="hover:text-gold transition-colors hover:underline">Commercial Hedge Cutting</a></li>
+                  <li><a href="/commercial/stump-grinding" className="hover:text-gold transition-colors hover:underline">Commercial Stump Grinding</a></li>
                 </ul>
               </div>
             </div>
@@ -94,6 +94,7 @@ const Footer = () => {
                 <li><a href="/our-work" className="hover:text-gold transition-colors hover:underline inline-block py-0.5 min-h-[32px] flex items-center">Our Work</a></li>
                 <li><a href="/locations/birmingham" className="hover:text-gold transition-colors hover:underline inline-block py-0.5 min-h-[32px] flex items-center">Birmingham</a></li>
                 <li><a href="/locations/worcester" className="hover:text-gold transition-colors hover:underline inline-block py-0.5 min-h-[32px] flex items-center">Worcester</a></li>
+                <li><a href="/locations/warwick" className="hover:text-gold transition-colors hover:underline inline-block py-0.5 min-h-[32px] flex items-center">Warwick</a></li>
                 
                 <li><a href="/contact" className="hover:text-gold transition-colors hover:underline inline-block py-0.5 min-h-[32px] flex items-center">Get Quote</a></li>
                 <li><a href="/privacy-policy" className="hover:text-gold transition-colors hover:underline inline-block py-0.5 min-h-[32px] flex items-center">Privacy Policy</a></li>
@@ -131,7 +132,7 @@ const Footer = () => {
                 <div className="flex items-start gap-2">
                   <MapPin className="text-white mt-0.5 flex-shrink-0" size={14} />
                   <div className="text-sm text-white/90">
-                    Bromsgrove, Worcestershire
+                    Stoney Lane, Tardebigge,<br />Bromsgrove B60 1LZ
                   </div>
                 </div>
 

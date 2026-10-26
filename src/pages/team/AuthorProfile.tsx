@@ -18,7 +18,7 @@ const AuthorProfile = () => {
         <title>John Reeves - Master Arborist & Director | Reeves Tree Surgeons</title>
         <meta name="description" content="Meet John Reeves, Master Arborist and Director of Reeves Tree Surgeons. NPTC certified with over 20 years experience serving the West Midlands since 2002." />
         <meta name="keywords" content="John Reeves arborist, NPTC certified tree surgeon, West Midlands arborist, professional tree surgeon, ARB approved contractor" />
-        <link rel="canonical" href="/team/john-reeves" />
+        <link rel="canonical" href="https://www.reevestreesurgeons.co.uk/team/john-reeves" />
         <script type="application/ld+json">
           {JSON.stringify(authorSchema)}
         </script>

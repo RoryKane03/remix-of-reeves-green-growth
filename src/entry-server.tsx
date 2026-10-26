@@ -1,6 +1,6 @@
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, type HelmetServerState } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AppSSR from './App.ssr';
 
@@ -13,16 +13,30 @@ export function render(url: string) {
       },
     },
   });
-  
+
+  // Collect each page's <Helmet> tags (title, description, canonical, schema)
+  // so prerender.js can write them into the static HTML that Google reads.
+  const helmetContext: { helmet?: HelmetServerState } = {};
+
   const html = ReactDOMServer.renderToString(
     <QueryClientProvider client={queryClient}>
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <StaticRouter location={url}>
           <AppSSR />
         </StaticRouter>
       </HelmetProvider>
     </QueryClientProvider>
   );
-  
-  return html;
+
+  const helmet = helmetContext.helmet;
+  const head = helmet
+    ? [
+        helmet.title.toString(),
+        helmet.meta.toString(),
+        helmet.link.toString(),
+        helmet.script.toString(),
+      ].join('\n')
+    : '';
+
+  return { html, head };
 }

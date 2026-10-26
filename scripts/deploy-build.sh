@@ -11,6 +11,10 @@ rm -rf dist
 echo "📦 Building client bundle..."
 vite build
 
+# Step 2b: Build the server bundle used for prerendering (resolves image paths correctly)
+echo "🧱 Building server bundle for prerendering..."
+vite build --ssr src/entry-server.tsx --outDir dist/server || { echo "❌ Server build failed!"; exit 1; }
+
 # Step 3: Generate static HTML for all routes with proper SSR
 echo "🕷️ Generating static HTML for all routes with SSR..."
 npm run build:prerender || { echo "❌ Prerendering failed!"; exit 1; }

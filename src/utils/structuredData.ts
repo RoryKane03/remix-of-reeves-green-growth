@@ -2,28 +2,30 @@
 export const getLocalBusinessData = () => ({
   "@context": "https://schema.org", 
   "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://reevestreesurgeons.uk",
+  "@id": "https://www.reevestreesurgeons.co.uk",
   "name": "Reeves Tree Surgeons", 
   "alternateName": "Reeves Tree Services",
   "description": "Professional tree surgeons serving the West Midlands since 2002. Expert tree removal, hedge cutting, stump grinding and emergency tree services.",
-  "url": "https://reevestreesurgeons.uk",
+  "url": "https://www.reevestreesurgeons.co.uk",
   "telephone": "+441527874143",
-  "logo": "https://reevestreesurgeons.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png",
-  "image": "https://reevestreesurgeons.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png",
+  "logo": "https://www.reevestreesurgeons.co.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png",
+  "image": "https://www.reevestreesurgeons.co.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png",
   "foundingDate": "2002",
-  "areaServed": {
-    "@type": "State",
-    "name": "West Midlands"
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stoney Lane, Tardebigge",
+    "addressLocality": "Bromsgrove",
+    "addressRegion": "Worcestershire",
+    "postalCode": "B60 1LZ",
+    "addressCountry": "GB"
   },
-  "serviceArea": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 52.4862,
-      "longitude": -1.8904
-    },
-    "geoRadius": "50000"
-  },
+  "email": "info@reevestreesurgeons.co.uk",
+  "areaServed": ["Bromsgrove", "Redditch", "Worcester", "Worcestershire", "Birmingham", "Solihull", "Warwick", "Warwickshire", "West Midlands"],
+  "sameAs": [
+    "https://www.facebook.com/reevestreesurgeons",
+    "https://instagram.com/reevestreesurgeons/",
+    "https://www.tiktok.com/@reevestreesurgeons"
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Tree Surgery Services",
@@ -59,13 +61,6 @@ export const getLocalBusinessData = () => ({
     ]
   },
   "openingHours": "Mo-Su 07:00-19:00",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "50+",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "priceRange": "££",
   "paymentAccepted": ["Cash", "Card", "Bank Transfer"],
   "currenciesAccepted": "GBP"
@@ -100,8 +95,8 @@ export const getEnhancedServiceData = (serviceName: string, description: string,
   "provider": {
     "@type": "LocalBusiness",
     "name": "Reeves Tree Surgeons",
-    "url": "https://reevestreesurgeons.uk",
-    "@id": "https://reevestreesurgeons.uk",
+    "url": "https://www.reevestreesurgeons.co.uk",
+    "@id": "https://www.reevestreesurgeons.co.uk",
     "telephone": "01527874143",
     "address": {
       "@type": "PostalAddress",
@@ -114,7 +109,7 @@ export const getEnhancedServiceData = (serviceName: string, description: string,
     "name": "West Midlands"
   },
   "serviceType": serviceName,
-  "url": serviceUrl ? `https://reevestreesurgeons.uk${serviceUrl}` : undefined,
+  "url": serviceUrl ? `https://www.reevestreesurgeons.co.uk${serviceUrl}` : undefined,
   "offers": {
     "@type": "Offer",
     "availability": "https://schema.org/InStock",
@@ -191,8 +186,8 @@ export const getServiceData = (serviceName: string, description: string, service
   "provider": {
     "@type": "LocalBusiness",
     "name": "Reeves Tree Surgeons",
-    "url": "https://reevestreesurgeons.uk",
-    "@id": "https://reevestreesurgeons.uk",
+    "url": "https://www.reevestreesurgeons.co.uk",
+    "@id": "https://www.reevestreesurgeons.co.uk",
     "telephone": "01527874143",
     "address": {
       "@type": "PostalAddress",
@@ -205,7 +200,7 @@ export const getServiceData = (serviceName: string, description: string, service
     "name": "West Midlands"
   },
   "serviceType": serviceName,
-  "url": serviceUrl ? `https://reevestreesurgeons.uk${serviceUrl}` : undefined,
+  "url": serviceUrl ? `https://www.reevestreesurgeons.co.uk${serviceUrl}` : undefined,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": serviceName,
@@ -252,7 +247,7 @@ export const getBreadcrumbData = (breadcrumbItems: Array<{label: string, href: s
     "@type": "ListItem",
     "position": index + 1,
     "name": item.label,
-    "item": item.current ? undefined : `https://reevestreesurgeons.uk${item.href}`
+    "item": item.current ? undefined : `https://www.reevestreesurgeons.co.uk${item.href}`
   }))
 });
 
@@ -266,7 +261,7 @@ export const getAuthorSchema = (authorName: string) => ({
   "worksFor": {
     "@type": "Organization",
     "name": "Reeves Tree Surgeons",
-    "url": "https://reevestreesurgeons.uk"
+    "url": "https://www.reevestreesurgeons.co.uk"
   },
   "hasCredential": [
     {
@@ -307,7 +302,7 @@ export const getAuthorSchema = (authorName: string) => ({
     "ARB Approved Contractor status",
     "Multiple NPTC certifications"
   ],
-  "url": `https://reevestreesurgeons.uk/team/${authorName.toLowerCase().replace(/\s+/g, '-')}`
+  "url": `https://www.reevestreesurgeons.co.uk/team/${authorName.toLowerCase().replace(/\s+/g, '-')}`
 });
 
 // Article/Blog structured data for SEO
@@ -319,21 +314,21 @@ export const getArticleStructuredData = () => ({
   "author": {
     "@type": "Organization",
     "name": "Reeves Tree Surgeons",
-    "url": "https://reevestreesurgeons.uk"
+    "url": "https://www.reevestreesurgeons.co.uk"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Reeves Tree Surgeons",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://reevestreesurgeons.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png"
+      "url": "https://www.reevestreesurgeons.co.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png"
     }
   },
   "datePublished": new Date().toISOString(),
   "dateModified": new Date().toISOString(),
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://reevestreesurgeons.uk/resources"
+    "@id": "https://www.reevestreesurgeons.co.uk/resources"
   }
 });
 
@@ -353,7 +348,7 @@ export const getEnhancedArticleSchema = (
   "author": {
     "@type": "Person",
     "name": authorName,
-    "url": `https://reevestreesurgeons.uk/team/${authorName.toLowerCase().replace(/\s+/g, '-')}`,
+    "url": `https://www.reevestreesurgeons.co.uk/team/${authorName.toLowerCase().replace(/\s+/g, '-')}`,
     "jobTitle": "Master Arborist & Company Director",
     "worksFor": {
       "@type": "Organization",
@@ -363,10 +358,10 @@ export const getEnhancedArticleSchema = (
   "publisher": {
     "@type": "Organization",
     "name": "Reeves Tree Surgeons",
-    "url": "https://reevestreesurgeons.uk",
+    "url": "https://www.reevestreesurgeons.co.uk",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://reevestreesurgeons.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png"
+      "url": "https://www.reevestreesurgeons.co.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png"
     }
   },
   "datePublished": datePublished,
@@ -374,7 +369,7 @@ export const getEnhancedArticleSchema = (
   "wordCount": wordCount,
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://reevestreesurgeons.uk/resources/${slug}`
+    "@id": `https://www.reevestreesurgeons.co.uk/resources/${slug}`
   },
   "inLanguage": "en-GB",
   "about": {

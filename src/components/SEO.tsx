@@ -9,6 +9,7 @@ interface SEOProps {
   type?: string;
   structuredData?: object;
   breadcrumbs?: Array<{label: string, href: string, current?: boolean}>;
+  noindex?: boolean;
 }
 
 const SEO = ({ 
@@ -19,7 +20,8 @@ const SEO = ({
   url,
   type = "website",
   structuredData,
-  breadcrumbs
+  breadcrumbs,
+  noindex = false
 }: SEOProps) => {
   const fullTitle = title.includes('Reeves Tree Surgeons') ? title : `${title} | Reeves Tree Surgeons`;
   const isBrowser = typeof window !== 'undefined';
@@ -34,7 +36,7 @@ const SEO = ({
   const cleanUrl = url ? url.replace(/\/$/, '') : '';
   const canonicalUrl = cleanUrl ? `${baseUrl}${cleanUrl}` : baseUrl;
   
-  const robotsContent = isStaging ? 'noindex, nofollow, noarchive' : 'index, follow';
+  const robotsContent = isStaging ? 'noindex, nofollow, noarchive' : noindex ? 'noindex, follow' : 'index, follow';
 
   return (
     <Helmet>
@@ -63,10 +65,8 @@ const SEO = ({
       <meta name="robots" content={robotsContent} />
       <meta name="googlebot" content={robotsContent} />
       <meta name="bingbot" content={robotsContent} />
-      <meta name="geo.region" content="GB-WMD" />
-      <meta name="geo.placename" content="West Midlands" />
-      <meta name="geo.position" content="52.4862;-1.8904" />
-      <meta name="ICBM" content="52.4862, -1.8904" />
+      <meta name="geo.region" content="GB-WOR" />
+      <meta name="geo.placename" content="Bromsgrove" />
       
       {/* PWA & Performance */}
       <meta name="theme-color" content="#22c55e" />
@@ -76,10 +76,7 @@ const SEO = ({
       {/* Additional Business Meta */}
       <meta name="coverage" content="West Midlands, Birmingham, Worcester, Bromsgrove, Redditch, Droitwich, Wolverhampton, Dudley, Solihull, Walsall" />
       <meta name="distribution" content="local" />
-      <meta name="rating" content="5 stars" />
       <meta name="application-name" content="Reeves Tree Surgeons" />
-      <meta name="theme-color" content="#22c55e" />
-      
       {/* Performance Hints */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

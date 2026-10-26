@@ -8,7 +8,7 @@ import CriticalCSS from '@/components/CriticalCSS';
 import { LazySection } from '@/components/LazySection';
 import { SectionSkeleton } from '@/components/skeletons/SectionSkeleton';
 import { initializeRevealAnimations } from '@/utils/animations';
-import { getLocalBusinessData, getFAQData, getReviewSchema } from '@/utils/structuredData';
+import { getLocalBusinessData, getFAQData } from '@/utils/structuredData';
 
 // Component imports
 import CredibilityBand from '@/components/CredibilityBand';
@@ -38,7 +38,7 @@ const Index = () => {
         description="Expert tree surgeons serving West Midlands since 2002. Professional tree removal, hedge cutting, stump grinding & emergency services. Fully insured & certified arborists."
         keywords="tree surgeons West Midlands, tree removal Birmingham, hedge cutting, stump grinding, emergency tree services, arborists"
         url="/"
-        structuredData={[getLocalBusinessData(), getFAQData(), getReviewSchema()]}
+        structuredData={[getLocalBusinessData(), getFAQData()]}
       />
       <CriticalCSS />
       <Header />
