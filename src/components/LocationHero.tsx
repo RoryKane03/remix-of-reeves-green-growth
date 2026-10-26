@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { cdnImage, cdnSrcSet } from '@/utils/netlifyImage';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Phone, LucideIcon } from 'lucide-react';
@@ -39,7 +40,9 @@ const LocationHero = ({
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={backgroundImage}
+          src={cdnImage(backgroundImage, 1600)}
+          srcSet={cdnSrcSet(backgroundImage, [640, 1024, 1600])}
+          sizes="100vw"
           alt={`Professional tree surgery services in ${locationName}`}
           className="w-full h-full object-cover"
           style={{

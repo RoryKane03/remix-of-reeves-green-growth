@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import { cdnImageByHeight } from '@/utils/netlifyImage';
 import { Phone, Mail, MapPin, TreePine, CheckCircle, AlertTriangle } from 'lucide-react';
 import { useCookieConsent } from '@/contexts/CookieConsentContext';
 import { trackPhoneCall } from '@/utils/phoneTracking';
@@ -52,9 +53,9 @@ const Footer = () => {
                   Accreditations
                 </h4>
                 <div className="flex items-center gap-3 flex-wrap">
-                  <img src="/lovable-uploads/fe5345fd-6675-451b-ba65-1dc38a1fbea6.png" alt="ARB" className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                  <img src="/lovable-uploads/safecontractor-logo.png" alt="SafeContractor Approved" className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
-                  <img src="/lovable-uploads/65db11fc-0fcf-4c16-81ae-7f7cc45d1b75.png" alt="Trustmark" className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
+                  <img src={cdnImageByHeight("/lovable-uploads/fe5345fd-6675-451b-ba65-1dc38a1fbea6.png", 72)} alt="ARB" className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
+                  <img src={cdnImageByHeight("/lovable-uploads/safecontractor-logo.png", 72)} alt="SafeContractor Approved" className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
+                  <img src={cdnImageByHeight("/lovable-uploads/65db11fc-0fcf-4c16-81ae-7f7cc45d1b75.png", 72)} alt="Trustmark" className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" loading="lazy" />
                 </div>
               </div>
             </div>

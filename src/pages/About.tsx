@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { cdnImage, cdnSrcSet, cdnImageByHeight } from '@/utils/netlifyImage';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -119,7 +120,9 @@ const About = () => {
             <div className="max-w-4xl mx-auto mb-12">
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-border">
                 <img
-                  src="/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png"
+                  src={cdnImage('/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png', 900)}
+                  srcSet={cdnSrcSet('/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png', [480, 900])}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   alt="Reeves Tree Surgeons team - 20 fully qualified NPTC and Lantra certified arborists with 20+ years experience across Birmingham, Worcester, Solihull, and West Midlands"
                   className="w-full h-auto object-contain"
                   width="900"
@@ -230,7 +233,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto bg-white/80 backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-xl">
               <div className="text-center">
                 <img
-                  src={arbLogo}
+                  src={cdnImageByHeight(arbLogo, 384)}
                   alt="ARB Approved Contractor Logo"
                   className="w-40 h-40 lg:w-48 lg:h-48 mx-auto mb-6 object-contain"
                   width="192"

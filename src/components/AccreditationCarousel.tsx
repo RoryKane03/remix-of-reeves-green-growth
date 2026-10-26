@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { cdnImageByHeight } from '@/utils/netlifyImage';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import trustmarkLogo from '@/assets/accreditations/trustmark.png';
@@ -205,7 +206,7 @@ const AccreditationCarousel = () => {
                 >
                   <div className="h-32 sm:h-36 lg:h-40 flex items-center justify-center transition-all duration-200 ease-in-out hover:scale-105 hover:drop-shadow-md">
                     <img
-                      src={accreditation.image}
+                      src={cdnImageByHeight(accreditation.image, 256)}
                       alt={accreditation.alt}
                       className="max-h-full max-w-full object-contain transition-all duration-200"
                       style={{ 

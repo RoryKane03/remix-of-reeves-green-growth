@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import OptimizedImage from './ImageOptimization';
+import { cdnImage } from '@/utils/netlifyImage';
 
 interface BeforeAfterComparisonProps {
   beforeImage: string;
@@ -22,7 +23,7 @@ const BeforeAfterComparison = ({
         {/* Before Image */}
         <div className="relative group overflow-hidden rounded-md">
           <OptimizedImage
-            src={beforeImage}
+            src={cdnImage(beforeImage, 800)}
             alt={beforeAlt}
             className="w-full h-64 object-cover"
             loading="lazy"
@@ -37,7 +38,7 @@ const BeforeAfterComparison = ({
         {/* After Image */}
         <div className="relative group overflow-hidden rounded-md">
           <OptimizedImage
-            src={afterImage}
+            src={cdnImage(afterImage, 800)}
             alt={afterAlt}
             className="w-full h-64 object-cover"
             loading="lazy"
