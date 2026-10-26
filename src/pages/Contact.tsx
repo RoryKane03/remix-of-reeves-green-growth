@@ -195,7 +195,7 @@ const Contact = () => {
     }
   };
   return <div className="min-h-screen bg-gray-50">
-      <SEO title="Contact Reeves Tree Surgeons - Get Your Free Quote Today" description="Contact Reeves Tree Surgeons for a free, no-obligation quote. Call 01527 874143 or fill out our form. Professional tree surgery services across Birmingham, Solihull, Worcester & West Midlands." keywords="contact tree surgeons, free quote tree surgery, Birmingham tree surgeons contact, West Midlands tree care quote, emergency tree services contact" url="/contact" structuredData={getLocalBusinessData()} breadcrumbs={[{
+      <SEO title="Contact & Free Quotes, Bromsgrove | Reeves Tree Surgeons" description="Free, no-obligation tree surgery quotes in Bromsgrove, Redditch, Birmingham, Solihull & the West Midlands. Call 01527 874143." keywords="contact tree surgeons, free quote tree surgery, Birmingham tree surgeons contact, West Midlands tree care quote, emergency tree services contact" url="/contact" structuredData={getLocalBusinessData()} breadcrumbs={[{
       label: 'Home',
       href: '/'
     }, {

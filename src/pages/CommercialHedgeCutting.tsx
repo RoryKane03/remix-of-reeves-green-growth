@@ -78,8 +78,8 @@ const CommercialHedgeCutting = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Commercial Hedge Cutting Services | Professional Hedge Maintenance"
-        description="Professional commercial hedge cutting and maintenance for businesses across the West Midlands. Scheduled programs, flexible timing, and expert care for business properties."
+        title="Commercial Hedge Cutting | Reeves Tree Surgeons"
+        description="Scheduled and one-off hedge cutting for business premises across the West Midlands, with flexible timing to suit you. Free quotes: 01527 874143."
         keywords="commercial hedge cutting, business hedge trimming, commercial hedge maintenance, professional hedge services, West Midlands"
         url="/commercial/hedge-cutting"
       />

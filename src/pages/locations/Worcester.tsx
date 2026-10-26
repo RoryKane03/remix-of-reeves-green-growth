@@ -29,8 +29,8 @@ const Worcester = () => {
   return (
     <>
       <Helmet>
-        <title>Tree Surgeons Worcester | Professional Tree Surgery Services Worcestershire</title>
-        <meta name="description" content="Expert tree surgeons in Worcester and Bromsgrove. Professional tree removal, pruning, hedge cutting & commercial services. Covering Bromsgrove, Redditch, Droitwich. Free quotes & emergency services." />
+        <title>Tree Surgeons Worcester | Reeves Tree Surgeons</title>
+        <meta name="description" content="Tree surgeons covering Worcester, Droitwich & Worcestershire from our Bromsgrove base. ARB Approved, 24/7 emergencies. Free quotes: 01527 874143." />
         <meta name="keywords" content="tree surgeons Worcester, tree surgeons Bromsgrove, tree removal Worcester, tree surgery Worcestershire, arborists Worcester, commercial tree services Bromsgrove, hedge cutting Worcestershire" />
         <link rel="canonical" href="https://www.reevestreesurgeons.co.uk/locations/worcester" />
         <script type="application/ld+json">
