@@ -13,6 +13,24 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2070,
+    src: "/lovable-uploads/tree-work-arborist-chainsaw-platform-cut.jpg",
+    alt: "Reeves arborist in orange branded high-visibility PPE and white helmet cutting into the trunk of a large ash tree with a chainsaw from a cherry picker platform, with residential street and work vehicles below",
+    category: "tree-work"
+  },
+  {
+    id: 2071,
+    src: "/lovable-uploads/tree-work-climber-pov-mewp-chip-pile.jpg",
+    alt: "Climber's point of view over a cherry picker platform as a Reeves arborist in orange high-visibility PPE operates lowering equipment above a fresh pile of wood chips, with open countryside and a large distribution warehouse beyond",
+    category: "tree-work"
+  },
+  {
+    id: 2072,
+    src: "/lovable-uploads/tree-work-climber-pink-vest-branch-cut.jpg",
+    alt: "Tree surgeon in a blue helmet and harness cutting a large horizontal branch with a chainsaw from a cherry picker platform above a tiled cottage roof in a leafy residential village",
+    category: "tree-work"
+  },
+  {
     id: 2067,
     src: "/lovable-uploads/tree-work-crane-dismantle-poplar.jpg",
     alt: "Orange mobile crane with an extended boom rigged to a tall ivy-covered tree trunk being dismantled in sections beside a residential car park, with cut stumps on the grass verge below",
