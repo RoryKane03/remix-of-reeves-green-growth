@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { cdnImage } from '@/utils/netlifyImage';
 import { createPortal } from 'react-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -109,7 +110,7 @@ const Lightbox = ({ images, currentImageId, onClose, onNavigate }: LightboxProps
         onClick={(e) => e.stopPropagation()}
       >
         <img
-          src={currentImage.src}
+          src={cdnImage(currentImage.src, 1600, 80)}
           alt={currentImage.alt}
           className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
         />

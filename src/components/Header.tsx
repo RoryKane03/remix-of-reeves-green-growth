@@ -299,9 +299,10 @@ const Header = () => {
                         />
                       </button>
                       
-                      {/* Dropdown Menu */}
-                      {isOpen && (
-                        <>
+                      {/* Dropdown Menu - always in the HTML so search engines can follow its links;
+                          hidden with CSS until opened */}
+                      <>
+                          {isOpen && (
                           <div 
                             className="fixed inset-0 z-40"
                             onClick={() => {
@@ -315,8 +316,9 @@ const Header = () => {
                               }
                             }}
                           />
+                          )}
                           <div 
-                            className="absolute top-full left-0 mt-2 min-w-[260px] bg-white/95 backdrop-blur-md rounded-[16px] z-50 animate-fade-in border border-[#2D5F3F]/10"
+                            className={`absolute top-full left-0 mt-2 min-w-[260px] bg-white/95 backdrop-blur-md rounded-[16px] z-50 animate-fade-in border border-[#2D5F3F]/10 ${isOpen ? '' : 'hidden'}`}
                             style={{
                               boxShadow: '0 10px 40px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08)'
                             }}
@@ -392,9 +394,9 @@ const Header = () => {
                                 )}
 
                                 {/* Flyout Submenu */}
-                                {subItem.hasSubmenu && activeSubmenu === subItem.submenuKey && subItem.submenuItems && (
+                                {subItem.hasSubmenu && subItem.submenuItems && (
                                   <div
-                                    className="absolute left-full top-0 -ml-4 min-w-[280px] bg-[#E9F2EA] rounded-[12px] z-51 animate-fade-in"
+                                    className={`absolute left-full top-0 -ml-4 min-w-[280px] bg-[#E9F2EA] rounded-[12px] z-51 animate-fade-in ${activeSubmenu === subItem.submenuKey ? '' : 'hidden'}`}
                                     style={{
                                       boxShadow: '0 8px 20px rgba(0,0,0,0.08)'
                                     }}
@@ -448,7 +450,6 @@ const Header = () => {
                             ))}
                           </div>
                         </>
-                      )}
                     </div>
                   );
                 }

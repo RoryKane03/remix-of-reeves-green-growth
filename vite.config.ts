@@ -7,6 +7,10 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, isSsrBuild }) => ({
+  define: {
+    // true only for builds on Netlify: switches photos to Netlify Image CDN (src/utils/netlifyImage.ts)
+    __NETLIFY_IMAGES__: JSON.stringify(process.env.NETLIFY === 'true'),
+  },
   server: {
     host: "::",
     port: 8080,
