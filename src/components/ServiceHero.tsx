@@ -1,4 +1,5 @@
 import { LucideIcon } from 'lucide-react';
+import { cdnImage, cdnSrcSet } from '@/utils/netlifyImage';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,7 +22,9 @@ const ServiceHero = ({ category, icon: Icon, title, description, backgroundImage
       {/* Hero Image with Gradient Overlay */}
       <div className="relative h-[50vh] lg:h-[60vh] max-h-[500px]">
         <img 
-          src={backgroundImage}
+          src={cdnImage(backgroundImage, 1600)}
+          srcSet={cdnSrcSet(backgroundImage, [640, 1024, 1600])}
+          sizes="100vw"
           alt={`Professional ${title} service in action`}
           className="w-full h-full object-cover"
           style={{

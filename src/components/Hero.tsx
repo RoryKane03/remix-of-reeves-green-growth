@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { cdnImage } from '@/utils/netlifyImage';
 import { Button } from '@/components/ui/button';
 import arbApprovedBadge from '@/assets/accreditations/arb-approved-badge.png';
 
@@ -34,7 +35,7 @@ const Hero = () => {
 
           <div className="home-hero__badge">
             <img
-              src={arbApprovedBadge}
+              src={cdnImage(arbApprovedBadge, 320)}
               alt="ARB Approved Contractor"
               width="160"
               height="160"

@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { cdnImageByHeight } from '@/utils/netlifyImage';
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -167,7 +168,7 @@ const CredibilityBand = () => {
               <CarouselContent>
                 {mobileSlides.map((slide, slideIndex) => <CarouselItem key={slideIndex}>
                     <div className="flex items-center justify-center w-full h-52 py-10">
-                      <img src={slide[0].logo} alt={`${slide[0].name} logo`} className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110" loading="lazy" />
+                      <img src={cdnImageByHeight(slide[0].logo, 160)} alt={`${slide[0].name} logo`} className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110" loading="lazy" />
                     </div>
                   </CarouselItem>)}
               </CarouselContent>
@@ -208,7 +209,7 @@ const CredibilityBand = () => {
                 {desktopSlides.map((slide, slideIndex) => <CarouselItem key={slideIndex}>
                     <div className="grid grid-cols-3 gap-10 items-center justify-items-center py-12 px-8">
                       {slide.map((partner, partnerIndex) => <div key={partnerIndex} className="flex items-center justify-center w-full h-60">
-                          <img src={partner.logo} alt={`${partner.name} logo`} className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110" loading="lazy" />
+                          <img src={cdnImageByHeight(partner.logo, 160)} alt={`${partner.name} logo`} className="max-w-full max-h-full object-contain transition-all duration-300 hover:scale-110" loading="lazy" />
                         </div>)}
                     </div>
                   </CarouselItem>)}

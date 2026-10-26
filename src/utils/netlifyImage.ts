@@ -22,6 +22,12 @@ export function cdnImage(src: string, width: number, quality = 72): string {
   return `/.netlify/images?url=${encodeURIComponent(src)}&w=${width}&q=${quality}`;
 }
 
+/** One resized copy of a logo or badge, `height` pixels tall (width follows). */
+export function cdnImageByHeight(src: string, height: number, quality = 80): string {
+  if (!canTransform(src)) return src;
+  return `/.netlify/images?url=${encodeURIComponent(src)}&h=${height}&q=${quality}`;
+}
+
 /** A srcSet so each device downloads only the size it needs. */
 export function cdnSrcSet(src: string, widths: number[] = [480, 800, 1200]): string | undefined {
   if (!canTransform(src)) return undefined;
