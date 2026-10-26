@@ -285,7 +285,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     id: 2060,
-    src: "/lovable-uploads/hedge-cutting-car-park-boundary-trim.jpg",
+    src: "/lovable-uploads/hedge-cutting-car-park-new-bay-markings.jpg",
     alt: "Long boundary hedge trimmed to a flat level top beside a tarmac car park with newly painted bay markings, residential houses and mature trees behind under a blue sky",
     category: "hedge-cutting"
   },
