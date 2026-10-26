@@ -46,11 +46,11 @@ const Hero = () => {
           </div>
 
           <h1 className="home-hero__title home-hero__entrance home-hero__entrance--2">
-            The West Midlands' ARB Approved tree surgeons, established 2002
+            Bromsgrove’s ARB Approved tree surgeons, established 2002
           </h1>
 
           <p className="home-hero__subtext home-hero__entrance home-hero__entrance--3">
-            40,000+ jobs completed safely. Free quotes across Birmingham, Worcester, Bromsgrove and the West Midlands.
+            40,000+ jobs completed safely. Free quotes across Bromsgrove, Redditch, Birmingham, Solihull and the West Midlands.
           </p>
 
           <div className="home-hero__actions home-hero__entrance home-hero__entrance--4">
