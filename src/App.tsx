@@ -31,7 +31,6 @@ const CommercialSiteClearance = lazy(() => import("./pages/CommercialSiteClearan
 const Birmingham = lazy(() => import("./pages/locations/Birmingham"));
 const Worcester = lazy(() => import("./pages/locations/Worcester"));
 const Warwick = lazy(() => import("./pages/locations/Warwick"));
-const AuthorProfile = lazy(() => import("./pages/team/AuthorProfile"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -79,7 +78,6 @@ const AppContent = () => {
             <Route path="/locations/birmingham" element={<Birmingham />} />
             <Route path="/locations/worcester" element={<Worcester />} />
             <Route path="/locations/warwick" element={<Warwick />} />
-            <Route path="/team/john-reeves" element={<AuthorProfile />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/auth" element={<Auth />} />

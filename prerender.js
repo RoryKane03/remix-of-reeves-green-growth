@@ -23,7 +23,6 @@ const routesToPrerender = [
   '/locations/birmingham',
   '/locations/worcester',
   '/locations/warwick',
-  '/team/john-reeves',
   '/privacy-policy',
   '/404'
 ]
