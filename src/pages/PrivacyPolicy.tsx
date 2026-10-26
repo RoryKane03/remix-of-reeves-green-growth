@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 import { ChevronUp } from 'lucide-react';
 import { trackEmailClick } from '@/utils/emailTracking';
 
@@ -18,6 +19,11 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--neutral-050)' }}>
+      <SEO
+        title="Privacy Policy | Reeves Tree Surgeons"
+        description="How Reeves Tree Surgeons collects, uses and protects your personal information when you contact us or use our website."
+        url="/privacy-policy"
+      />
       <Header />
       
       {/* Hero Section */}

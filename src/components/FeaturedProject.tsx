@@ -8,19 +8,19 @@ const FeaturedProject = () => {
   const projects = [
     {
       id: 1,
-      image: "/lovable-uploads/f3ae2a98-d484-4b4f-8320-2236d94d3904.png",
+      image: "/lovable-uploads/f3ae2a98-d484-4b4f-8320-2236d94d3904",
       title: "Large Oak Removal",
       description: "Professional removal using crane equipment"
     },
     {
       id: 2,
-      image: "/lovable-uploads/e4587469-be1f-4959-a258-62dd2b8a8834.png",
+      image: "/lovable-uploads/e4587469-be1f-4959-a258-62dd2b8a8834",
       title: "Stump Grinding",
       description: "Complete stump removal and site clearance"
     },
     {
       id: 3,
-      image: "/lovable-uploads/56fdf6b5-eb05-4c88-a572-ff26ba94815d.png",
+      image: "/lovable-uploads/56fdf6b5-eb05-4c88-a572-ff26ba94815d",
       title: "Team Tree Work",
       description: "Coordinated large-scale tree surgery"
     }
@@ -50,10 +50,15 @@ const FeaturedProject = () => {
             >
               <div className="aspect-video relative">
                 <img
-                  src={project.image}
+                  src={`${project.image}-800.webp`}
+                  srcSet={`${project.image}-800.webp 800w, ${project.image}-1280.webp 1280w`}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  width={800}
+                  height={450}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

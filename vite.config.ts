@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode, isSsrBuild }) => ({
   server: {
     host: "::",
     port: 8080,
@@ -37,7 +37,8 @@ export default defineConfig(({ mode }) => ({
       input: {
         main: path.resolve(__dirname, 'index.html')
       },
-      output: {
+      // manualChunks only applies to the browser build; the prerender server build skips it
+      output: isSsrBuild ? {} : {
         manualChunks: {
           // Vendor chunk - React core libraries
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],

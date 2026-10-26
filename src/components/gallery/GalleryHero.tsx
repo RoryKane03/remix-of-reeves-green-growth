@@ -4,7 +4,11 @@ const GalleryHero = () => {
       {/* Hero Image with Enhanced Gradient Overlay */}
       <div className="relative h-[50vh] lg:h-[60vh] max-h-[550px]">
         <img 
-          src="/lovable-uploads/f3ae2a98-d484-4b4f-8320-2236d94d3904.png" 
+          src="/lovable-uploads/f3ae2a98-d484-4b4f-8320-2236d94d3904-1280.webp"
+          srcSet="/lovable-uploads/f3ae2a98-d484-4b4f-8320-2236d94d3904-800.webp 800w, /lovable-uploads/f3ae2a98-d484-4b4f-8320-2236d94d3904-1280.webp 1280w"
+          sizes="100vw"
+          width={1280}
+          height={720}
           alt="Professional tree surgeons and equipment in action at work site"
           className="w-full h-full object-cover"
           style={{

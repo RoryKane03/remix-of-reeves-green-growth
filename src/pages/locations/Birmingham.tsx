@@ -31,7 +31,7 @@ const Birmingham = () => {
         <title>Tree Surgeons Birmingham | Professional Tree Surgery Services West Midlands</title>
         <meta name="description" content="Expert tree surgeons in Birmingham. Professional tree removal, pruning, hedge cutting & emergency services. Covering Edgbaston, Moseley, Kings Heath, Harborne. Free quotes." />
         <meta name="keywords" content="tree surgeons Birmingham, tree removal Birmingham, tree surgery Birmingham, arborists Birmingham, emergency tree services Birmingham, hedge cutting Birmingham" />
-        <link rel="canonical" href="https://reevestreesurgeons.uk/locations/birmingham" />
+        <link rel="canonical" href="https://www.reevestreesurgeons.co.uk/locations/birmingham" />
         <script type="application/ld+json">
           {JSON.stringify(localBusinessData)}
         </script>

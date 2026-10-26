@@ -46,8 +46,20 @@ http://www.reevestreesurgeons.uk/* https://www.reevestreesurgeons.co.uk/:splat 3
 /team/john-reeves/     /team/john-reeves.html        200
 /privacy-policy        /privacy-policy.html          200
 /privacy-policy/       /privacy-policy.html          200
-/thank-you             /index.html                   200
-/thank-you/            /index.html                   200
+/thank-you             /app-shell.html               200
+/thank-you/            /app-shell.html               200
+
+# App-only pages (not prerendered, noindex) - serve the plain app shell
+/auth                  /app-shell.html               200
+/auth/                 /app-shell.html               200
+/admin                 /app-shell.html               200
+/admin/*               /app-shell.html               200
+
+# Old footer URLs - send visitors and Google to the real pages
+/commercial-tree-work        /commercial/tree-work                  301
+/commercial-hedge-cutting    /commercial/hedge-cutting              301
+/commercial-stump-grinding   /commercial/stump-grinding             301
+/commercial-site-clearance   /services/commercial/site-clearance    301
 
 # Redirect old Coventry page to Worcester (both versions)
 /locations/coventry  /locations/worcester  301
@@ -56,5 +68,5 @@ http://www.reevestreesurgeons.uk/* https://www.reevestreesurgeons.co.uk/:splat 3
 # Remove trailing slashes ONLY for paths that don't match above rules
 /*/                 /:splat                        301
 
-# Fallback for any other routes (SPA routing)
-/*    /index.html   200
+# Anything else is a real 404 (proper status code + helpful page), not a copy of the home page
+/*    /404.html   404
