@@ -34,8 +34,8 @@ const Index = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--neutral-050)' }}>
       <SEO 
-        title="Professional Tree Surgeons West Midlands | Reeves Tree Surgeons"
-        description="Expert tree surgeons serving West Midlands since 2002. Professional tree removal, hedge cutting, stump grinding & emergency services. Fully insured & certified arborists."
+        title="Tree Surgeons Bromsgrove | Reeves Tree Surgeons"
+        description="Family-run, ARB Approved tree surgeons in Bromsgrove since 2002, covering Redditch, Birmingham, Solihull & the West Midlands."
         keywords="tree surgeons West Midlands, tree removal Birmingham, hedge cutting, stump grinding, emergency tree services, arborists"
         url="/"
         structuredData={[getLocalBusinessData(), getFAQData()]}

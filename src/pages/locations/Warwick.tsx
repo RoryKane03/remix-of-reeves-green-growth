@@ -28,8 +28,8 @@ const Warwick = () => {
   return (
     <>
       <Helmet>
-        <title>Tree Surgeons Warwick | Professional Tree Surgery Services Warwickshire</title>
-        <meta name="description" content="Expert tree surgeons in Warwick. Professional tree removal, pruning, hedge cutting & emergency services. Covering Warwick, Leamington Spa, Kenilworth, Stratford-upon-Avon. Free quotes." />
+        <title>Tree Surgeons Warwick | Reeves Tree Surgeons</title>
+        <meta name="description" content="Tree surgeons covering Warwick, Leamington Spa, Kenilworth & Stratford-upon-Avon. ARB Approved, 24/7 emergencies. Free quotes: 01527 874143." />
         <meta name="keywords" content="tree surgeons Warwick, tree removal Warwick, tree surgery Warwickshire, arborists Warwick, emergency tree services Warwick, hedge cutting Warwickshire, tree surgeon Leamington Spa, tree surgeon Kenilworth" />
         <link rel="canonical" href="https://www.reevestreesurgeons.co.uk/locations/warwick" />
         <script type="application/ld+json">

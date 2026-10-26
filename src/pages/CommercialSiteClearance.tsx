@@ -87,8 +87,8 @@ const CommercialSiteClearance = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--neutral-050)' }}>
       <SEO 
-        title="Commercial Site Clearance Services | Reeves Tree Surgeons"
-        description="Expert commercial site clearance in the West Midlands. Garden clearance, land development & construction site preparation. ARB approved, fully insured, compliant service."
+        title="Site Clearance West Midlands | Reeves Tree Surgeons"
+        description="Commercial and development site clearance across the West Midlands: trees, scrub and vegetation removed. ARB Approved, fully insured. 01527 874143."
         keywords="commercial site clearance, land clearance Birmingham, construction site preparation, garden clearance, development clearance, West Midlands"
         url="/services/commercial/site-clearance"
         structuredData={getServiceData(

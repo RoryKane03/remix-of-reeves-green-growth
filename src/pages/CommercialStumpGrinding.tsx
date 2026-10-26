@@ -81,8 +81,8 @@ const CommercialStumpGrinding = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Commercial Stump Grinding Services | Professional Stump Removal"
-        description="Professional commercial stump grinding and removal services for businesses across the West Midlands. Fast, efficient, and minimal disruption to your operations."
+        title="Commercial Stump Grinding | Reeves Tree Surgeons"
+        description="Commercial stump grinding and removal across the West Midlands, with minimal disruption to your site. ARB Approved, fully insured. Call 01527 874143."
         keywords="commercial stump grinding, business stump removal, commercial stump services, professional stump grinding, West Midlands"
         url="/commercial/stump-grinding"
       />

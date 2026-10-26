@@ -17,8 +17,8 @@ const OurWork = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Our Work Gallery - Tree Surgery Projects West Midlands | Reeves Tree Surgeons"
-        description="Browse our portfolio of completed tree surgery, hedge cutting, stump grinding, and site clearance projects across the West Midlands. See professional results from NPTC qualified arborists."
+        title="Tree Surgery Project Gallery | Reeves Tree Surgeons"
+        description="See recent tree felling, pruning, hedge cutting, stump grinding and site clearance jobs across Bromsgrove, Birmingham and the West Midlands."
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Our Work', href: '/our-work', current: true }
