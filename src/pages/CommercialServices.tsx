@@ -104,7 +104,7 @@ const CommercialServices = () => {
               <p className="text-lg md:text-xl leading-relaxed mb-8" style={{
               color: '#6B7280'
             }}>
-                ARB approved contractor providing professional tree services for businesses, schools, and commercial properties since 2002.
+                Established in 2002 and an ARB Approved Contractor since 2020, providing professional tree services for businesses, schools, and commercial properties.
               </p>
             </div>
           </div>
