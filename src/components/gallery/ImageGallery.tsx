@@ -13,6 +13,18 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    id: 2073,
+    src: "/lovable-uploads/tree-work-felling-pub-bucking-rounds.jpg",
+    alt: "Reeves arborist in orange high-visibility PPE and a dark helmet with ear defenders bucking a large felled trunk into rounds with a chainsaw at ground level on a paved patio, with a brick pub building behind",
+    category: "tree-work"
+  },
+  {
+    id: 2074,
+    src: "/lovable-uploads/tree-work-felling-pub-spar-pull.jpg",
+    alt: "Arborist in orange high-visibility PPE taking the back-cut at the base of a standing tree spar while a pulling rope held under tension guides the felling, with cut rounds on the grass and a brick pub building behind",
+    category: "tree-work"
+  },
+  {
     id: 2070,
     src: "/lovable-uploads/tree-work-arborist-chainsaw-platform-cut.jpg",
     alt: "Reeves arborist in orange branded high-visibility PPE and white helmet cutting into the trunk of a large ash tree with a chainsaw from a cherry picker platform, with residential street and work vehicles below",
