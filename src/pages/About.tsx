@@ -59,7 +59,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="About Reeves Tree Surgeons - ARB Approved Since 2002 | West Midlands"
+        title="About Reeves Tree Surgeons | ARB Approved Since 2020"
         description="Meet the team at Reeves Tree Surgeons — ARB Approved Contractor with 20 fully qualified NPTC arborists and over 20 years of professional tree care experience across Birmingham, Worcester, Solihull, and the West Midlands."
         keywords="about reeves tree surgeons, tree surgery company, ARB approved contractor, qualified arborists, NPTC certified, West Midlands tree care, professional tree surgeons, Birmingham tree surgeons, Worcester arborists, Solihull tree care"
         url="/about"

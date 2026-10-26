@@ -157,7 +157,7 @@ const DomesticServices = () => {
           <div className="container max-w-6xl mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg md:text-xl leading-relaxed" style={{ color: '#6B7280' }}>
-                Reeves Tree Surgeons provides trusted domestic tree care across the West Midlands, including tree work, hedge cutting, and stump removal. Since 2002, our ARB-approved team has delivered safe, reliable, and affordable services for homeowners.
+                Reeves Tree Surgeons provides trusted domestic tree care across the West Midlands, including tree work, hedge cutting, and stump removal. Since 2002, our team (ARB Approved since 2020) has delivered safe, reliable, and affordable services for homeowners.
               </p>
               
               <div className="w-16 h-0.5 mx-auto mt-8 mb-8 rounded-full" style={{ backgroundColor: '#2D5F3F' }} />

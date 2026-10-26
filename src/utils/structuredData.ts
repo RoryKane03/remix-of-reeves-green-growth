@@ -5,7 +5,7 @@ export const getLocalBusinessData = () => ({
   "@id": "https://www.reevestreesurgeons.co.uk",
   "name": "Reeves Tree Surgeons", 
   "alternateName": "Reeves Tree Services",
-  "description": "Professional tree surgeons serving the West Midlands since 2002. Expert tree removal, hedge cutting, stump grinding and emergency tree services.",
+  "description": "Professional tree surgeons serving the West Midlands since 2002 and ARB Approved Contractors since 2020. Tree removal, hedge cutting, stump grinding and 24/7 emergency call-outs.",
   "url": "https://www.reevestreesurgeons.co.uk",
   "telephone": "+441527874143",
   "logo": "https://www.reevestreesurgeons.co.uk/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png",
@@ -60,7 +60,7 @@ export const getLocalBusinessData = () => ({
       }
     ]
   },
-  "openingHours": "Mo-Su 07:00-19:00",
+  "openingHours": "Mo-Fr 09:00-16:00",
   "priceRange": "££",
   "paymentAccepted": ["Cash", "Card", "Bank Transfer"],
   "currenciesAccepted": "GBP"

@@ -281,7 +281,7 @@ const ContactForm = () => {
                       fontSize: '14px',
                       fontWeight: '500'
                     }}>
-                      7:00 AM - 4:00 PM
+                      9:00 AM - 4:00 PM
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
