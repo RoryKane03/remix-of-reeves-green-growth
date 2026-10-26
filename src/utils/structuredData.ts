@@ -251,60 +251,6 @@ export const getBreadcrumbData = (breadcrumbItems: Array<{label: string, href: s
   }))
 });
 
-// Author/Person Schema for E-E-A-T
-export const getAuthorSchema = (authorName: string) => ({
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": authorName,
-  "jobTitle": "Master Arborist & Company Director",
-  "description": "NPTC qualified arborist with over 20 years of professional experience in tree surgery, serving the West Midlands since 2002.",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Reeves Tree Surgeons",
-    "url": "https://www.reevestreesurgeons.co.uk"
-  },
-  "hasCredential": [
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Professional Certification",
-      "name": "NPTC Qualified Arborist",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "National Proficiency Tests Council"
-      }
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Professional Membership",
-      "name": "ARB Approved Contractor",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Arboricultural Association"
-      }
-    }
-  ],
-  "alumniOf": {
-    "@type": "Organization",
-    "name": "National Proficiency Tests Council"
-  },
-  "knowsAbout": [
-    "Arboriculture",
-    "Tree Surgery",
-    "Tree Preservation Orders",
-    "Emergency Tree Work",
-    "Commercial Tree Management",
-    "Urban Forestry",
-    "Tree Risk Assessment",
-    "Heritage Tree Care"
-  ],
-  "award": [
-    "Over 20 years professional experience",
-    "ARB Approved Contractor status",
-    "Multiple NPTC certifications"
-  ],
-  "url": `https://www.reevestreesurgeons.co.uk/team/${authorName.toLowerCase().replace(/\s+/g, '-')}`
-});
-
 // Article/Blog structured data for SEO
 export const getArticleStructuredData = () => ({
   "@context": "https://schema.org",

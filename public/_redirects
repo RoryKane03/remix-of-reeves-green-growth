@@ -42,8 +42,6 @@ http://www.reevestreesurgeons.uk/* https://www.reevestreesurgeons.co.uk/:splat 3
 /locations/worcester/  /locations/worcester.html     200
 /locations/warwick     /locations/warwick.html       200
 /locations/warwick/    /locations/warwick.html       200
-/team/john-reeves      /team/john-reeves.html        200
-/team/john-reeves/     /team/john-reeves.html        200
 /privacy-policy        /privacy-policy.html          200
 /privacy-policy/       /privacy-policy.html          200
 /thank-you             /app-shell.html               200
@@ -60,6 +58,10 @@ http://www.reevestreesurgeons.uk/* https://www.reevestreesurgeons.co.uk/:splat 3
 /commercial-hedge-cutting    /commercial/hedge-cutting              301
 /commercial-stump-grinding   /commercial/stump-grinding             301
 /commercial-site-clearance   /services/commercial/site-clearance    301
+
+# Removed team page - send visitors and Google to About
+/team/john-reeves    /about    301
+/team/john-reeves/   /about    301
 
 # Redirect old Coventry page to Worcester (both versions)
 /locations/coventry  /locations/worcester  301

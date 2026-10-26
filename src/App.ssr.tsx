@@ -24,7 +24,6 @@ import CommercialSiteClearance from "./pages/CommercialSiteClearance";
 import Birmingham from "./pages/locations/Birmingham";
 import Worcester from "./pages/locations/Worcester";
 import Warwick from "./pages/locations/Warwick";
-import AuthorProfile from "./pages/team/AuthorProfile";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
@@ -55,7 +54,6 @@ const AppSSR = () => (
             <Route path="/locations/birmingham" element={<Birmingham />} />
             <Route path="/locations/worcester" element={<Worcester />} />
             <Route path="/locations/warwick" element={<Warwick />} />
-            <Route path="/team/john-reeves" element={<AuthorProfile />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
