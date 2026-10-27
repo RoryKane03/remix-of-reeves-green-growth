@@ -885,12 +885,6 @@ const galleryImages: GalleryImage[] = [
     category: "hedge-cutting"
   },
   {
-    id: 127,
-    src: "/lovable-uploads/hedge-cutting-driveway-conifer-laurel.jpg",
-    alt: "Professionally maintained tall conifer and laurel hedges along residential driveway",
-    category: "hedge-cutting"
-  },
-  {
     id: 128,
     src: "/lovable-uploads/hedge-cutting-commercial-frontage-topiary.jpg",
     alt: "Shaped topiary box hedging maintained at commercial Tudor-style building frontage",
