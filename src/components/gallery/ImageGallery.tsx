@@ -309,6 +309,18 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2077,
+    src: "/lovable-uploads/hedge-cutting-topiary-pillars-garden-lawn.jpg",
+    alt: "Five tall columnar evergreen hedges clipped into neat rounded vertical pillars along a wooden boundary fence, above a sloping lawn and brick paved patio in a residential garden",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2078,
+    src: "/lovable-uploads/hedge-cutting-tall-boundary-garden-lawn.jpg",
+    alt: "Very tall formal evergreen boundary hedge cut to a crisp level top and flat face behind a large lawn with a rotary clothes line, with bulk collection bags and tarps laid out for cleanup",
+    category: "hedge-cutting"
+  },
+  {
     id: 2075,
     src: "/lovable-uploads/hedge-cutting-topiary-blocks-period-home.jpg",
     alt: "Large block-shaped yew topiary hedges freshly clipped to clean rounded forms on a sloped lawn beside a stone paved patio, with a red-brick period home and mature autumn woodland behind under an overcast sky",
