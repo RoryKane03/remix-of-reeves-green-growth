@@ -309,6 +309,18 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2075,
+    src: "/lovable-uploads/hedge-cutting-topiary-blocks-period-home.jpg",
+    alt: "Large block-shaped yew topiary hedges freshly clipped to clean rounded forms on a sloped lawn beside a stone paved patio, with a red-brick period home and mature autumn woodland behind under an overcast sky",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2076,
+    src: "/lovable-uploads/hedge-cutting-tall-boundary-greenhouse.jpg",
+    alt: "Very tall evergreen boundary hedge reduced and trimmed to a straight level top and flat face along a residential garden border, with a timber fence, small glass greenhouse and potted plants beneath",
+    category: "hedge-cutting"
+  },
+  {
     id: 2063,
     src: "/lovable-uploads/hedge-cutting-boundary-hedge-estate-railings.jpg",
     alt: "Long formally trimmed broadleaf boundary hedge with a flat level top and neat vertical sides, backed by dark metal estate railings, beside a mown grass verge with rolling arable fields and mature oaks beyond",
