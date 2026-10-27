@@ -699,12 +699,6 @@ const galleryImages: GalleryImage[] = [
     category: "hedge-cutting"
   },
   {
-    id: 68,
-    src: "/lovable-uploads/hedge-cutting-laurel-boundary.jpg",
-    alt: "Freshly trimmed laurel hedge along boundary path with mulched base and neat professional finish",
-    category: "hedge-cutting"
-  },
-  {
     id: 69,
     src: "/lovable-uploads/hedge-cutting-pub-garden.jpg",
     alt: "Professionally trimmed boundary hedge at pub beer garden with picnic tables on overcast winter day",
