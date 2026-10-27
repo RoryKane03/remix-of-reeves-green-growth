@@ -309,6 +309,18 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2079,
+    src: "/lovable-uploads/hedge-cutting-shaped-evergreens-garden-patio.jpg",
+    alt: "Mature evergreen hedges clipped into sculpted undulating shapes behind garden shrubs, beside a stone paved patio and sloping lawn, with a team member in orange high-visibility clothing at the right edge",
+    category: "hedge-cutting"
+  },
+  {
+    id: 2080,
+    src: "/lovable-uploads/hedge-cutting-tennis-court-privacy-hedge.jpg",
+    alt: "Tall evergreen hedges cut into straight flat-topped privacy walls surrounding an outdoor hard-surface tennis court with net and guide string",
+    category: "hedge-cutting"
+  },
+  {
     id: 2077,
     src: "/lovable-uploads/hedge-cutting-topiary-pillars-garden-lawn.jpg",
     alt: "Five tall columnar evergreen hedges clipped into neat rounded vertical pillars along a wooden boundary fence, above a sloping lawn and brick paved patio in a residential garden",
