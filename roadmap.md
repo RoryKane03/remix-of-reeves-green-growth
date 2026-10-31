@@ -1,4 +1,5 @@
 # Quote tracking
+- [ ] Investigate lower website enquiries using saved quotes, available traffic and live form checks; leave Campaign 2 and its budget unchanged.
 - [x] Consolidate tags and honor recorded cookie choices.
 - [x] Count only a successfully saved quote, using the existing Google page rule without an extra conversion event.
 - [x] Save consent-permitted attribution alongside quotes.
