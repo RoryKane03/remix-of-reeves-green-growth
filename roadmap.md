@@ -1,4 +1,5 @@
 # Quote tracking
+- [x] Investigate lower website enquiries: 3 non-test/owner quotes in each of 17–23 and 24–30 Oct; visitor totals unavailable for Netlify. Live intercepted desktop/mobile flows worked; reproduced silent email-failure confirmation. Dispatch records are attempts, not delivery proof. No real test submissions, campaign changes or website fixes made.
 - [x] Consolidate tags and honor recorded cookie choices.
 - [x] Count only a successfully saved quote, using the existing Google page rule without an extra conversion event.
 - [x] Save consent-permitted attribution alongside quotes.
