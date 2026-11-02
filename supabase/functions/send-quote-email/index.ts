@@ -336,16 +336,28 @@ const handler = async (req: Request): Promise<Response> => {
       ? ` [${payload.files.length} photo${payload.files.length !== 1 ? 's' : ''}]` 
       : '';
     
-    const emailResponse = await resend.emails.send({
+    const baseEmail = {
       from: "Reeves Tree Surgeons <onboarding@resend.dev>",
       to: ["rory.kane07@outlook.com"],
       subject: `New Quote Request${payload.service ? ` - ${payload.service}` : ''}${fileCountText}`,
       html: emailHtml,
       replyTo: payload.email,
-      attachments: attachments,
-    });
+    };
 
-    console.log("[send-quote-email] Email sent successfully:", emailResponse);
+    // Resend returns { error } instead of throwing, so check it explicitly.
+    let emailResponse = await resend.emails.send({ ...baseEmail, attachments });
+    if (emailResponse.error && attachments && attachments.length > 0) {
+      console.error("[send-quote-email] Send with photos failed, retrying without attachments:", emailResponse.error);
+      emailResponse = await resend.emails.send({
+        ...baseEmail,
+        subject: `${baseEmail.subject} (photos could not be attached - see quote ${payload.quoteId})`,
+      });
+    }
+    if (emailResponse.error || !emailResponse.data?.id) {
+      throw new Error(`Email provider rejected the notification: ${emailResponse.error?.message ?? 'no message id'}`);
+    }
+
+    console.log("[send-quote-email] Email sent successfully:", emailResponse.data.id);
 
     return new Response(
       JSON.stringify({ 
