@@ -1,4 +1,5 @@
 import { quoteTrackingMetadata } from '@/utils/marketingTracking';
+import { notifyQuote } from './notifyQuote';
 import { supabase } from "@/integrations/supabase/client";
 import { logSecurityEvent, validateFileUpload, validateFileContent, sanitizeInput, detectAutomatedSubmission, RateLimiter } from "@/utils/security";
 import { z } from "zod";
@@ -352,36 +353,34 @@ export async function submitQuote(data: QuoteFormData, files: File[], formMetada
       files: quoteFiles.map(f => ({ name: f.name, size: f.size, type: f.type }))
     });
     
-    const filesData = await Promise.all(
+    // The quote is already saved: a photo problem must never turn into an error
+    // for the customer (they would resubmit). Unreadable photos are skipped.
+    const processed = await Promise.all(
       quoteFiles.map(async (file) => {
-        // Step 1: Convert to base64 — REQUIRED for the email attachment.
-        // If this fails, we surface the real error so the user knows what went wrong.
         let base64Content: string;
         try {
           base64Content = await fileToBase64Content(file);
         } catch (err) {
-          const msg = err instanceof Error ? err.message : 'unknown read error';
           console.error("[submitQuote] base64 conversion failed for", file.name, err);
-          throw new Error(`Could not read photo "${file.name}". Please try a different photo. (${msg})`);
+          logSecurityEvent({
+            action: 'QUOTE_PHOTO_SKIPPED',
+            resourceId: quoteId,
+            metadata: { fileName: file.name, error: err instanceof Error ? err.message : 'unknown' },
+            severity: 'low'
+          });
+          return null;
         }
 
         const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
         const filePath = `${quoteId}/${crypto.randomUUID()}-${safeName}`;
 
-        // Step 2: Storage upload — best-effort. If it fails, we still send the
-        // email with the attachment so the customer's submission isn't lost.
         try {
           const { error: uploadError } = await supabase.storage
             .from('quote-photos')
-            .upload(filePath, file, {
-              contentType: file.type || 'image/jpeg',
-              upsert: false,
-            });
-
+            .upload(filePath, file, { contentType: file.type || 'image/jpeg', upsert: false });
           if (uploadError) {
             console.warn("[submitQuote] storage upload failed (continuing with email-only):", uploadError);
           } else {
-            // Only insert metadata if storage upload actually succeeded
             const { error: metaError } = await supabase.from("quote_files").insert({
               quote_id: quoteId,
               file_name: file.name,
@@ -389,94 +388,63 @@ export async function submitQuote(data: QuoteFormData, files: File[], formMetada
               file_size: file.size,
               mime_type: file.type || null,
             });
-            if (metaError) {
-              console.warn("[submitQuote] file metadata insert failed (continuing):", metaError);
-            }
+            if (metaError) console.warn("[submitQuote] file metadata insert failed (continuing):", metaError);
           }
         } catch (storageErr) {
           console.warn("[submitQuote] storage step threw (continuing with email-only):", storageErr);
         }
 
-        logSecurityEvent({
-          action: 'FILE_PROCESSED',
-          resource: 'quote_files',
-          resourceId: quoteId,
-          metadata: { fileName: file.name, fileSize: file.size, mimeType: file.type }
-        });
-
-        return {
-          name: file.name,
-          size: file.size,
-          type: file.type || 'image/jpeg',
-          base64: base64Content,
-          path: filePath,
-        };
+        return { name: file.name, size: file.size, type: file.type || 'image/jpeg', base64: base64Content, path: filePath };
       })
     );
+    const filesData = processed.filter((f): f is NonNullable<typeof f> => f !== null);
+    const photosFailed = quoteFiles.length - filesData.length;
 
-    console.log("[submitQuote] Files converted successfully:", {
-      count: filesData.length,
-      totalBase64Size: filesData.reduce((sum, f) => sum + f.base64.length, 0)
+    // 3) Notify the business, with retries and a no-photo fallback.
+    const notification = await notifyQuote(
+      (body) => supabase.functions.invoke('send-quote-email', { body }),
+      {
+        quoteId,
+        name: normalized.name,
+        email: normalized.email,
+        phone: normalized.phone,
+        service: normalized.service || 'General inquiry',
+        message: (normalized.message || 'No message provided') +
+          (photosFailed > 0 ? `\n\n[${photosFailed} photo(s) could not be read from the customer's device]` : ''),
+        addressLine1: normalized.address_line_1,
+        addressLine2: normalized.address_line_2,
+        city: normalized.city,
+        postcode: normalized.postcode,
+        country: normalized.country || 'United Kingdom',
+        discountCode: normalized.discount_code || undefined,
+        files: filesData,
+      },
+    );
+    logSecurityEvent({
+      action: notification.sent ? 'QUOTE_EMAIL_SENT' : 'QUOTE_EMAIL_FAILED',
+      resourceId: quoteId,
+      metadata: { ...notification },
+      severity: notification.sent ? 'low' : 'high'
     });
 
-    // 3) Send notification email with attachments
-    try {
-      console.log("[submitQuote] Invoking send-quote-email edge function");
-      await supabase.functions.invoke('send-quote-email', {
-        body: {
-          quoteId,
-          name: normalized.name,
-          email: normalized.email,
-          phone: normalized.phone,
-          service: normalized.service || 'General inquiry',
-          message: normalized.message || 'No message provided',
-          addressLine1: normalized.address_line_1,
-          addressLine2: normalized.address_line_2,
-          city: normalized.city,
-          postcode: normalized.postcode,
-          country: normalized.country || 'United Kingdom',
-          discountCode: normalized.discount_code || undefined,
-          files: filesData // Send base64 files directly
-        }
-      });
-      
-      logSecurityEvent({
-        action: 'QUOTE_EMAIL_SENT',
-        resourceId: quoteId,
-        metadata: { emailSent: true }
-      });
-    } catch (emailError) {
-      console.error("[submitQuote] email notification failed:", emailError);
-      logSecurityEvent({
-        action: 'QUOTE_EMAIL_FAILED',
-        resourceId: quoteId,
-        metadata: { emailError: emailError instanceof Error ? emailError.message : 'Unknown error' },
-        severity: 'low'
-      });
-      // Don't throw - email failure shouldn't block quote submission
-    }
-
-    // Security: Log successful submission completion
     const duration = Date.now() - startTime;
     logSecurityEvent({
       action: 'QUOTE_SUBMISSION_COMPLETED',
       resourceId: quoteId,
-      metadata: { 
-        duration,
-        filesProcessed: filesData.length
-      }
+      metadata: { duration, filesProcessed: filesData.length, photosFailed, notified: notification.sent }
     });
 
-    return { 
-      quoteId, 
+    return {
+      quoteId,
       trackingAllowed: trackingMetadata.tracking_consent?.tracking_allowed === true,
-      uploads: filesData.map(f => ({ 
-        success: true, 
-        file: { name: f.name, size: f.size, type: f.type } as File, 
-        path: f.path 
-      })) as UploadResult[], 
-      succeeded: filesData.length, 
-      failed: 0 
+      notified: notification.sent,
+      uploads: filesData.map(f => ({
+        success: true,
+        file: { name: f.name, size: f.size, type: f.type } as File,
+        path: f.path
+      })) as UploadResult[],
+      succeeded: filesData.length,
+      failed: photosFailed
     };
 
   } catch (error) {
