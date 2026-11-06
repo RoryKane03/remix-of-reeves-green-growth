@@ -19,7 +19,7 @@ declare global {
 
 
 const GOOGLE_ADS_ID = 'AW-17942512211';
-const GOOGLE_ADS_CALL_CONVERSION_LABEL = 'YOUR_CONVERSION_LABEL_HERE';
+const GOOGLE_ADS_CALL_CONVERSION_LABEL = 'yk9QCNqErrMdENOE1OtC'; // Website call button tap
 const META_PIXEL_ID = '1305046474735858';
 
 const PHONE_NUMBER = '01527874143';
@@ -49,8 +49,6 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
   ) {
     window.gtag('event', 'conversion', {
       send_to: `${GOOGLE_ADS_ID}/${GOOGLE_ADS_CALL_CONVERSION_LABEL}`,
-      value: 1.0,
-      currency: 'GBP',
     });
   }
 
