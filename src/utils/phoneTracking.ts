@@ -44,8 +44,7 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
   // Google Ads conversion event
   if (
     readChoice() === 'accepted' && typeof window.gtag === 'function' &&
-    GOOGLE_ADS_CALL_CONVERSION_LABEL &&
-    GOOGLE_ADS_CALL_CONVERSION_LABEL !== 'YOUR_CONVERSION_LABEL_HERE'
+    GOOGLE_ADS_CALL_CONVERSION_LABEL
   ) {
     window.gtag('event', 'conversion', {
       send_to: `${GOOGLE_ADS_ID}/${GOOGLE_ADS_CALL_CONVERSION_LABEL}`,
