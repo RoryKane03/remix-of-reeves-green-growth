@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, TreePine, Building2, Scissors, Shovel } from 'lucide-react';
 
@@ -8,13 +8,6 @@ interface InternalLinkSuggestionsProps {
 }
 
 const InternalLinkSuggestions = ({ currentPage, category = 'domestic' }: InternalLinkSuggestionsProps) => {
-  const navigate = useNavigate();
-
-  const handleNavigation = (route: string) => {
-    navigate(route);
-    window.scrollTo(0, 0);
-  };
-
   const getSuggestedLinks = () => {
     const links = [];
     
@@ -101,14 +94,14 @@ const InternalLinkSuggestions = ({ currentPage, category = 'domestic' }: Interna
           {suggestedLinks.map((link, index) => {
             const IconComponent = link.icon;
             return (
-              <div
+              <Link
                 key={index}
-                className="p-4 rounded-lg border cursor-pointer hover:shadow-md transition-all duration-200"
+                to={link.route}
+                className="block p-4 rounded-lg border cursor-pointer hover:shadow-md transition-all duration-200"
                 style={{ 
                   backgroundColor: 'white',
                   borderColor: 'var(--neutral-200)'
                 }}
-                onClick={() => handleNavigation(link.route)}
               >
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 p-2 rounded-full" style={{
@@ -134,7 +127,7 @@ const InternalLinkSuggestions = ({ currentPage, category = 'domestic' }: Interna
                   
                   <ChevronRight size={14} style={{ color: 'var(--text-400)' }} />
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

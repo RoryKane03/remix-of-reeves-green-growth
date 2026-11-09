@@ -219,19 +219,15 @@ const StumpGrinding = () => {
           </div>
         </section>
 
-        {/* Related Services - Lazy Loaded */}
-        <LazySection threshold={0.1} rootMargin="300px">
-          <section className="py-20" style={{ backgroundColor: '#F8F8F8' }}>
-            <RelatedServices currentService="stump-grinding" category="domestic" />
-          </section>
-        </LazySection>
+        {/* Related Services - rendered up front so search engines see these links */}
+        <section className="py-20" style={{ backgroundColor: '#F8F8F8' }}>
+          <RelatedServices currentService="stump-grinding" category="domestic" />
+        </section>
         
-        {/* Internal Link Suggestions - Lazy Loaded */}
-        <LazySection threshold={0.1} rootMargin="300px">
-          <section className="py-20 bg-white">
-            <InternalLinkSuggestions currentPage="stump-grinding" category="domestic" />
-          </section>
-        </LazySection>
+        {/* Internal Link Suggestions - rendered up front so search engines see these links */}
+        <section className="py-20 bg-white">
+          <InternalLinkSuggestions currentPage="stump-grinding" category="domestic" />
+        </section>
 
         {/* CTA Section - Lazy Loaded */}
         <LazySection threshold={0.1} rootMargin="200px">

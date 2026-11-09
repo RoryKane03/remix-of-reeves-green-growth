@@ -228,21 +228,17 @@ const HedgeCutting = () => {
           </div>
         </section>
 
-        {/* Related Services - Lazy Loaded */}
-        <LazySection threshold={0.1} rootMargin="300px">
-          <section className="py-20" style={{
-          backgroundColor: '#F8F8F8'
-        }}>
-            <RelatedServices currentService="hedge-cutting" category="domestic" />
-          </section>
-        </LazySection>
+        {/* Related Services - rendered up front so search engines see these links */}
+        <section className="py-20" style={{
+        backgroundColor: '#F8F8F8'
+      }}>
+          <RelatedServices currentService="hedge-cutting" category="domestic" />
+        </section>
         
-        {/* Internal Link Suggestions - Lazy Loaded */}
-        <LazySection threshold={0.1} rootMargin="300px">
-          <section className="py-20 bg-white">
-            <InternalLinkSuggestions currentPage="hedge-cutting" category="domestic" />
-          </section>
-        </LazySection>
+        {/* Internal Link Suggestions - rendered up front so search engines see these links */}
+        <section className="py-20 bg-white">
+          <InternalLinkSuggestions currentPage="hedge-cutting" category="domestic" />
+        </section>
 
         {/* CTA Section - Lazy Loaded */}
         <LazySection threshold={0.1} rootMargin="200px">
