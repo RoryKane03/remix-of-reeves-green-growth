@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -67,9 +67,6 @@ const DomesticServices = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleServiceClick = (route: string) => {
-    navigate(route);
-  };
   const scrollToContact = () => {
     navigate('/contact');
   };
@@ -109,11 +106,11 @@ const DomesticServices = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
               {services.map((service, index) => {
               const IconComponent = service.icon;
-              return <div 
+              return <Link 
                 key={service.id} 
-                className="group bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-lg pt-8 pb-8 px-6 cursor-pointer animate-fade-in-up"
+                to={service.route}
+                className="block group bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-lg pt-8 pb-8 px-6 cursor-pointer animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
-                onClick={() => handleServiceClick(service.route)}
               >
                     {/* Icon Circle */}
                     <div className="flex justify-center mb-6">
@@ -134,18 +131,14 @@ const DomesticServices = () => {
                     </p>
                     
                     <div className="text-center">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleServiceClick(service.route);
-                        }}
+                      <span
                         className="font-medium text-sm inline-flex items-center gap-1 transition-colors duration-300"
                         style={{ color: '#2D5F3F' }}
                       >
                         {service.cta} →
-                      </button>
+                      </span>
                     </div>
-                  </div>;
+                  </Link>;
             })}
             </div>
           </div>
@@ -168,9 +161,9 @@ const DomesticServices = () => {
               
               <div className="mt-8 flex items-center justify-center gap-2 text-base" style={{ color: '#6B7280' }}>
                 <span>👉 Looking for larger projects? See our</span>
-                <button onClick={() => navigate('/commercial-services')} className="underline hover:no-underline transition-all duration-200 font-medium" style={{ color: '#2D5F3F' }}>
+                <Link to="/commercial-services" className="underline hover:no-underline transition-all duration-200 font-medium" style={{ color: '#2D5F3F' }}>
                   Commercial Tree Services
-                </button>
+                </Link>
               </div>
             </div>
           </div>

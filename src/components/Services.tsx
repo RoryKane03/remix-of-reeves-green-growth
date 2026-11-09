@@ -1,18 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { TreePine, Building2, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Services = () => {
-  const navigate = useNavigate();
-  const scrollToContact = () => {
-    navigate('/contact');
-  };
-  const handleDomesticServicesClick = () => {
-    navigate('/domestic-services');
-  };
-  const handleCommercialServicesClick = () => {
-    navigate('/commercial-services');
-  };
   return <section id="services" className="pt-12 md:pt-16 lg:pt-20 pb-20 bg-neutral-050">
       <div className="container-premium">
         <div className="text-center mb-12 lg:mb-16">
@@ -29,7 +19,8 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 max-w-4xl mx-auto">
           {/* Domestic Services Card */}
-          <Card className="card-premium h-full reveal-fade-up cursor-pointer transition-all duration-300 lg:hover:scale-[1.02] flex flex-col" onClick={handleDomesticServicesClick}>
+          <Link to="/domestic-services" className="block h-full">
+          <Card className="card-premium h-full reveal-fade-up cursor-pointer transition-all duration-300 lg:hover:scale-[1.02] flex flex-col">
             <CardHeader className="text-center pb-6">
               <div className="mx-auto icon-premium mb-6">
                 <TreePine size={32} />
@@ -52,21 +43,22 @@ const Services = () => {
               </CardDescription>
               
               <div className="mt-auto">
-                <Button onClick={e => {
-                e.stopPropagation();
-                handleDomesticServicesClick();
-              }} className="btn-outline-green focus-premium group" style={{
+                <Button asChild className="btn-outline-green focus-premium group" style={{
                 fontFamily: 'Inter, sans-serif'
               }}>
-                  View Domestic Services
-                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  <span>
+                    View Domestic Services
+                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
               </div>
             </CardContent>
           </Card>
+          </Link>
 
           {/* Commercial Services Card */}
-          <Card className="card-premium h-full reveal-fade-up cursor-pointer transition-all duration-300 lg:hover:scale-[1.02] flex flex-col" onClick={handleCommercialServicesClick}>
+          <Link to="/commercial-services" className="block h-full">
+          <Card className="card-premium h-full reveal-fade-up cursor-pointer transition-all duration-300 lg:hover:scale-[1.02] flex flex-col">
             <CardHeader className="text-center pb-6">
               <div className="mx-auto icon-premium mb-6">
                 <Building2 size={32} />
@@ -89,18 +81,18 @@ const Services = () => {
               </CardDescription>
               
               <div className="mt-auto">
-                <Button onClick={e => {
-                e.stopPropagation();
-                handleCommercialServicesClick();
-              }} className="btn-outline-green focus-premium group" style={{
+                <Button asChild className="btn-outline-green focus-premium group" style={{
                 fontFamily: 'Inter, sans-serif'
               }}>
-                  View Commercial Services
-                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  <span>
+                    View Commercial Services
+                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
               </div>
             </CardContent>
           </Card>
+          </Link>
         </div>
         
         {/* Request Consultation CTA */}

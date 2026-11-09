@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { TreePine, Scissors, Shovel, Building2, ChevronRight, LucideIcon } from 'lucide-react';
 
@@ -17,8 +17,6 @@ interface RelatedServicesProps {
 }
 
 const RelatedServices = ({ currentService, category = 'domestic' }: RelatedServicesProps) => {
-  const navigate = useNavigate();
-
   const allServices: RelatedService[] = [
     {
       id: 'tree-work',
@@ -91,11 +89,6 @@ const RelatedServices = ({ currentService, category = 'domestic' }: RelatedServi
 
   if (relatedServices.length === 0) return null;
 
-  const handleServiceClick = (route: string) => {
-    navigate(route);
-    window.scrollTo(0, 0);
-  };
-
   return (
     <section className="py-12 lg:py-16" style={{ backgroundColor: 'var(--neutral-050)' }}>
       <div className="container-premium">
@@ -121,11 +114,11 @@ const RelatedServices = ({ currentService, category = 'domestic' }: RelatedServi
           {relatedServices.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div
+              <Link
                 key={service.id}
-                className="p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
+                to={service.route}
+                className="block p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
                 style={{ backgroundColor: 'white' }}
-                onClick={() => handleServiceClick(service.route)}
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="flex-shrink-0 p-3 rounded-full" style={{
@@ -151,6 +144,7 @@ const RelatedServices = ({ currentService, category = 'domestic' }: RelatedServi
                 </div>
                 
                 <Button
+                  asChild
                   variant="outline"
                   className="w-full inline-flex items-center justify-center gap-2 hover:bg-opacity-10 transition-all duration-200"
                   style={{
@@ -159,25 +153,29 @@ const RelatedServices = ({ currentService, category = 'domestic' }: RelatedServi
                     fontFamily: 'Inter, sans-serif'
                   }}
                 >
-                  Learn More
-                  <ChevronRight size={16} />
+                  <span>
+                    Learn More
+                    <ChevronRight size={16} />
+                  </span>
                 </Button>
-              </div>
+              </Link>
             );
           })}
         </div>
         
         <div className="text-center mt-12">
           <Button
-            onClick={() => navigate(category === 'commercial' ? '/commercial-services' : '/domestic-services')}
+            asChild
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
             style={{
               background: '#1F5A3B',
               fontFamily: 'Inter, sans-serif'
             }}
           >
-            View All {category === 'commercial' ? 'Commercial' : 'Domestic'} Services
-            <ChevronRight size={18} />
+            <Link to={category === 'commercial' ? '/commercial-services' : '/domestic-services'}>
+              View All {category === 'commercial' ? 'Commercial' : 'Domestic'} Services
+              <ChevronRight size={18} />
+            </Link>
           </Button>
         </div>
       </div>
