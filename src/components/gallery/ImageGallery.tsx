@@ -321,6 +321,24 @@ const galleryImages: GalleryImage[] = [
     category: "hedge-cutting"
   },
   {
+    id: 2081,
+    src: "/lovable-uploads/tree-work-conifer-dismantle-climber-ropes.jpg",
+    alt: "Tree surgeon in orange chainsaw trousers and helmet rope-climbing high in a tall conifer during a sectional dismantle, against a blue sky",
+    category: "tree-work"
+  },
+  {
+    id: 2082,
+    src: "/lovable-uploads/tree-work-conifer-dismantle-climber-chainsaw.jpg",
+    alt: "Arborist secured on climbing ropes with a chainsaw hanging from his harness, working between two conifer stems during a tree dismantle",
+    category: "tree-work"
+  },
+  {
+    id: 2083,
+    src: "/lovable-uploads/tree-work-conifer-dismantle-cherry-picker-house.jpg",
+    alt: "Wide view of a climber dismantling a large conifer in a residential garden with a truck-mounted cherry picker parked below beside a house",
+    category: "tree-work"
+  },
+  {
     id: 2077,
     src: "/lovable-uploads/hedge-cutting-topiary-pillars-garden-lawn.jpg",
     alt: "Five tall columnar evergreen hedges clipped into neat rounded vertical pillars along a wooden boundary fence, above a sloping lawn and brick paved patio in a residential garden",
