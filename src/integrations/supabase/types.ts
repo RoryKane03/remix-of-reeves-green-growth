@@ -226,6 +226,7 @@ export type Database = {
         }
         Returns: string
       }
+      quote_accepts_files: { Args: { _quote_id: string }; Returns: boolean }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
