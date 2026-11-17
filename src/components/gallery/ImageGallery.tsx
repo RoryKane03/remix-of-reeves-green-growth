@@ -603,6 +603,18 @@ const galleryImages: GalleryImage[] = [
     category: "site-clearance"
   },
   {
+    id: 2084,
+    src: "/lovable-uploads/stump-grinding-bandit-sg40-autumn-garden-closeup.jpg",
+    alt: "Operator in hi-vis and forestry helmet grinding a large stump with a green Bandit SG-40 tracked stump grinder beside red and white debris barriers",
+    category: "stump-grinding"
+  },
+  {
+    id: 2085,
+    src: "/lovable-uploads/stump-grinding-bandit-sg40-autumn-garden-wide.jpg",
+    alt: "Wide view of Bandit SG-40 stump grinder removing a stump in a mulched garden bed beside a brick paved driveway with safety barriers in place",
+    category: "stump-grinding"
+  },
+  {
     id: 2,
     src: "/lovable-uploads/e4587469-be1f-4959-a258-62dd2b8a8834-1280.webp",
     alt: "Professional stump grinding with specialized equipment",
