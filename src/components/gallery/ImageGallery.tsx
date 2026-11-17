@@ -170,6 +170,12 @@ const galleryImages: GalleryImage[] = [
     category: "tree-work"
   },
   {
+    id: 2086,
+    src: "/lovable-uploads/site-clearance-pub-terrace-planting-posts.jpg",
+    alt: "Freshly planted evergreen hedging in a new raised bed with timber posts along a pub beer garden terrace after site clearance and landscaping by Reeves Tree Surgeons, with a paved walkway and cherry picker in the car park",
+    category: "site-clearance"
+  },
+  {
     id: 2066,
     src: "/lovable-uploads/site-clearance-felled-timber-logs-pasture.jpg",
     alt: "Large felled tree trunk with thick limb cuts beside a neatly stacked pile of cut timber logs on a grass pasture after tree felling and site clearance by Reeves Tree Surgeons, with a post-and-wire fence line and overcast sky",
