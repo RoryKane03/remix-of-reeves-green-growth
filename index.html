@@ -67,50 +67,14 @@
 </head>
 
   <body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#root" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-green-600 text-white p-2 rounded z-50">
-      Skip to main content
-    </a>
+    <!-- Skip to main content link for accessibility (data-nosnippet keeps it out of Google's search snippets) -->
+    <div data-nosnippet>
+      <a href="#root" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-green-600 text-white p-2 rounded z-50">Skip to main content</a>
+    </div>
     
     <!-- Main App Container -->
     <div id="root" role="main" aria-label="Reeves Tree Surgeons Website"><!--app-html--></div>
     
-    <!-- Fallback content for users with JavaScript disabled -->
-    <noscript>
-      <div style="text-align: center; padding: 2rem; font-family: system-ui; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-        <p style="color: #22c55e; margin-bottom: 1rem; font-size: 1.5em; font-weight: bold;">Reeves Tree Surgeons - Professional Tree Surgery Services</p>
-        <p style="font-size: 1.1em; margin-bottom: 1.5rem;">This website requires JavaScript to function properly. Please enable JavaScript in your browser to access our full website.</p>
-        
-        <hr style="margin: 2rem 0; border: none; height: 1px; background: #e5e7eb;" />
-        
-        <h2 style="color: #16a34a; margin-bottom: 1rem;">About Reeves Tree Surgeons</h2>
-        <p style="margin-bottom: 1rem;"><strong>Serving West Midlands since 2002</strong></p>
-        <p style="margin-bottom: 1.5rem;">Professional tree surgeons providing expert arboricultural services across the West Midlands region.</p>
-        
-        <div style="text-align: left; display: inline-block; margin-bottom: 2rem;">
-          <h3 style="color: #16a34a; margin-bottom: 0.5rem;">Our Services Include:</h3>
-          <ul style="list-style-type: disc; padding-left: 1.5rem;">
-            <li>Professional tree removal and felling</li>
-            <li>Tree pruning and crown reduction</li>
-            <li>Hedge cutting and maintenance</li>
-            <li>Stump grinding and removal</li>
-            <li>Emergency tree services (24/7)</li>
-            <li>Commercial site clearance</li>
-            <li>Tree health assessments</li>
-          </ul>
-        </div>
-        
-        <div style="background: #f3f4f6; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-          <h3 style="color: #16a34a; margin-bottom: 0.5rem;">Contact Information</h3>
-          <p><strong>Phone:</strong> <a href="tel:01527874143" style="color: #16a34a;">01527 874143</a></p>
-          <p><strong>Coverage Area:</strong> Bromsgrove, Redditch, Worcester, Birmingham, Solihull and Warwick</p>
-          <p><strong>Fully Insured:</strong> £2 million public liability</p>
-          <p><strong>Certified:</strong> NPTC qualified arborists</p>
-        </div>
-        
-        <p style="font-size: 0.9em; color: #6b7280;">Established 2002 | Over 20 years of professional tree surgery experience</p>
-      </div>
-    </noscript>
     
     <script type="module" src="/src/main.tsx"></script>
   </body>
