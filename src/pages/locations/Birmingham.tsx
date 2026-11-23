@@ -29,7 +29,7 @@ const Birmingham = () => {
     <>
       <Helmet>
         <title>Tree Surgeons Birmingham | Reeves Tree Surgeons</title>
-        <meta name="description" content="ARB Approved tree surgeons covering Birmingham, including Edgbaston, Moseley, Kings Heath & Harborne. 24/7 emergencies. Free quotes: 01527 874143." />
+        <meta name="description" content="ARB Approved tree surgeons covering Birmingham, including Edgbaston, Moseley, Kings Heath and Harborne. 24/7 emergencies. Free quotes: 01527 874143." />
         <meta name="keywords" content="tree surgeons Birmingham, tree removal Birmingham, tree surgery Birmingham, arborists Birmingham, emergency tree services Birmingham, hedge cutting Birmingham" />
         <link rel="canonical" href="https://www.reevestreesurgeons.co.uk/locations/birmingham" />
         <script type="application/ld+json">

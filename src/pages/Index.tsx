@@ -35,7 +35,7 @@ const Index = () => {
     <div className="min-h-screen" style={{ backgroundColor: 'var(--neutral-050)' }}>
       <SEO 
         title="Tree Surgeons Bromsgrove | Reeves Tree Surgeons"
-        description="Family-run, ARB Approved tree surgeons in Bromsgrove since 2002, covering Redditch, Birmingham, Solihull & the West Midlands."
+        description="Family-run, ARB Approved tree surgeons in Bromsgrove since 2002, covering Redditch, Birmingham, Solihull and the West Midlands."
         keywords="tree surgeons West Midlands, tree removal Birmingham, hedge cutting, stump grinding, emergency tree services, arborists"
         url="/"
         structuredData={[getLocalBusinessData(), getFAQData()]}
