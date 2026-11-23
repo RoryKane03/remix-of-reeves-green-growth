@@ -74,7 +74,7 @@ const DomesticServices = () => {
     handlePhoneClick('01527874143');
   };
   return <div className="min-h-screen bg-white">
-      <SEO title="Domestic Tree Surgeon Bromsgrove | Reeves Tree Surgeons" description="Safe, tidy tree surgery for homes in Bromsgrove, Redditch, Barnt Green, Birmingham & Solihull. Family-run since 2002, ARB Approved. Call 01527 874143." keywords="domestic tree services, West Midlands tree surgeons, residential tree work, home garden tree care, ARB approved contractor" url="/domestic-services" structuredData={getServiceData("Domestic Tree Services", "Professional domestic tree services for homeowners in West Midlands", "/domestic-services")} breadcrumbs={[{
+      <SEO title="Domestic Tree Surgeon Bromsgrove | Reeves Tree Surgeons" description="Safe, tidy tree surgery for homes in Bromsgrove, Redditch, Barnt Green, Birmingham and Solihull. Family-run since 2002, ARB Approved. Call 01527 874143." keywords="domestic tree services, West Midlands tree surgeons, residential tree work, home garden tree care, ARB approved contractor" url="/domestic-services" structuredData={getServiceData("Domestic Tree Services", "Professional domestic tree services for homeowners in West Midlands", "/domestic-services")} breadcrumbs={[{
       label: 'Home',
       href: '/'
     }, {

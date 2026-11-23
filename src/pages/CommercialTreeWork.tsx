@@ -79,7 +79,7 @@ const CommercialTreeWork = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Commercial Tree Surgery West Midlands | Reeves Tree Surgeons"
-        description="Commercial tree surgery for businesses, schools & councils across the West Midlands. ARB Approved, NPTC-qualified, fully insured. Call 01527 874143."
+        description="Commercial tree surgery for businesses, schools and councils across the West Midlands. ARB Approved, NPTC-qualified, fully insured. Call 01527 874143."
         keywords="commercial tree work, business tree surgery, commercial tree services, professional tree care, commercial arborists, West Midlands"
         url="/commercial/tree-work"
       />
