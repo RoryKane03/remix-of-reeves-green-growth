@@ -33,11 +33,15 @@ export function trackEmailClick(email: string = EMAIL_ADDRESS) {
 
   // Fire-and-forget DB log for the admin dashboard.
   try {
-    void supabase.from('email_clicks').insert({
+    // supabase-js only sends a request once it is awaited/then'd, so the old
+    // `void ...insert()` never reached the database. Send it, don't block on it.
+    supabase.from('email_clicks').insert({
       email_address: email,
       page_path: typeof window !== 'undefined' ? window.location.pathname : null,
       user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : null,
-    });
+    }).then(({ error }) => {
+      if (error && isDev) console.warn('[Tracking] DB log failed', error);
+    }, () => {});
   } catch (err) {
     if (isDev) console.warn('[Email Tracking] DB log failed', err);
   }

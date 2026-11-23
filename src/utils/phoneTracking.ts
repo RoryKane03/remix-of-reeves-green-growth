@@ -59,10 +59,14 @@ export function trackPhoneCall(phoneNumber: string = PHONE_NUMBER) {
   // Log to our own backend so the admin dashboard can report on it.
   // Fire-and-forget — never block the dial action.
   try {
-    void supabase.from('phone_clicks').insert({
+    // supabase-js only sends a request once it is awaited/then'd, so the old
+    // `void ...insert()` never reached the database. Send it, don't block on it.
+    supabase.from('phone_clicks').insert({
       page_path: typeof window !== 'undefined' ? window.location.pathname : null,
       user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : null,
-    });
+    }).then(({ error }) => {
+      if (error && isDev) console.warn('[Tracking] DB log failed', error);
+    }, () => {});
   } catch (err) {
     if (isDev) console.warn('[Phone Tracking] DB log failed', err);
   }
