@@ -1419,9 +1419,9 @@ const ImageGallery = () => {
             >
               <div className="aspect-video">
                 <img
-                  src={cdnImage(image.src, 800)}
                   srcSet={cdnSrcSet(image.src, [480, 800])}
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  src={cdnImage(image.src, 800)}
                   width={800}
                   height={450}
                   alt={image.alt}

@@ -22,9 +22,9 @@ const ServiceHero = ({ category, icon: Icon, title, description, backgroundImage
       {/* Hero Image with Gradient Overlay */}
       <div className="relative h-[50vh] lg:h-[60vh] max-h-[500px]">
         <img 
-          src={cdnImage(backgroundImage, 1600)}
           srcSet={cdnSrcSet(backgroundImage, [640, 1024, 1600])}
           sizes="100vw"
+          src={cdnImage(backgroundImage, 1600)}
           alt={`Professional ${title} service in action`}
           className="w-full h-full object-cover"
           style={{
