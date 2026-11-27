@@ -69,7 +69,7 @@ const HedgeCutting = () => {
     text: 'Competitive Pricing'
   }];
   return <div className="min-h-screen bg-white">
-      <SEO title="Hedge Cutting Bromsgrove | Reeves Tree Surgeons" description="Hedge cutting, trimming and reduction in Bromsgrove, Redditch, Barnt Green, Birmingham and Solihull, with all waste removed. Free quotes: 01527 874143." keywords="hedge cutting, hedge trimming, hedge maintenance, hedge shaping, hedge restoration, West Midlands" url="/hedge-cutting" structuredData={getServiceData("Hedge Cutting & Maintenance", "Professional hedge trimming, shaping, and restoration services", "/hedge-cutting")} />
+      <SEO title="Hedge Cutting Bromsgrove | Reeves Tree Surgeons" description="5-star rated on Google. Hedge cutting, trimming and reduction in Bromsgrove, Redditch, Barnt Green, Birmingham and Solihull, with all waste removed." keywords="hedge cutting, hedge trimming, hedge maintenance, hedge shaping, hedge restoration, West Midlands" url="/hedge-cutting" structuredData={getServiceData("Hedge Cutting & Maintenance", "Professional hedge trimming, shaping, and restoration services", "/hedge-cutting")} />
       <Header />
       
       <main>

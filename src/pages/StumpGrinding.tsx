@@ -77,7 +77,7 @@ const StumpGrinding = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Stump Grinding Bromsgrove | Reeves Tree Surgeons"
-        description="Tree stumps ground out and cleared up in Bromsgrove, Redditch, Barnt Green, Birmingham and Solihull. Tidy, fully insured work. Call 01527 874143."
+        description="5-star rated on Google. Tree stumps ground out and cleared up in Bromsgrove, Redditch, Barnt Green, Birmingham and Solihull. Call 01527 874143."
         keywords="stump grinding, stump removal, tree stump removal, eco-friendly stump grinding, West Midlands"
         url="/stump-grinding"
         structuredData={getServiceData("Stump Grinding & Removal", "Fast, safe, and eco-friendly stump removal services", "/stump-grinding")}
