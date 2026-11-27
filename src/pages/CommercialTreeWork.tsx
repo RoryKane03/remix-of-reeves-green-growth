@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { handlePhoneClick } from '@/utils/phoneTracking';
+import { cdnImage } from '@/utils/netlifyImage';
 
 const CommercialTreeWork = () => {
   const navigate = useNavigate();
@@ -123,9 +124,10 @@ const CommercialTreeWork = () => {
                 <div>
                   <div className="rounded-lg overflow-hidden shadow-lg bg-gray-900">
                     <video 
+                      poster={cdnImage('/lovable-uploads/tree-work-climbing-rigging.jpg', 960)}
                       className="w-full h-auto"
                       controls
-                      preload="metadata"
+                      preload="none"
                       playsInline
                       style={{ minHeight: '300px' }}
                     >

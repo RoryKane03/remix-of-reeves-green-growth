@@ -13,6 +13,7 @@ import SEO from '@/components/SEO';
 import { getServiceData } from '@/utils/structuredData';
 import OptimizedImage from '@/components/ImageOptimization';
 import { handlePhoneClick } from '@/utils/phoneTracking';
+import { cdnImage } from '@/utils/netlifyImage';
 
 const CommercialSiteClearance = () => {
   const navigate = useNavigate();
@@ -147,9 +148,10 @@ const CommercialSiteClearance = () => {
                 <div className="lg:sticky lg:top-24">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <video 
+                      poster={cdnImage('/lovable-uploads/site-clearance-roadside-tractor.jpg', 960)}
                       className="w-full h-auto"
                       controls
-                      preload="metadata"
+                      preload="none"
                       playsInline
                     >
                       <source src="/lovable-uploads/site-clearance-commercial.mov" type="video/quicktime" />

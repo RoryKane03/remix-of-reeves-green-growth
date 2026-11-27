@@ -17,6 +17,7 @@ import { getServiceData } from '@/utils/structuredData';
 import { handlePhoneClick } from '@/utils/phoneTracking';
 import treeBeforeImg from '@/assets/before-after/tree-work-before.jpg';
 import treeAfterImg from '@/assets/before-after/tree-work-after.jpg';
+import { cdnImage } from '@/utils/netlifyImage';
 const TreeWork = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -128,9 +129,10 @@ const TreeWork = () => {
                 <div>
                   <div className="rounded-lg overflow-hidden shadow-lg bg-gray-900">
                     <video 
+                      poster={cdnImage('/lovable-uploads/tree-work-climbing-rigging.jpg', 960)}
                       className="w-full h-auto"
                       controls
-                      preload="metadata"
+                      preload="none"
                       playsInline
                       style={{ minHeight: '300px' }}
                     >
