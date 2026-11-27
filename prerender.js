@@ -82,7 +82,12 @@ async function prerender() {
         }
         
         // Replace placeholder with rendered content and add build timestamp
-        const html = injectHead(template, head, route)
+        // The homepage hero image is preloaded in index.html. Other pages don't show it,
+        // so drop that preload there: it wasted ~0.7 MB and slowed their own main image.
+        const pageTemplate = route === '/'
+          ? template
+          : template.replace(/\s*<link rel="preload" as="image" href="\/lovable-uploads\/hero-tree-work-drone[^>]*>/, '')
+        const html = injectHead(pageTemplate, head, route)
           .replace('<!--app-html-->', appHtml)
           .replace('</head>', `<meta name="build-time" content="${buildTimestamp}" /></head>`)
         

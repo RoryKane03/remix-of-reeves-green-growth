@@ -17,6 +17,7 @@ import { getServiceData } from '@/utils/structuredData';
 import beforeImg from '@/assets/before-after/hedge-cutting-before.jpg';
 import afterImg from '@/assets/before-after/hedge-cutting-after.jpg';
 import { handlePhoneClick } from '@/utils/phoneTracking';
+import { cdnImage } from '@/utils/netlifyImage';
 const HedgeCutting = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -113,9 +114,9 @@ const HedgeCutting = () => {
                     <video 
                       className="w-full h-auto"
                       controls
-                      preload="auto"
+                      preload="metadata"
                       playsInline
-                      poster="/lovable-uploads/hedge-cutting-formal-topiary.jpg"
+                      poster={cdnImage('/lovable-uploads/hedge-cutting-formal-topiary.jpg', 960)}
                     >
                       <source src="/lovable-uploads/hedge-cutting-action.mov" type="video/quicktime" />
                       <source src="/lovable-uploads/hedge-cutting-action.mov" type="video/mp4" />

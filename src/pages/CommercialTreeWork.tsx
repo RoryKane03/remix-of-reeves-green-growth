@@ -125,7 +125,7 @@ const CommercialTreeWork = () => {
                     <video 
                       className="w-full h-auto"
                       controls
-                      preload="auto"
+                      preload="metadata"
                       playsInline
                       style={{ minHeight: '300px' }}
                     >

@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { handlePhoneClick } from '@/utils/phoneTracking';
+import { cdnImage } from '@/utils/netlifyImage';
 
 const CommercialHedgeCutting = () => {
   const navigate = useNavigate();
@@ -125,9 +126,9 @@ const CommercialHedgeCutting = () => {
                     <video 
                       className="w-full h-auto"
                       controls
-                      preload="auto"
+                      preload="metadata"
                       playsInline
-                      poster="/lovable-uploads/hedge-cutting-formal-topiary.jpg"
+                      poster={cdnImage('/lovable-uploads/hedge-cutting-formal-topiary.jpg', 960)}
                     >
                       <source src="/lovable-uploads/hedge-cutting-action.mov" type="video/quicktime" />
                       <source src="/lovable-uploads/hedge-cutting-action.mov" type="video/mp4" />
