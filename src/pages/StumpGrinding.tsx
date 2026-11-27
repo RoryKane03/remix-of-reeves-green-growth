@@ -15,6 +15,7 @@ import ServiceHero from '@/components/ServiceHero';
 import { LazySection } from '@/components/LazySection';
 import { getServiceData } from '@/utils/structuredData';
 import { handlePhoneClick } from '@/utils/phoneTracking';
+import { cdnImage } from '@/utils/netlifyImage';
 
 const StumpGrinding = () => {
   const navigate = useNavigate();
@@ -118,10 +119,11 @@ const StumpGrinding = () => {
                 {/* Video Section */}
                 <div className="rounded-lg overflow-hidden shadow-lg bg-gray-900">
                   <video 
+                    poster={cdnImage('/lovable-uploads/stump-grinding-bandit-sg40-autumn-garden-wide.jpg', 960)}
                     className="w-full h-auto"
                     controls
                     playsInline
-                    preload="metadata"
+                    preload="none"
                   >
                     <source src="/lovable-uploads/stump-grinding-action.mov" type="video/quicktime" />
                     <source src="/lovable-uploads/stump-grinding-action.mp4" type="video/mp4" />

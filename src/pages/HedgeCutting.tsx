@@ -114,7 +114,7 @@ const HedgeCutting = () => {
                     <video 
                       className="w-full h-auto"
                       controls
-                      preload="metadata"
+                      preload="none"
                       playsInline
                       poster={cdnImage('/lovable-uploads/hedge-cutting-formal-topiary.jpg', 960)}
                     >
