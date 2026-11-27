@@ -120,9 +120,9 @@ const About = () => {
             <div className="max-w-4xl mx-auto mb-12">
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-border">
                 <img
-                  src={cdnImage('/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png', 900)}
                   srcSet={cdnSrcSet('/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png', [480, 900])}
                   sizes="(min-width: 1024px) 50vw, 100vw"
+                  src={cdnImage('/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png', 900)}
                   alt="Reeves Tree Surgeons team - 20 fully qualified NPTC and Lantra certified arborists with 20+ years experience across Birmingham, Worcester, Solihull, and West Midlands"
                   className="w-full h-auto object-contain"
                   width="900"

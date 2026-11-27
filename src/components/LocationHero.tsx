@@ -40,9 +40,9 @@ const LocationHero = ({
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={cdnImage(backgroundImage, 1600)}
           srcSet={cdnSrcSet(backgroundImage, [640, 1024, 1600])}
           sizes="100vw"
+          src={cdnImage(backgroundImage, 1600)}
           alt={`Professional tree surgery services in ${locationName}`}
           className="w-full h-full object-cover"
           style={{

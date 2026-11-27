@@ -38,9 +38,9 @@ const TrustedSince = () => {
           <div className="order-first lg:order-last">
             <div className="aspect-[16/10] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
               <img 
-                src={cdnImage('/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png', 1022)}
                 srcSet={cdnSrcSet('/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png', [480, 800, 1022])}
                 sizes="(min-width: 1024px) 50vw, 100vw"
+                src={cdnImage('/lovable-uploads/26fe9352-cca5-4102-aedb-6ba7f5c2de66.png', 1022)}
                 alt="Reeves Tree Surgeons team - 20 fully qualified NPTC and Lantra certified arborists with 20+ years experience across Birmingham, Solihull, Worcester, and West Midlands" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
                 loading="lazy" 
