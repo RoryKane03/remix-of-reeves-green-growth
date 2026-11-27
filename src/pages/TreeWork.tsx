@@ -69,7 +69,7 @@ const TreeWork = () => {
     text: 'Complete Site Cleanup'
   }];
   return <div className="min-h-screen bg-white">
-      <SEO title="Tree Surgery & Removal Bromsgrove | Reeves Tree Surgeons" description="Tree felling, pruning, crown reduction and emergency removal in Bromsgrove, Redditch, Birmingham and Solihull. ARB Approved, fully insured. 01527 874143." keywords="tree work, tree pruning, tree removal, emergency tree care, cabling bracing, arborists West Midlands" url="/tree-work" structuredData={getServiceData("Tree Work Services", "Professional tree pruning, removal, emergency care, and structural support services", "/tree-work")} breadcrumbs={[{
+      <SEO title="Tree Surgery & Removal Bromsgrove | Reeves Tree Surgeons" description="5-star rated on Google. Tree felling, pruning, crown reduction and emergency removal in Bromsgrove, Redditch, Birmingham and Solihull. ARB Approved." keywords="tree work, tree pruning, tree removal, emergency tree care, cabling bracing, arborists West Midlands" url="/tree-work" structuredData={getServiceData("Tree Work Services", "Professional tree pruning, removal, emergency care, and structural support services", "/tree-work")} breadcrumbs={[{
       label: 'Home',
       href: '/'
     }, {
